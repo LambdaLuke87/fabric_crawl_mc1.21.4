@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "crawling-chaos",
+	"version": "${version}",
+	"name": "Crawling Chaos",
+	"description": "Anti Plants Virus Mod Remake!",
+	"authors": [
+		"Luke and Alexys"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/crawling-chaos/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.luke.crawlingchaos.CrawlingChaos"
+		],
+		"fabric-datagen": [
+			"net.luke.crawlingchaos.CrawlingChaosDataGenerator"
+		],
+		"client": [
+			"net.luke.crawlingchaos.CrawlingChaosClient"
+		]
+	},
+	"mixins": [
+		"crawling-chaos.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
