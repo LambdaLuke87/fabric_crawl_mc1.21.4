@@ -2,6 +2,7 @@ package net.luke.crawlingchaos;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.client.ModEntities;
 import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.item.ModItemsGroups;
@@ -16,6 +17,7 @@ public class CrawlingChaos implements ModInitializer {
 	public void onInitialize() {
 		//LOGGER.info("Hello Fabric world!");
 		ModItemsGroups.registerItemsGroups();
+		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModEntities.registerAttributes();

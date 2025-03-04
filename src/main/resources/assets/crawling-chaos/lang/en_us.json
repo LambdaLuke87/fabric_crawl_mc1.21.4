@@ -1,5 +1,18 @@
 {
+  "pack.crawling": "Crawling Chaos",
+
   "entity.crawling-chaos.eroded_zombie": "Eroded Zombie",
 
+  "block.entity.crawling-chaos.bug_oak_log": "Bug Oak Log",
+  "block.entity.crawling-chaos.bug_oak_planks": "Bug Oak Planks",
+
+  "item.crawling-chaos.butterfly_wings": "Butterfly Wings",
+  "item.crawling-chaos.crystals_of_virus": "Crystals of Virus",
+  "item.crawling-chaos.acacia_boat": "Insect Wings",
+  "item.crawling-chaos.storage_organ": "Storage Organ of the Virus",
+  "item.crawling-chaos.small_crystals": "Small Crystals of Virus",
+  "item.crawling-chaos.virus_buds": "Virus Buds",
+  "item.crawling-chaos.virus_seeds": "Virus Seeds",
+  "item.crawling-chaos.virus_sprouts": "Virus Sprouts",
   "item.crawling-chaos.eroded_zombie_spawn_egg": "Eroded Zombie Spawn Egg"
 }

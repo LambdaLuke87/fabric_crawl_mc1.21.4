@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "crawling-chaos:item/wing0"
+    "layer0": "crawling-chaos:item/virus_seeds"
   }
 }
