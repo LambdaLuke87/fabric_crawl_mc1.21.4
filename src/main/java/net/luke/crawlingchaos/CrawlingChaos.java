@@ -6,6 +6,7 @@ import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.client.ModEntities;
 import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.item.ModItemsGroups;
+import net.luke.crawlingchaos.sound.ModSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,5 +22,6 @@ public class CrawlingChaos implements ModInitializer {
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModEntities.registerAttributes();
+		ModSounds.registerSounds();
 	}
 }

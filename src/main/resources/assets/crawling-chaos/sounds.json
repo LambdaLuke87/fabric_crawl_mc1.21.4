@@ -1,0 +1,11 @@
+{
+  "entity.skeleton_friend.heal": {
+    "subtitle": "subtitles.crawling-chaos.entity.skeleton_friend.heal",
+    "sounds": [
+      "crawling-chaos:entity/skeleton_friend/heal1",
+      "crawling-chaos:entity/skeleton_friend/heal2",
+      "crawling-chaos:entity/skeleton_friend/heal3",
+      "crawling-chaos:entity/skeleton_friend/heal4"
+    ]
+  }
+}
