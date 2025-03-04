@@ -1,9 +1,11 @@
 package net.luke.crawlingchaos;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.luke.crawlingchaos.entity.client.ModEntities;
 import net.luke.crawlingchaos.entity.client.ErodedZombieRenderer;
+import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -14,6 +16,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
     public void onInitializeClient() {
         ModEntityModelLayers.registerEntityModelLayers();
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE, ErodedZombieModel::getTexturedModelData);
 
         RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"));
     }
