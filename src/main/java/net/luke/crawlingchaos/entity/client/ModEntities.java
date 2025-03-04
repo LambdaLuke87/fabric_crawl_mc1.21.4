@@ -22,6 +22,6 @@ public class ModEntities {
     }
 
     public static void registerAttributes() {
-        FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createZombieAttributes());
+        FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createErodedZombieAttributes());
     }
 }

@@ -11,6 +11,9 @@ import java.util.Set;
 
 @Environment(EnvType.CLIENT)
 public class ErodedZombieModel<S extends ErodedZombieRenderState> extends ZombieEntityModel<S> {
+    public static final ModelTransformer ERODED_ZOMBIE_BABY_TRANSFORMER =
+            new BabyModelTransformer (true, 16.0F, 0.0F, 2.0F, 2.0F, 24.0F, Set.of("head"));
+
     private final ModelPart head;
     private final ModelPart body;
     private final ModelPart rightArm;
