@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "crawling-chaos:block/bug_oak_planks"
+  }
+}

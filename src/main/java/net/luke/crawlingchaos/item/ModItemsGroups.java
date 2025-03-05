@@ -21,9 +21,14 @@ public class ModItemsGroups {
                         // Normal Items
                         entries.add(ModItems.BUTTERFLY_WINGS);
                         entries.add(ModItems.CRYSTALS_OF_VIRUS);
+                        entries.add(ModItems.GROWTH_ORGAN);
+                        entries.add(ModItems.HARD_EXOSKELETON);
+                        entries.add(ModItems.INDIGO_EXOSKELETON);
                         entries.add(ModItems.INSECT_WINGS);
+                        entries.add(ModItems.PARASITE_TOOTH);
                         entries.add(ModItems.SMALL_CRYSTALS);
                         entries.add(ModItems.STORAGE_ORGAN);
+                        entries.add(ModItems.STORAGE_ORGAN_POISON);
                         entries.add(ModItems.VIRUS_BUDS);
                         entries.add(ModItems.VIRUS_SEEDS);
                         entries.add(ModItems.VIRUS_SPROUTS);
@@ -33,8 +38,20 @@ public class ModItemsGroups {
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks
+                        entries.add(ModBlocks.BUG_OAK_SAPLING);
                         entries.add(ModBlocks.BUG_OAK_LOG);
+                        entries.add(ModBlocks.STRIPPED_BUG_OAK_LOG);
                         entries.add(ModBlocks.BUG_OAK_PLANKS);
+                        entries.add(ModBlocks.BUG_OAK_BUTTON);
+                        entries.add(ModBlocks.BUG_OAK_PRESSURE_PLATE);
+                        entries.add(ModBlocks.BUG_OAK_LEAVES);
+                        entries.add(ModBlocks.BUG_OAK_STAIRS);
+                        entries.add(ModBlocks.BUG_OAK_SLAB);
+                        entries.add(ModBlocks.BUG_OAK_FENCE);
+                        entries.add(ModBlocks.BUG_OAK_FENCE_GATE);
+                        entries.add(ModBlocks.BUG_OAK_SIGN);
+                        entries.add(ModBlocks.BUG_OAK_WOOD);
+                        entries.add(ModBlocks.STRIPPED_BUG_OAK_WOOD);
 
                     }).build());
 

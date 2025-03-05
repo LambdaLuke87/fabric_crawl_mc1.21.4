@@ -17,12 +17,22 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "butterfly_wings")))));
     public static final Item CRYSTALS_OF_VIRUS = registerItem("crystals_of_virus", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "crystals_of_virus")))));
+    public static final Item HARD_EXOSKELETON = registerItem("hard_exoskeleton", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "hard_exoskeleton")))));
+    public static final Item GROWTH_ORGAN = registerItem("growth_organ", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "growth_organ")))));
+    public static final Item INDIGO_EXOSKELETON = registerItem("indigo_exoskeleton", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "indigo_exoskeleton")))));
     public static final Item INSECT_WINGS = registerItem("insect_wings", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "insect_wings")))));
+    public static final Item PARASITE_TOOTH = registerItem("parasite_tooth", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_tooth")))));
     public static final Item SMALL_CRYSTALS = registerItem("small_crystals", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "small_crystals")))));
     public static final Item STORAGE_ORGAN = registerItem("storage_organ", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "storage_organ")))));
+    public static final Item STORAGE_ORGAN_POISON = registerItem("storage_organ_poison", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "storage_organ_poison")))));
     public static final Item VIRUS_BUDS = registerItem("virus_buds", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_buds")))));
     public static final Item VIRUS_SEEDS = registerItem("virus_seeds", new Item(new Item.Settings()

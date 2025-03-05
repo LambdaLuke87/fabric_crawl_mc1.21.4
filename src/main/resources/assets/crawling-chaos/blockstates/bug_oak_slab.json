@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crawling-chaos:block/bug_oak_slab"
+    },
+    "type=double": {
+      "model": "crawling-chaos:block/bug_oak_planks"
+    },
+    "type=top": {
+      "model": "crawling-chaos:block/bug_oak_slab_top"
+    }
+  }
+}

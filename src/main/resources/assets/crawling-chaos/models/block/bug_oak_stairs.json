@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "crawling-chaos:block/bug_oak_planks",
+    "side": "crawling-chaos:block/bug_oak_planks",
+    "top": "crawling-chaos:block/bug_oak_planks"
+  }
+}

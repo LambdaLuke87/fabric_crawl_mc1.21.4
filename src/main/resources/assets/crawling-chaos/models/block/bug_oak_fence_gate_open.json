@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_open",
+  "textures": {
+    "texture": "crawling-chaos:block/bug_oak_planks"
+  }
+}

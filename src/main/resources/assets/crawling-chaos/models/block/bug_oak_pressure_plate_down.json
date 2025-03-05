@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "crawling-chaos:block/bug_oak_planks"
+  }
+}

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.client.ModEntities;
+import net.luke.crawlingchaos.gen.ModWorldGeneration;
 import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.item.ModItemsGroups;
 import net.luke.crawlingchaos.sound.ModSounds;
@@ -23,5 +24,6 @@ public class CrawlingChaos implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModEntities.registerAttributes();
 		ModSounds.registerSounds();
+		ModWorldGeneration.generateModWorldGen();
 	}
 }

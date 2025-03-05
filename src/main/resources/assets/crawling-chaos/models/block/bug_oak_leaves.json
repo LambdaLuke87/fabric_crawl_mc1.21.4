@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "crawling-chaos:block/bug_oak_leaves"
+  }
+}

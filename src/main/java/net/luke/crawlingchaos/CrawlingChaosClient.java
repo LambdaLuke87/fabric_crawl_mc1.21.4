@@ -1,8 +1,10 @@
 package net.luke.crawlingchaos;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.client.ModEntities;
 import net.luke.crawlingchaos.entity.client.ErodedZombieRenderer;
 import net.luke.crawlingchaos.entity.client.SkeletonFriendRenderer;
@@ -10,8 +12,8 @@ import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.TexturedModelData;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.model.ArmorEntityModel;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.SkeletonEntityModel;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -25,6 +27,8 @@ public class CrawlingChaosClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUG_OAK_SAPLING, RenderLayer.getCutout());
+
         ModEntityModelLayers.registerEntityModelLayers();
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
