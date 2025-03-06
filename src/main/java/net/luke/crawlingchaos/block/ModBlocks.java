@@ -13,6 +13,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.TreeConfiguredFeatures;
 
 public class ModBlocks {
     public static final Block BUG_OAK_SAPLING = registerBlock("bug_oak_sapling",
@@ -57,6 +58,12 @@ public class ModBlocks {
     public static final Block STRIPPED_BUG_OAK_WOOD = registerBlock("stripped_bug_oak_wood",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "stripped_bug_oak_wood")))));
+    public static final Block MYCENA_CHLOROPHOS = registerBlock("mycena_chlorophos",
+            new MushroomPlantBlock(TreeConfiguredFeatures.HUGE_RED_MUSHROOM, AbstractBlock.Settings.copy(Blocks.RED_MUSHROOM)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "mycena_chlorophos")))));
+    public static final Block POISON_VINE = registerBlock("poison_vine",
+            new VineBlock(AbstractBlock.Settings.copy(Blocks.VINE)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "poison_vine")))));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
