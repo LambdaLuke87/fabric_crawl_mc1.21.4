@@ -2,6 +2,7 @@
   "pack.crawling": "Crawling Chaos",
 
   "entity.crawling-chaos.eroded_zombie": "Eroded Zombie",
+  "entity.crawling-chaos.loneger": "Loneger",
   "entity.crawling-chaos.skeleton_friend": "Skeleton Friend",
 
   "block.crawling-chaos.biollanta": "Biollanta",
@@ -38,5 +39,6 @@
   "item.crawling-chaos.virus_seeds": "Virus Seeds",
   "item.crawling-chaos.virus_sprouts": "Virus Sprouts",
   "item.crawling-chaos.eroded_zombie_spawn_egg": "Eroded Zombie Spawn Egg",
+  "item.crawling-chaos.loneger_spawn_egg": "Loneger Spawn Egg",
   "item.crawling-chaos.skeleton_friend_spawn_egg": "Skeleton Friend Spawn Egg"
 }

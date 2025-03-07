@@ -35,6 +35,7 @@ public class ModItemsGroups {
 
                         // Spawn Eggs
                         entries.add(ModItems.ERODED_ZOMBIE_SPAWN_EGG);
+                        entries.add(ModItems.LONEGER_SPAWN_EGG);
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.luke.crawlingchaos.block.ModBlocks;
+import net.luke.crawlingchaos.entity.client.LonegerRenderer;
 import net.luke.crawlingchaos.entity.client.ModEntities;
 import net.luke.crawlingchaos.entity.client.ErodedZombieRenderer;
 import net.luke.crawlingchaos.entity.client.SkeletonFriendRenderer;
@@ -36,6 +37,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
 
         ModEntityModelLayers.registerEntityModelLayers();
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
+        EntityRendererRegistry.register(ModEntities.LONEGER, LonegerRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE, ErodedZombieModel::getTexturedModelData);
@@ -48,6 +50,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);
 
+        RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "aloneger"));
         RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"));
     }
 }
