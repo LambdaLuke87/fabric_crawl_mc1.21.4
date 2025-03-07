@@ -2,6 +2,8 @@ package net.luke.crawlingchaos;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.client.ModEntities;
 import net.luke.crawlingchaos.gen.ModWorldGeneration;
@@ -25,5 +27,17 @@ public class CrawlingChaos implements ModInitializer {
 		ModEntities.registerAttributes();
 		ModSounds.registerSounds();
 		ModWorldGeneration.generateModWorldGen();
+
+		StrippableBlockRegistry.register(ModBlocks.BUG_OAK_LOG, ModBlocks.STRIPPED_BUG_OAK_LOG);
+		StrippableBlockRegistry.register(ModBlocks.BUG_OAK_WOOD, ModBlocks.STRIPPED_BUG_OAK_WOOD);
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_BUG_OAK_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_BUG_OAK_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_STAIRS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_SLAB, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_LEAVES, 30, 60);
 	}
 }

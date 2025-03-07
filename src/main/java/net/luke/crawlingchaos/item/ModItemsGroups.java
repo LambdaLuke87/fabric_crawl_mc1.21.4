@@ -47,12 +47,15 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.BUG_OAK_SLAB);
                         entries.add(ModBlocks.BUG_OAK_FENCE);
                         entries.add(ModBlocks.BUG_OAK_FENCE_GATE);
+                        entries.add(ModBlocks.BUG_OAK_TRAPDOOR);
                         entries.add(ModBlocks.BUG_OAK_PRESSURE_PLATE);
                         entries.add(ModBlocks.BUG_OAK_BUTTON);
                         entries.add(ModBlocks.BUG_OAK_SIGN);
                         entries.add(ModBlocks.BUG_OAK_LEAVES);
                         entries.add(ModBlocks.BUG_OAK_SAPLING);
                         entries.add(ModBlocks.MYCENA_CHLOROPHOS);
+                        entries.add(ModBlocks.BIOLLANTA);
+                        entries.add(ModBlocks.TERAPIA);
                         entries.add(ModBlocks.POISON_VINE);
 
                     }).build());

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_open",
+  "textures": {
+    "texture": "crawling-chaos:block/bug_oak_trapdoor"
+  }
+}

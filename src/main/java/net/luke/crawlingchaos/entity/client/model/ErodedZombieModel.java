@@ -6,6 +6,7 @@ import net.luke.crawlingchaos.entity.client.ErodedZombieAnimations;
 import net.luke.crawlingchaos.entity.client.state.ErodedZombieRenderState;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.entity.model.*;
+import net.minecraft.util.math.MathHelper;
 
 import java.util.Set;
 
@@ -60,5 +61,13 @@ public class ErodedZombieModel<S extends ErodedZombieRenderState> extends Zombie
         this.animate(erodedzombieRenderState.idleAnimationState, ErodedZombieAnimations.ANIM_ERODED_ZOMBIE_IDLE, erodedzombieRenderState.age, 1f);
         //this.animate(erodedzombieRenderState.walkAnimationState, ErodedZombieAnimations.ANIM_ERODED_ZOMBIE_WALK, erodedzombieRenderState.age, 1f);
         this.animate(erodedzombieRenderState.attackAnimationState, ErodedZombieAnimations.ANIM_ERODED_ZOMBIE_ATTACK, erodedzombieRenderState.age, 1f);
+
+        float g = erodedzombieRenderState.limbFrequency;
+        float h = erodedzombieRenderState.limbAmplitudeMultiplier;
+
+        // Make Left Arm (worm hand) point down, so avoid having it up
+        // DISCLAIMER: When he is chasing a victim, just by raising his right hand he seems to be making the National Socialist salute.
+        // If you are offended by this, you are an idiot.
+        this.leftArm.pitch = MathHelper.cos(g * 0.0F) * 0.0F * h * 0.0F / erodedzombieRenderState.limbAmplitudeInverse;
     }
 }

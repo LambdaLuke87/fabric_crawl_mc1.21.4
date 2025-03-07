@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -16,6 +17,12 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.TreeConfiguredFeatures;
 
 public class ModBlocks {
+    public static final Block BIOLLANTA = registerBlock("biollanta",
+            new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F,AbstractBlock.Settings.copy(Blocks.POPPY)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "biollanta")))));
+    public static final Block TERAPIA = registerBlock("terapia",
+            new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F,AbstractBlock.Settings.copy(Blocks.POPPY)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "terapia")))));
     public static final Block BUG_OAK_SAPLING = registerBlock("bug_oak_sapling",
             new SaplingBlock(ModSaplingGenerators.BUG_OAK, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_sapling")))));
@@ -52,6 +59,9 @@ public class ModBlocks {
     public static final Block BUG_OAK_SIGN = registerBlock("bug_oak_sign",
             new SignBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_sign")))));
+    public static final Block BUG_OAK_TRAPDOOR = registerBlock("bug_oak_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_trapdoor")))));
     public static final Block BUG_OAK_WOOD = registerBlock("bug_oak_wood",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_wood")))));

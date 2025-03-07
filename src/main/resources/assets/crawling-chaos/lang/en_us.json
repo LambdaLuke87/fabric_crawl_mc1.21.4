@@ -4,6 +4,7 @@
   "entity.crawling-chaos.eroded_zombie": "Eroded Zombie",
   "entity.crawling-chaos.skeleton_friend": "Skeleton Friend",
 
+  "block.crawling-chaos.biollanta": "Biollanta",
   "block.crawling-chaos.bug_oak_sapling": "Bug Oak Sapling",
   "block.crawling-chaos.bug_oak_log": "Bug Oak Log",
   "block.crawling-chaos.bug_oak_planks": "Bug Oak Planks",
@@ -15,11 +16,13 @@
   "block.crawling-chaos.bug_oak_fence": "Bug Oak Fence",
   "block.crawling-chaos.bug_oak_fence_gate": "Bug Oak Fence Gate",
   "block.crawling-chaos.bug_oak_sign": "Bug Oak Sign",
+  "block.crawling-chaos.bug_oak_trapdoor": "Bug Oak Trapdoor",
   "block.crawling-chaos.bug_oak_wood": "Bug Oak Wood",
   "block.crawling-chaos.mycena_chlorophos": "Mycena Chlorophos",
   "block.crawling-chaos.poison_vine": "Poison Vines",
   "block.crawling-chaos.stripped_bug_oak_log": "Stripped Bug Oak Log",
   "block.crawling-chaos.stripped_bug_oak_wood": "Stripped Bug Oak Wood",
+  "block.crawling-chaos.terapia": "Terapia",
 
   "item.crawling-chaos.butterfly_wings": "Butterfly Wings",
   "item.crawling-chaos.crystals_of_virus": "Crystals of Virus",

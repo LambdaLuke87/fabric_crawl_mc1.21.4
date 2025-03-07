@@ -439,9 +439,4 @@ public class ErodedZombieAnimations {
                                     Transformation.Interpolations.LINEAR),
                             new Keyframe(0.625f, AnimationHelper.createRotationalVector(0f, 0f, 0f),
                                     Transformation.Interpolations.LINEAR))).build();
-    public static final Animation ANIM_ERODED_ZOMBIE_BABY_TRANSFORM = Animation.Builder.create(0f).looping()
-            .addBoneAnimation("head",
-                    new Transformation(Transformation.Targets.SCALE,
-                            new Keyframe(0f, AnimationHelper.createScalingVector(1.5f, 1.5f, 1.5f),
-                                    Transformation.Interpolations.LINEAR))).build();
 }
