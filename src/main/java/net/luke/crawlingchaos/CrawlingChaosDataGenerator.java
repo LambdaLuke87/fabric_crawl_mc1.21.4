@@ -8,6 +8,7 @@ import net.luke.crawlingchaos.datagen.ModLootTableProvider;
 import net.luke.crawlingchaos.datagen.ModRegistryDataGenerator;
 import net.luke.crawlingchaos.world.ModConfiguredFeatures;
 import net.luke.crawlingchaos.world.ModPlacedFeatures;
+import net.luke.crawlingchaos.world.biome.ModBiomes;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
@@ -26,5 +27,6 @@ public class CrawlingChaosDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 	}
 }

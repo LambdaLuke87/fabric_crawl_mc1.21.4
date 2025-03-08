@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"net.luke.crawlingchaos.CrawlingChaosClient"
+		],
+		"terrablender": [
+			"net.luke.crawlingchaos.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

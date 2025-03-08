@@ -11,10 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -27,6 +24,9 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> BUG_OAK_KEY = registerKey("bug_oak");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BIOLLANTA_KEY = registerKey("biollanta");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MYCENA_CHLOROPHOS_KEY = registerKey("mycena_chlorophos");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TERAPIA_KEY = registerKey("terapia");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, BUG_OAK_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
@@ -41,6 +41,19 @@ public class ModConfiguredFeatures {
                         new AttachedToLeavesTreeDecorator(0.14F, 1, 0,
                                 new RandomizedIntBlockStateProvider(BlockStateProvider.of(Blocks.COBWEB),
                                         PropaguleBlock.AGE, UniformIntProvider.create(0, 4)), 2, List.of(Direction.DOWN)))).build());
+
+        register(context, BIOLLANTA_KEY, Feature.FLOWER,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BIOLLANTA)),
+                        List.of(Blocks.GRASS_BLOCK)));
+        register(context, MYCENA_CHLOROPHOS_KEY, Feature.FLOWER,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MYCENA_CHLOROPHOS)),
+                        List.of(Blocks.GRASS_BLOCK)));
+        register(context, TERAPIA_KEY, Feature.FLOWER,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.TERAPIA)),
+                        List.of(Blocks.GRASS_BLOCK)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
