@@ -2,6 +2,7 @@ package net.luke.crawlingchaos.world;
 
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.block.ModBlocks;
+import net.luke.crawlingchaos.world.treedecorator.LeavesPoisonVineTreeDecorator;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.PropaguleBlock;
 import net.minecraft.registry.Registerable;
@@ -37,7 +38,7 @@ public class ModConfiguredFeatures {
                 new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
 
                 new TwoLayersFeatureSize(1, 0, 2))
-                .decorators(List.of(new LeavesVineTreeDecorator(0.125F),
+                .decorators(List.of(new LeavesPoisonVineTreeDecorator(0.125F),
                         new AttachedToLeavesTreeDecorator(0.14F, 1, 0,
                                 new RandomizedIntBlockStateProvider(BlockStateProvider.of(Blocks.COBWEB),
                                         PropaguleBlock.AGE, UniformIntProvider.create(0, 4)), 2, List.of(Direction.DOWN)))).build());

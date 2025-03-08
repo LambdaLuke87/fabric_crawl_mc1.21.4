@@ -3,7 +3,7 @@
   "config": {
     "decorators": [
       {
-        "type": "minecraft:leave_vine",
+        "type": "minecraft:poison_vine_placer",
         "probability": 0.125
       },
       {
