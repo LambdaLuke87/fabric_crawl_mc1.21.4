@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "crawling-chaos:serupinea"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "crawling-chaos:serupinea"
+      }
+    ]
+  }
+}

@@ -3,14 +3,14 @@ package net.luke.crawlingchaos.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.entity.client.ModEntities;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     public static final Item BUTTERFLY_WINGS = registerItem("butterfly_wings", new Item(new Item.Settings()
@@ -33,12 +33,55 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "storage_organ")))));
     public static final Item STORAGE_ORGAN_POISON = registerItem("storage_organ_poison", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "storage_organ_poison")))));
+    public static final Item VIRUS_TEMPLATE = registerItem("virus_template", new VirusTemplateItem(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_template")))));
+    public static final Item VIRUS_A = registerItem("virus_a", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_a")))));
+    public static final Item VIRUS_B = registerItem("virus_b", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_b")))));
     public static final Item VIRUS_BUDS = registerItem("virus_buds", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_buds")))));
+    public static final Item VIRUS_C = registerItem("virus_c", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_c")))));
     public static final Item VIRUS_SEEDS = registerItem("virus_seeds", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_seeds")))));
     public static final Item VIRUS_SPROUTS = registerItem("virus_sprouts", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_sprouts")))));
+
+    // Smithing Templates and Upgrades Items
+    public static final Item SERUPINEA_UPGRADE_SMITHING_TEMPLATE = registerItem("serupinea_upgrade_smithing_template", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_upgrade_smithing_template"))).rarity(Rarity.UNCOMMON)));
+
+    // Tools Items
+    public static final Item SERUPINEA_AXE = registerItem("serupinea_axe",
+            new AxeItem(ModToolMaterials.SERUPINEA, 6.5F, -3.1F, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_axe")))));
+    public static final Item SERUPINEA_HOE = registerItem("serupinea_hoe",
+            new HoeItem(ModToolMaterials.SERUPINEA, -2.0F, -1.0F, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_hoe")))));
+    public static final Item SERUPINEA_PICKAXE = registerItem("serupinea_pickaxe",
+            new PickaxeItem(ModToolMaterials.SERUPINEA, 1.5F, -2.8F, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_pickaxe")))));
+    public static final Item SERUPINEA_SHOVEL = registerItem("serupinea_shovel",
+            new ShovelItem(ModToolMaterials.SERUPINEA, 2.0F, -3.0F, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_shovel")))));
+    public static final Item SERUPINEA_SWORD = registerItem("serupinea_sword",
+            new SwordItem(ModToolMaterials.SERUPINEA, 3.5F, -2.4f, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_sword")))));
+
+    // Armor Items
+    public static final Item SERUPINEA_HELMET = registerItem("serupinea_helmet",
+            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.HELMET, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_helmet")))));
+    public static final Item SERUPINEA_CHESTPLATE = registerItem("serupinea_chestplate",
+            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_chestplate")))));
+    public static final Item SERUPINEA_LEGGINGS = registerItem("serupinea_leggings",
+            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_leggings")))));
+    public static final Item SERUPINEA_BOOTS = registerItem("serupinea_boots",
+            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.BOOTS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_boots")))));
 
     // SpawnEggs
     public static final Item LONEGER_SPAWN_EGG = registerItem("loneger_spawn_egg", new SpawnEggItem(ModEntities.LONEGER, new Item.Settings()

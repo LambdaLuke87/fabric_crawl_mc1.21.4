@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "C": "crawling-chaos:hard_exoskeleton",
+    "S": "crawling-chaos:serupinea_upgrade_smithing_template"
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "crawling-chaos:serupinea_upgrade_smithing_template"
+  }
+}

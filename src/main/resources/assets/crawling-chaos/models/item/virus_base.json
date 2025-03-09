@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "crawling-chaos:item/virus_base",
+    "layer1": "crawling-chaos:item/virus_base_bottle"
+  }
+}

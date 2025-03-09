@@ -29,9 +29,29 @@ public class ModItemsGroups {
                         entries.add(ModItems.SMALL_CRYSTALS);
                         entries.add(ModItems.STORAGE_ORGAN);
                         entries.add(ModItems.STORAGE_ORGAN_POISON);
+                        entries.add(ModItems.VIRUS_TEMPLATE);
+                        entries.add(ModItems.VIRUS_A);
+                        entries.add(ModItems.VIRUS_B);
+                        entries.add(ModItems.VIRUS_C);
                         entries.add(ModItems.VIRUS_BUDS);
                         entries.add(ModItems.VIRUS_SEEDS);
                         entries.add(ModItems.VIRUS_SPROUTS);
+
+                        // Smithing Templates and Upgrades Items
+                        entries.add(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE);
+
+                        // Tools Items
+                        entries.add(ModItems.SERUPINEA_AXE);
+                        entries.add(ModItems.SERUPINEA_HOE);
+                        entries.add(ModItems.SERUPINEA_PICKAXE);
+                        entries.add(ModItems.SERUPINEA_SHOVEL);
+                        entries.add(ModItems.SERUPINEA_SWORD);
+
+                        // Armor Items
+                        entries.add(ModItems.SERUPINEA_HELMET);
+                        entries.add(ModItems.SERUPINEA_CHESTPLATE);
+                        entries.add(ModItems.SERUPINEA_LEGGINGS);
+                        entries.add(ModItems.SERUPINEA_BOOTS);
 
                         // Spawn Eggs
                         entries.add(ModItems.ERODED_ZOMBIE_SPAWN_EGG);
@@ -48,6 +68,7 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.BUG_OAK_SLAB);
                         entries.add(ModBlocks.BUG_OAK_FENCE);
                         entries.add(ModBlocks.BUG_OAK_FENCE_GATE);
+                        entries.add(ModBlocks.BUG_OAK_DOOR);
                         entries.add(ModBlocks.BUG_OAK_TRAPDOOR);
                         entries.add(ModBlocks.BUG_OAK_PRESSURE_PLATE);
                         entries.add(ModBlocks.BUG_OAK_BUTTON);
