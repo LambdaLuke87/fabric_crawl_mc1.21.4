@@ -1,5 +1,9 @@
 package net.luke.crawlingchaos.block;
 
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.tree.ModSaplingGenerators;
@@ -12,14 +16,15 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block BIOLLANTA = registerBlock("biollanta",
-            new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F,AbstractBlock.Settings.copy(Blocks.POPPY)
+            new FlowerBlock(StatusEffects.REGENERATION, 5.0F,AbstractBlock.Settings.copy(Blocks.POPPY)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "biollanta")))));
     public static final Block TERAPIA = registerBlock("terapia",
-            new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F,AbstractBlock.Settings.copy(Blocks.POPPY)
+            new FlowerBlock(StatusEffects.NAUSEA, 5.0F,AbstractBlock.Settings.copy(Blocks.POPPY)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "terapia")))));
     public static final Block BUG_OAK_SAPLING = registerBlock("bug_oak_sapling",
             new SaplingBlock(ModSaplingGenerators.BUG_OAK, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
@@ -54,9 +59,6 @@ public class ModBlocks {
     public static final Block BUG_OAK_FENCE_GATE = registerBlock("bug_oak_fence_gate",
             new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_fence_gate")))));
-    public static final Block BUG_OAK_SIGN = registerBlock("bug_oak_sign",
-            new SignBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
-                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_sign")))));
     public static final Block BUG_OAK_DOOR = registerBlock("bug_oak_door",
             new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_DOOR)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_door")))));
@@ -75,6 +77,24 @@ public class ModBlocks {
     public static final Block POISON_VINE = registerBlock("poison_vine",
             new VineBlock(AbstractBlock.Settings.copy(Blocks.VINE)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "poison_vine")))));
+
+    protected static final Identifier BUG_OAK_SIGN_TEXTURE_ID = Identifier.of(CrawlingChaos.MOD_ID, "entity/signs/bug_oak");
+    protected static final Identifier BUG_OAK_HANGING_SIGN_TEXTURE_ID = Identifier.of(CrawlingChaos.MOD_ID, "entity/signs/hanging/bug_oak");
+    protected static final Identifier BUG_OAK_HANGING_SIGN_GUI_TEXTURE_ID = Identifier.of(CrawlingChaos.MOD_ID, "textures/gui/hanging_signs/bug_oak");
+
+    public static final Block BUG_OAK_SIGN = registerBlock("bug_oak_sign",
+            new TerraformSignBlock(BUG_OAK_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_SIGN).sounds(BlockSoundGroup.WOOD)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID,"bug_oak_sign")))));
+    public static final Block BUG_OAK_WALL_SIGN = registerBlock("bug_oak_wall_sign",
+            new TerraformWallSignBlock(BUG_OAK_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).sounds(BlockSoundGroup.WOOD)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID,"bug_oak_wall_sign")))));
+
+    public static final Block BUG_OAK_HANGING_SIGN = registerBlock("bug_oak_hanging_sign",
+            new TerraformHangingSignBlock(BUG_OAK_HANGING_SIGN_TEXTURE_ID, BUG_OAK_HANGING_SIGN_GUI_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN).sounds(BlockSoundGroup.HANGING_SIGN)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID,"bug_oak_hanging_sign")))));
+    public static final Block BUG_OAK_WALL_HANGING_SIGN = registerBlock("bug_oak_wall_hanging_sign",
+            new TerraformWallHangingSignBlock(BUG_OAK_HANGING_SIGN_TEXTURE_ID, BUG_OAK_HANGING_SIGN_GUI_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN).sounds(BlockSoundGroup.HANGING_SIGN)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID,"bug_oak_wall_hanging_sign")))));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

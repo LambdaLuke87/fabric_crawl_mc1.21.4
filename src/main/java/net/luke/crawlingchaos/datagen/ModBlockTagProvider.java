@@ -24,12 +24,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_BUG_OAK_LOG)
                 .add(ModBlocks.STRIPPED_BUG_OAK_WOOD);
 
-        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.BUG_OAK_FENCE);
+        getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.BUG_OAK_PLANKS);
+        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(ModBlocks.BUG_OAK_STAIRS);
+        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS).add(ModBlocks.BUG_OAK_SLAB);
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.BUG_OAK_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.BUG_OAK_FENCE_GATE);
-        getOrCreateTagBuilder(BlockTags.SIGNS).add(ModBlocks.BUG_OAK_SIGN);
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.BUG_OAK_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.BUG_OAK_DOOR);
-        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES).add(ModBlocks.BUG_OAK_PRESSURE_PLATE);
-        getOrCreateTagBuilder(BlockTags.BUTTONS).add(ModBlocks.BUG_OAK_BUTTON);
+        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.BUG_OAK_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.BUG_OAK_BUTTON);
     }
 }

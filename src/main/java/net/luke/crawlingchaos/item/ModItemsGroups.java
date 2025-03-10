@@ -72,9 +72,13 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.BUG_OAK_TRAPDOOR);
                         entries.add(ModBlocks.BUG_OAK_PRESSURE_PLATE);
                         entries.add(ModBlocks.BUG_OAK_BUTTON);
-                        entries.add(ModBlocks.BUG_OAK_SIGN);
                         entries.add(ModBlocks.BUG_OAK_LEAVES);
                         entries.add(ModBlocks.BUG_OAK_SAPLING);
+
+                        // Need Fixes
+                        entries.add(ModBlocks.BUG_OAK_SIGN);
+                        entries.add(ModBlocks.BUG_OAK_HANGING_SIGN);
+
                         entries.add(ModBlocks.MYCENA_CHLOROPHOS);
                         entries.add(ModBlocks.BIOLLANTA);
                         entries.add(ModBlocks.TERAPIA);

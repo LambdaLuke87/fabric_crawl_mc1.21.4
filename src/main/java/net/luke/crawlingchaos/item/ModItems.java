@@ -91,6 +91,15 @@ public class ModItems {
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend_spawn_egg")))));
 
+    // Signs items
+    /*
+    public static final Item BUG_OAK_SIGN = registerItem("bug_oak_sign",
+            new SignItem(ModBlocks.BUG_OAK_SIGN, ModBlocks.BUG_OAK_WALL_SIGN, new Item.Settings().maxCount(16)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_sign"))).useBlockPrefixedTranslationKey()));
+    public static final Item BUG_OAK_HANGING_SIGN = registerItem("bug_oak_hanging_sign",
+            new HangingSignItem(ModBlocks.BUG_OAK_HANGING_SIGN, ModBlocks.BUG_OAK_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_hanging_sign"))).useBlockPrefixedTranslationKey()));*/
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(CrawlingChaos.MOD_ID, name), item);
     }

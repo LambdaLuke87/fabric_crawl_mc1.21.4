@@ -29,10 +29,7 @@ public class VirusTemplateItem extends Item {
             );
     private static final Map<Block, Block> VIRUS_MAP_OTHERS =
             Map.of(
-                    Blocks.TALL_GRASS, Blocks.AIR,
-                    Blocks.ROSE_BUSH, Blocks.AIR,
-                    Blocks.PEONY, Blocks.AIR,
-                    Blocks.LILAC, Blocks.AIR,
+                    Blocks.SHORT_GRASS, Blocks.AIR,
                     Blocks.POPPY, Blocks.AIR,
                     Blocks.DANDELION, Blocks.AIR
             );
