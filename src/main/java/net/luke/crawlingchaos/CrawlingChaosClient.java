@@ -1,5 +1,6 @@
 package net.luke.crawlingchaos;
 
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
@@ -11,6 +12,7 @@ import net.luke.crawlingchaos.entity.client.ErodedZombieRenderer;
 import net.luke.crawlingchaos.entity.client.SkeletonFriendRenderer;
 import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
+import net.luke.crawlingchaos.item.ModItems;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.TexturedModelData;
 import net.minecraft.client.render.RenderLayer;
@@ -28,6 +30,8 @@ public class CrawlingChaosClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        TerraformBoatClientHelper.registerModelLayers(ModItems.BUG_OAK_BOATS_ID);
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BIOLLANTA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TERAPIA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUG_OAK_DOOR, RenderLayer.getCutout());

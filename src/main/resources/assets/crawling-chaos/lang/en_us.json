@@ -1,6 +1,8 @@
 {
   "pack.crawling": "Crawling Chaos",
 
+  "entity.crawling-chaos.bug_oak_boat": "Bug Oak Boat",
+  "entity.crawling-chaos.bug_oak_chest_boat": "Bug Oak Boat Chest",
   "entity.crawling-chaos.eroded_zombie": "Eroded Zombie",
   "entity.crawling-chaos.loneger": "Loneger",
   "entity.crawling-chaos.skeleton_friend": "Skeleton Friend",
@@ -27,6 +29,8 @@
   "block.crawling-chaos.stripped_bug_oak_wood": "Stripped Bug Oak Wood",
   "block.crawling-chaos.terapia": "Terapia",
 
+  "item.crawling-chaos.bug_oak_boat": "Bug Oak Boat",
+  "item.crawling-chaos.bug_oak_chest_boat": "Bug Oak Boat with Chest",
   "item.crawling-chaos.butterfly_wings": "Butterfly Wings",
   "item.crawling-chaos.crystals_of_virus": "Crystals of Virus",
   "item.crawling-chaos.hard_exoskeleton": "Hard Exoskeleton",

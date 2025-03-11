@@ -1,5 +1,6 @@
 package net.luke.crawlingchaos.item;
 
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.entity.client.ModEntities;
@@ -91,14 +92,11 @@ public class ModItems {
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend_spawn_egg")))));
 
-    // Signs items
-    /*
-    public static final Item BUG_OAK_SIGN = registerItem("bug_oak_sign",
-            new SignItem(ModBlocks.BUG_OAK_SIGN, ModBlocks.BUG_OAK_WALL_SIGN, new Item.Settings().maxCount(16)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_sign"))).useBlockPrefixedTranslationKey()));
-    public static final Item BUG_OAK_HANGING_SIGN = registerItem("bug_oak_hanging_sign",
-            new HangingSignItem(ModBlocks.BUG_OAK_HANGING_SIGN, ModBlocks.BUG_OAK_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_hanging_sign"))).useBlockPrefixedTranslationKey()));*/
+    // Boats
+    public static final Identifier BUG_OAK_BOATS_ID = Identifier.of(CrawlingChaos.MOD_ID, "bug_oak");
+
+    public static final BoatItem BUG_OAK_BOAT = TerraformBoatItemHelper.registerBoatItem(BUG_OAK_BOATS_ID, false);
+    public static final BoatItem BUG_OAK_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(BUG_OAK_BOATS_ID, true);
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(CrawlingChaos.MOD_ID, name), item);

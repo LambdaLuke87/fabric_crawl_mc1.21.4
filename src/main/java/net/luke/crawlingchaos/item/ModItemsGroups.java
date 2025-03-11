@@ -76,6 +76,8 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.BUG_OAK_SAPLING);
                         entries.add(ModBlocks.BUG_OAK_SIGN);
                         entries.add(ModBlocks.BUG_OAK_HANGING_SIGN);
+                        entries.add(ModItems.BUG_OAK_BOAT); // Not Block but listed here
+                        entries.add(ModItems.BUG_OAK_CHEST_BOAT); // Not Block but listed here
                         entries.add(ModBlocks.MYCENA_CHLOROPHOS);
                         entries.add(ModBlocks.BIOLLANTA);
                         entries.add(ModBlocks.TERAPIA);
