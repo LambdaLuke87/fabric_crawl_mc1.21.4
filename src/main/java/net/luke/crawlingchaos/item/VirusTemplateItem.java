@@ -48,8 +48,8 @@ public class VirusTemplateItem extends Item {
                 if (clickedBlock.equals(Blocks.OAK_SAPLING) || clickedBlock.equals(Blocks.DARK_OAK_SAPLING)
                         || clickedBlock.equals(Blocks.PALE_OAK_SAPLING))
                     Block.dropStack(world, context.getBlockPos(), new ItemStack(ModItems.VIRUS_A));
-                else if (clickedBlock.equals(Blocks.ROSE_BUSH) || clickedBlock.equals(Blocks.PEONY)
-                        || clickedBlock.equals(Blocks.LILAC))
+                else if (clickedBlock.equals(Blocks.SHORT_GRASS) || clickedBlock.equals(Blocks.POPPY)
+                        || clickedBlock.equals(Blocks.DANDELION))
                     Block.dropStack(world, context.getBlockPos(), new ItemStack(ModItems.VIRUS_B));
                 else if (clickedBlock.equals(ModBlocks.BUG_OAK_SAPLING))
                     Block.dropStack(world, context.getBlockPos(), new ItemStack(ModItems.VIRUS_C));

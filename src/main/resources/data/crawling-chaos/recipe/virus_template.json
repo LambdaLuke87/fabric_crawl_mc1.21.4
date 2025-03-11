@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:glass_bottle",
+    "B": "crawling-chaos:virus_seeds"
+  },
+  "pattern": [
+    " B ",
+    " A ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:virus_template"
+  }
+}
