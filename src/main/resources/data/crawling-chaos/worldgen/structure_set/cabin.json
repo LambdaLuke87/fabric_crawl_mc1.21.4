@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "crawling-chaos:cabin",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 165745296,
+    "spread_type": "triangular",
+    "spacing": 32,
+    "separation": 8
+  }
+}
