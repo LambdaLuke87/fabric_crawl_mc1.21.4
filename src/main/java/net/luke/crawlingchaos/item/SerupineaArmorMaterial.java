@@ -28,7 +28,7 @@ public class SerupineaArmorMaterial {
             15,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON,
             2.0F,
-            0.0F,
+            0.1F,
             ModTags.Items.REPAIRS_SERUPINEA_ARMOR,
             SERUPINEA_ARMOR_MATERIAL_KEY
     );

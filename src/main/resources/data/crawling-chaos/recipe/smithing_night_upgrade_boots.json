@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#crawling-chaos:night_tool_materials",
+  "base": "crawling-chaos:serupinea_boots",
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:night_boots"
+  },
+  "template": "crawling-chaos:night_upgrade_smithing_template"
+}

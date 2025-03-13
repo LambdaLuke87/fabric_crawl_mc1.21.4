@@ -194,4 +194,8 @@ public class LonegerEntity extends MerchantEntity {
             return !pos.isWithinDistance(this.trader.getPos(), proximityDistance);
         }
     }
+
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false;
+    }
 }

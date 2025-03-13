@@ -61,6 +61,10 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
         }
     }
 
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false;
+    }
+
     @Override
     public int getAngerTime() {
         return 0;

@@ -30,19 +30,27 @@ public class ModItemTagProvider extends FabricTagProvider<Item> {
                 .add(ModItems.SERUPINEA_SWORD);
 
         getOrCreateTagBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
-                .add(ModItems.SERUPINEA_HELMET);
+                .add(ModItems.SERUPINEA_HELMET)
+                .add(ModItems.NIGHT_HELMET);
         getOrCreateTagBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
-                .add(ModItems.SERUPINEA_CHESTPLATE);
+                .add(ModItems.SERUPINEA_CHESTPLATE)
+                .add(ModItems.NIGHT_CHESTPLATE);
         getOrCreateTagBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
-                .add(ModItems.SERUPINEA_LEGGINGS);
+                .add(ModItems.SERUPINEA_LEGGINGS)
+                .add(ModItems.NIGHT_LEGGINGS);
         getOrCreateTagBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
-                .add(ModItems.SERUPINEA_BOOTS);
+                .add(ModItems.SERUPINEA_BOOTS)
+                .add(ModItems.NIGHT_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.ARMOR_ENCHANTABLE)
                 .add(ModItems.SERUPINEA_HELMET)
                 .add(ModItems.SERUPINEA_CHESTPLATE)
                 .add(ModItems.SERUPINEA_LEGGINGS)
-                .add(ModItems.SERUPINEA_BOOTS);
+                .add(ModItems.SERUPINEA_BOOTS)
+                .add(ModItems.NIGHT_HELMET)
+                .add(ModItems.NIGHT_CHESTPLATE)
+                .add(ModItems.NIGHT_LEGGINGS)
+                .add(ModItems.NIGHT_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
                 .add(ModItems.SERUPINEA_AXE)
@@ -53,13 +61,21 @@ public class ModItemTagProvider extends FabricTagProvider<Item> {
                 .add(ModItems.SERUPINEA_HELMET)
                 .add(ModItems.SERUPINEA_CHESTPLATE)
                 .add(ModItems.SERUPINEA_LEGGINGS)
-                .add(ModItems.SERUPINEA_BOOTS);
+                .add(ModItems.SERUPINEA_BOOTS)
+                .add(ModItems.NIGHT_HELMET)
+                .add(ModItems.NIGHT_CHESTPLATE)
+                .add(ModItems.NIGHT_LEGGINGS)
+                .add(ModItems.NIGHT_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.SERUPINEA_HELMET)
                 .add(ModItems.SERUPINEA_CHESTPLATE)
                 .add(ModItems.SERUPINEA_LEGGINGS)
-                .add(ModItems.SERUPINEA_BOOTS);
+                .add(ModItems.SERUPINEA_BOOTS)
+                .add(ModItems.NIGHT_HELMET)
+                .add(ModItems.NIGHT_CHESTPLATE)
+                .add(ModItems.NIGHT_LEGGINGS)
+                .add(ModItems.NIGHT_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.BUG_OAK_LOG.asItem())

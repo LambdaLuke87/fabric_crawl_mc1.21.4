@@ -30,15 +30,16 @@ public class LonegerTradeOffers extends TradeOffers {
         LONEGER_TRADES = copyToFastUtilMap(ImmutableMap.of(1, new Factory[]{
                 // TEST: temporal new trades, not the final versions
                         new SellItemCustom(ModItems.GROWTH_ORGAN, 10, 1, 5, 1),
+                        new SellItemCustom(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE, 22, 1, 5, 1),
                         new BuyCustom(Items.ROTTEN_FLESH, 14, 5, 5, 1),
                         new BuyCustom(Items.BONE, 8, 5, 5, 1),
                         new SellItemCustom(ModItems.STORAGE_ORGAN, 2, 4, 5, 1),
                         new SellItemCustom(ModItems.STORAGE_ORGAN_POISON, 2, 4, 5, 1),
-                        new BuyCustom(ModItems.HARD_EXOSKELETON, 1, 5, 5, 2)},
+                        new BuyCustom(ModItems.SERUPINEA_EXOSKELETON, 1, 5, 5, 2)},
                 2, new Factory[]{
                         new BuyCustom(Items.PHANTOM_MEMBRANE, 5, 4, 5, 1),
                         new BuyCustom(ModItems.PARASITE_TOOTH, 5, 4, 5, 1),
-                        new BuyCustom(ModItems.INDIGO_EXOSKELETON, 5, 4, 5, 1),
+                        new BuyCustom(ModItems.NIGHT_EXOSKELETON, 5, 4, 5, 1),
                         new BuyCustom(ModItems.SMALL_CRYSTALS, 5, 4, 5, 1)}));
     }
 
