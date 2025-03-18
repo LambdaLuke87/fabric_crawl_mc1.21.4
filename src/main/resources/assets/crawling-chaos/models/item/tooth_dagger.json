@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "crawling-chaos:item/tooth_dagger"
+  }
+}

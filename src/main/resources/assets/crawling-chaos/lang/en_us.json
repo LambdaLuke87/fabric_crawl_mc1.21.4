@@ -46,6 +46,9 @@
   "item.crawling-chaos.virus_buds": "Virus Buds",
   "item.crawling-chaos.virus_seeds": "Virus Seeds",
   "item.crawling-chaos.virus_sprouts": "Virus Sprouts",
+  "item.crawling-chaos.hyourougan": "Hyourougan",
+  "item.crawling-chaos.luminous_chicken_stew": "Luminous Chicken Stew",
+  "item.crawling-chaos.tooth_dagger": "Tooth Dagger",
   "item.crawling-chaos.serupinea_exoskeleton": "Serupinea Exoskeleton",
   "item.crawling-chaos.serupinea_upgrade_smithing_template": "Serupinea Upgrade",
   "item.crawling-chaos.serupinea_axe": "Serupinea Axe",
@@ -64,6 +67,9 @@
   "item.crawling-chaos.night_leggings": "Night Leggings",
   "item.crawling-chaos.night_boots": "Night Boots",
   "item.crawling-chaos.eroded_zombie_spawn_egg": "Eroded Zombie Spawn Egg",
+  "item.crawling-chaos.knight_bug_spawn_egg": "Knight Bug Spawn Egg (NOT ADDED YET)",
   "item.crawling-chaos.loneger_spawn_egg": "Loneger Spawn Egg",
+  "item.crawling-chaos.parasite_worm_spawn_egg": "Parasite Worm Spawn Egg (NOT ADDED YET)",
+  "item.crawling-chaos.serupinea_spawn_egg": "Serupinea Spawn Egg (NOT ADDED YET)",
   "item.crawling-chaos.skeleton_friend_spawn_egg": "Skeleton Friend Spawn Egg"
 }

@@ -18,6 +18,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.BIOLLANTA);
+        addPottedPlantDrops(ModBlocks.POTTED_BIOLLANTA);
         addDrop(ModBlocks.BUG_OAK_SAPLING);
         addDrop(ModBlocks.BUG_OAK_LOG);
         addDrop(ModBlocks.BUG_OAK_WOOD);
@@ -30,11 +31,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BUG_OAK_SLAB);
         addDrop(ModBlocks.BUG_OAK_FENCE);
         addDrop(ModBlocks.BUG_OAK_FENCE_GATE);
-        //addDrop(ModBlocks.BUG_OAK_WALL_SIGN);
-        //addDrop(ModBlocks.BUG_OAK_WALL_HANGING_SIGN);
         addDrop(ModBlocks.BUG_OAK_DOOR);
         addDrop(ModBlocks.BUG_OAK_TRAPDOOR);
         addDrop(ModBlocks.MYCENA_CHLOROPHOS);
+        addPottedPlantDrops(ModBlocks.POTTED_MYCENA_CHLOROPHOS);
         addDrop(ModBlocks.TERAPIA);
+        addPottedPlantDrops(ModBlocks.POTTED_TERAPIA);
     }
 }

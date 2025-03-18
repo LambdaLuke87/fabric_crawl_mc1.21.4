@@ -59,8 +59,6 @@ public class ErodedZombieModel<S extends ErodedZombieRenderState> extends Zombie
         super.setAngles(erodedzombieRenderState);
 
         this.animate(erodedzombieRenderState.idleAnimationState, ErodedZombieAnimations.ANIM_ERODED_ZOMBIE_IDLE, erodedzombieRenderState.age, 1f);
-        //this.animate(erodedzombieRenderState.walkAnimationState, ErodedZombieAnimations.ANIM_ERODED_ZOMBIE_WALK, erodedzombieRenderState.age, 1f);
-        this.animate(erodedzombieRenderState.attackAnimationState, ErodedZombieAnimations.ANIM_ERODED_ZOMBIE_ATTACK, erodedzombieRenderState.age, 1f);
 
         float g = erodedzombieRenderState.limbFrequency;
         float h = erodedzombieRenderState.limbAmplitudeMultiplier;

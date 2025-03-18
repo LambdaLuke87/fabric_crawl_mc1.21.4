@@ -24,10 +24,6 @@ public class ErodedZombieEntity extends ZombieEntity {
     private static final int MAX_HEALTH = 60;
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
-    //public final AnimationState walkAnimationState = new AnimationState();
-    //public int walkAnimationTimeout = 0;
-    public final AnimationState attackAnimationState = new AnimationState();
-    public int attackAnimationTimeout = 0;
 
     public static DefaultAttributeContainer.Builder createErodedZombieAttributes() {
         return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)60.0F) .add(EntityAttributes.FOLLOW_RANGE, (double)35.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.23F).add(EntityAttributes.ATTACK_DAMAGE, (double)3.0F).add(EntityAttributes.ARMOR, (double)2.0F).add(EntityAttributes.SPAWN_REINFORCEMENTS);
@@ -77,17 +73,6 @@ public class ErodedZombieEntity extends ZombieEntity {
             this.idleAnimationState.start(this.age);
         } else {
             --this.idleAnimationTimeout;
-        }
-
-        if(this.isAttacking() && this.isAttacking() && attackAnimationTimeout <= 0) {
-            attackAnimationTimeout = 19;
-            attackAnimationState.start(this.age);
-        } else {
-            --this.attackAnimationTimeout;
-        }
-
-        if(!this.isAttacking()) {
-            attackAnimationState.stop();
         }
     }
 }

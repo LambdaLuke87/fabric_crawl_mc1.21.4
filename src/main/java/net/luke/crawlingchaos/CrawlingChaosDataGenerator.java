@@ -2,10 +2,7 @@ package net.luke.crawlingchaos;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.luke.crawlingchaos.datagen.ModBlockTagProvider;
-import net.luke.crawlingchaos.datagen.ModItemTagProvider;
-import net.luke.crawlingchaos.datagen.ModLootTableProvider;
-import net.luke.crawlingchaos.datagen.ModRegistryDataGenerator;
+import net.luke.crawlingchaos.datagen.*;
 import net.luke.crawlingchaos.world.ModConfiguredFeatures;
 import net.luke.crawlingchaos.world.ModPlacedFeatures;
 import net.luke.crawlingchaos.world.biome.ModBiomes;
@@ -20,6 +17,7 @@ public class CrawlingChaosDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModRegistryDataGenerator::new);
+		pack.addProvider(ModEntityTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
 	}
 

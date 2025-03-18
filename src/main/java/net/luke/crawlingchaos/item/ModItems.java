@@ -8,13 +8,17 @@ import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.DamageResistantComponent;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.DamageTypeTags;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+
+import java.util.List;
 
 public class ModItems {
     public static final Item BUTTERFLY_WINGS = registerItem("butterfly_wings", new Item(new Item.Settings()
@@ -52,6 +56,30 @@ public class ModItems {
     public static final Item VIRUS_SPROUTS = registerItem("virus_sprouts", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_sprouts")))));
 
+    // Foods
+    public static final Item HYOUROUGAN = registerItem("hyourougan", new Item(new Item.Settings()
+            .food(ModFoodComponents.HYOUROUGAN_COMPONENT, ModFoodComponents.HYOUROUGAN_CONSUMABLE_COMPONENT)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "hyourougan")))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("effect.minecraft.health_boost")
+                    .append(Text.literal(" 00:50"))
+                    .styled(style -> style.withColor(0xA8C2A8)));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item LUMINOUS_CHICKEN_STEW = registerItem("luminous_chicken_stew", new Item(new Item.Settings().maxCount(1)
+            .food(ModFoodComponents.LUMINOUS_CHICKEN_COMPONENT, ModFoodComponents.LUMINOUS_CHICKEN_CONSUMABLE_COMPONENT).useRemainder(Items.BOWL)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "luminous_chicken_stew")))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("effect.minecraft.night_vision")
+                    .append(Text.literal(" 00:40"))
+                    .styled(style -> style.withColor(0xA8C2A8)));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
     // Smithing Templates and Upgrades Items
     public static final Item SERUPINEA_UPGRADE_SMITHING_TEMPLATE = registerItem("serupinea_upgrade_smithing_template", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_upgrade_smithing_template"))).rarity(Rarity.UNCOMMON)));
@@ -74,6 +102,11 @@ public class ModItems {
     public static final Item SERUPINEA_SWORD = registerItem("serupinea_sword",
             new SwordItem(ModToolMaterials.SERUPINEA, 3.5F, -2.4f, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_sword")))));
+
+    public static final Item TOOTH_DAGGER = registerItem("tooth_dagger",
+            new SwordItem(ToolMaterial.STONE, 3.0F, -2.0F, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "tooth_dagger")))));
+
 
     // Armor Items
     public static final Item SERUPINEA_HELMET = registerItem("serupinea_helmet",
@@ -107,10 +140,16 @@ public class ModItems {
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
 
     // SpawnEggs
-    public static final Item LONEGER_SPAWN_EGG = registerItem("loneger_spawn_egg", new SpawnEggItem(ModEntities.LONEGER, new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "loneger_spawn_egg")))));
     public static final Item ERODED_ZOMBIE_SPAWN_EGG = registerItem("eroded_zombie_spawn_egg", new SpawnEggItem(ModEntities.ERODED_ZOMBIE, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spawn_egg")))));
+    public static final Item KNIGHT_BUG_SPAWN_EGG = registerItem("knight_bug_spawn_egg", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_bug_spawn_egg")))));
+    public static final Item LONEGER_SPAWN_EGG = registerItem("loneger_spawn_egg", new SpawnEggItem(ModEntities.LONEGER, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "loneger_spawn_egg")))));
+    public static final Item PARASITE_WORM_SPAWN_EGG = registerItem("parasite_worm_spawn_egg", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm_spawn_egg")))));
+    public static final Item SERUPINEA_SPAWN_EGG = registerItem("serupinea_spawn_egg", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_spawn_egg")))));
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend_spawn_egg")))));
 

@@ -24,6 +24,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_BUG_OAK_LOG)
                 .add(ModBlocks.STRIPPED_BUG_OAK_WOOD);
 
+        getOrCreateTagBuilder(BlockTags.CLIMBABLE).add(ModBlocks.POISON_VINE);
         getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.BUG_OAK_PLANKS);
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(ModBlocks.BUG_OAK_STAIRS);
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS).add(ModBlocks.BUG_OAK_SLAB);

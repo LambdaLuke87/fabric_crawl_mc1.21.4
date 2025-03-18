@@ -75,8 +75,19 @@ public class ModBlocks {
             new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, AbstractBlock.Settings.copy(Blocks.RED_MUSHROOM)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "mycena_chlorophos")))));
     public static final Block POISON_VINE = registerBlock("poison_vine",
-            new VineBlock(AbstractBlock.Settings.copy(Blocks.VINE)
+            new PoisonVineBlock(AbstractBlock.Settings.copy(Blocks.VINE)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "poison_vine")))));
+
+    // Potted Flowers
+    public static final Block POTTED_BIOLLANTA = registerBlock("potted_biollanta",
+            new FlowerPotBlock(BIOLLANTA, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "potted_biollanta")))));
+    public static final Block POTTED_MYCENA_CHLOROPHOS = registerBlock("potted_mycena_chlorophos",
+            new FlowerPotBlock(MYCENA_CHLOROPHOS, AbstractBlock.Settings.copy(Blocks.POTTED_RED_MUSHROOM)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "potted_mycena_chlorophos")))));
+    public static final Block POTTED_TERAPIA = registerBlock("potted_terapia",
+            new FlowerPotBlock(TERAPIA, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "potted_terapia")))));
 
     protected static final Identifier BUG_OAK_SIGN_TEXTURE_ID = Identifier.of(CrawlingChaos.MOD_ID, "entity/signs/bug_oak");
     protected static final Identifier BUG_OAK_HANGING_SIGN_TEXTURE_ID = Identifier.of(CrawlingChaos.MOD_ID, "entity/signs/hanging/bug_oak");

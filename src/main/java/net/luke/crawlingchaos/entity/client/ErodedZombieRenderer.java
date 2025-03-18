@@ -46,7 +46,5 @@ public class ErodedZombieRenderer extends ZombieBaseEntityRenderer<ErodedZombieE
     public void updateRenderState(ErodedZombieEntity erodedZombieEntity, ErodedZombieRenderState erodedZombieRenderState, float f) {
         super.updateRenderState(erodedZombieEntity, erodedZombieRenderState, f);
         erodedZombieRenderState.idleAnimationState.copyFrom(erodedZombieEntity.idleAnimationState);
-        //erodedZombieRenderState.walkAnimationState.copyFrom(erodedZombieEntity.walkAnimationState);
-        erodedZombieRenderState.attackAnimationState.copyFrom(erodedZombieEntity.attackAnimationState);
     }
 }

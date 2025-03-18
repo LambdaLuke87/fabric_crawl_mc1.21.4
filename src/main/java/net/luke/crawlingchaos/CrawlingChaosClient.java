@@ -33,11 +33,14 @@ public class CrawlingChaosClient implements ClientModInitializer {
         TerraformBoatClientHelper.registerModelLayers(ModItems.BUG_OAK_BOATS_ID);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BIOLLANTA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_BIOLLANTA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TERAPIA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_TERAPIA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUG_OAK_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUG_OAK_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BUG_OAK_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MYCENA_CHLOROPHOS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_MYCENA_CHLOROPHOS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POISON_VINE, RenderLayer.getCutout());
 
         ModEntityModelLayers.registerEntityModelLayers();

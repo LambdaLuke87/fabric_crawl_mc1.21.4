@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:baked_potato",
+    "minecraft:cooked_chicken",
+    "minecraft:bowl",
+    "minecraft:carrot",
+    "crawling-chaos:mycena_chlorophos"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:luminous_chicken_stew"
+  }
+}

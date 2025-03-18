@@ -11,6 +11,4 @@ public class ErodedZombieRenderState extends ZombieEntityRenderState {
     }
 
     public final AnimationState idleAnimationState = new AnimationState();
-    //public final AnimationState walkAnimationState = new AnimationState();
-    public final AnimationState attackAnimationState = new AnimationState();
 }

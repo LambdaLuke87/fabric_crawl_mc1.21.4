@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:cod",
+    "K": "minecraft:cocoa_beans",
+    "S": "minecraft:wheat_seeds",
+    "V": "crawling-chaos:virus_seeds",
+    "A": "minecraft:apple",
+    "W": "minecraft:wheat"
+  },
+  "pattern": [
+    "KCK",
+    "SVS",
+    "WAW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:hyourougan"
+  }
+}

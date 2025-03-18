@@ -37,6 +37,10 @@ public class ModItemsGroups {
                         entries.add(ModItems.VIRUS_SEEDS);
                         entries.add(ModItems.VIRUS_SPROUTS);
 
+                        // Foods
+                        entries.add(ModItems.HYOUROUGAN);
+                        entries.add(ModItems.LUMINOUS_CHICKEN_STEW);
+
                         // Smithing Templates and Upgrades Items
                         entries.add(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE);
                         entries.add(ModItems.NIGHT_UPGRADE_SMITHING_TEMPLATE);
@@ -47,6 +51,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.SERUPINEA_PICKAXE);
                         entries.add(ModItems.SERUPINEA_SHOVEL);
                         entries.add(ModItems.SERUPINEA_SWORD);
+                        entries.add(ModItems.TOOTH_DAGGER);
 
                         // Armor Items
                         entries.add(ModItems.SERUPINEA_HELMET);
@@ -60,7 +65,10 @@ public class ModItemsGroups {
 
                         // Spawn Eggs
                         entries.add(ModItems.ERODED_ZOMBIE_SPAWN_EGG);
+                        entries.add(ModItems.KNIGHT_BUG_SPAWN_EGG);
                         entries.add(ModItems.LONEGER_SPAWN_EGG);
+                        entries.add(ModItems.PARASITE_WORM_SPAWN_EGG);
+                        entries.add(ModItems.SERUPINEA_SPAWN_EGG);
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks
