@@ -97,13 +97,13 @@
     "axolotls": [],
     "creature": [
       {
-        "type": "crawling-chaos:eroded_zombie",
+        "type": "minecraft:pig",
         "maxCount": 5,
         "minCount": 3,
         "weight": 2
       },
       {
-        "type": "minecraft:cave_spider",
+        "type": "minecraft:frog",
         "maxCount": 4,
         "minCount": 4,
         "weight": 5
@@ -195,5 +195,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.2
+  "temperature": 0.8
 }

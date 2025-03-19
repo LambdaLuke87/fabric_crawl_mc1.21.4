@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "minecraft:red_mushroom",
+    "P": "minecraft:poisonous_potato",
+    "V": "crawling-chaos:virus_seeds",
+    "F": "crawling-chaos:test_tube_water",
+    "T": "crawling-chaos:parasite_tooth"
+  },
+  "pattern": [
+    " R ",
+    "PVT",
+    " F "
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:formula_poison_vermilion"
+  }
+}

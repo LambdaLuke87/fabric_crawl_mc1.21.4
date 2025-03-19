@@ -32,6 +32,7 @@ public class CrawlingChaos implements ModInitializer {
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModEntities.registerAttributes();
+		ModEntities.addMobsToBiome();
 		ModSounds.registerSounds();
 		ModWorldGeneration.generateModWorldGen();
 		ModTreeDecorators.register();

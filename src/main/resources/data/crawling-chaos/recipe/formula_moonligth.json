@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": "crawling-chaos:virus_seeds",
+    "F": "crawling-chaos:test_tube_water",
+    "M": "crawling-chaos:mycena_chlorophos"
+  },
+  "pattern": [
+    "VMF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:formula_moonligth"
+  }
+}

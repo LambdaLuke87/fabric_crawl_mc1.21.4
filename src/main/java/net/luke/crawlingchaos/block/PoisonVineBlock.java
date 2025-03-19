@@ -11,13 +11,8 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
-
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class PoisonVineBlock extends VineBlock {
 
@@ -29,7 +24,7 @@ public class PoisonVineBlock extends VineBlock {
         if (world instanceof ServerWorld serverWorld) {
             if (world.getDifficulty() != Difficulty.PEACEFUL && entity instanceof LivingEntity livingEntity) {
                 // && entity.getType() != EntityType.BEE
-                entity.damage(serverWorld, world.getDamageSources().sweetBerryBush(), 0.5F);
+                //entity.damage(serverWorld, world.getDamageSources().sweetBerryBush(), 0.5F);
                 livingEntity.addStatusEffect(this.getPoisonEffect());
             }
         }

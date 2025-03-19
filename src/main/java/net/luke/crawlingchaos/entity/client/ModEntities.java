@@ -1,6 +1,10 @@
 package net.luke.crawlingchaos.entity.client;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags;
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.entity.custom.LonegerEntity;
 import net.luke.crawlingchaos.entity.custom.ErodedZombieEntity;
@@ -12,6 +16,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+
+import java.util.function.Predicate;
 
 public class ModEntities {
     public static final EntityType<ErodedZombieEntity> ERODED_ZOMBIE =  Registry.register(Registries.ENTITY_TYPE,
@@ -37,5 +43,15 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createErodedZombieAttributes());
         FabricDefaultAttributeRegistry.register(LONEGER, LonegerEntity.createMobAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
+    }
+
+    public static void addMobsToBiome() {
+        Predicate<BiomeSelectionContext> forest = BiomeSelectors.tag(ConventionalBiomeTags.IS_FOREST);
+        Predicate<BiomeSelectionContext> jungle = BiomeSelectors.tag(ConventionalBiomeTags.IS_JUNGLE);
+        Predicate<BiomeSelectionContext> plains = BiomeSelectors.tag(ConventionalBiomeTags.IS_PLAINS);
+
+        BiomeModifications.addSpawn(forest, SpawnGroup.MONSTER, ERODED_ZOMBIE, 10, 1, 4);
+        BiomeModifications.addSpawn(jungle, SpawnGroup.MONSTER, ERODED_ZOMBIE, 15, 1, 4);
+        BiomeModifications.addSpawn(plains, SpawnGroup.MONSTER, ERODED_ZOMBIE, 5, 1, 4);
     }
 }

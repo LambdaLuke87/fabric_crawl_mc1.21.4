@@ -29,6 +29,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.SMALL_CRYSTALS);
                         entries.add(ModItems.STORAGE_ORGAN);
                         entries.add(ModItems.STORAGE_ORGAN_POISON);
+                        entries.add(ModItems.TEST_TUBE);
                         entries.add(ModItems.VIRUS_TEMPLATE);
                         entries.add(ModItems.VIRUS_A);
                         entries.add(ModItems.VIRUS_B);
@@ -38,6 +39,10 @@ public class ModItemsGroups {
                         entries.add(ModItems.VIRUS_SPROUTS);
 
                         // Foods
+                        entries.add(ModItems.TEST_TUBE_WATER);
+                        entries.add(ModItems.FORMULA_MOONLIGTH);
+                        entries.add(ModItems.FORMULA_POISON_VERMILION);
+                        entries.add(ModItems.FORMULA_PURIFICATION);
                         entries.add(ModItems.HYOUROUGAN);
                         entries.add(ModItems.LUMINOUS_CHICKEN_STEW);
 

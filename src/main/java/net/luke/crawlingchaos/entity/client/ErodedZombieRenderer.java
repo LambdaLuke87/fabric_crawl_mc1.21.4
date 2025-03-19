@@ -1,6 +1,7 @@
 package net.luke.crawlingchaos.entity.client;
 
 import net.luke.crawlingchaos.CrawlingChaos;
+import net.luke.crawlingchaos.entity.client.feature.CustomErodedZombieGlowFeature;
 import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.luke.crawlingchaos.entity.client.state.ErodedZombieRenderState;
@@ -12,6 +13,7 @@ import net.minecraft.util.Identifier;
 
 public class ErodedZombieRenderer extends ZombieBaseEntityRenderer<ErodedZombieEntity, ErodedZombieRenderState, ErodedZombieModel<ErodedZombieRenderState>> {
     private static final Identifier TEXTURE = Identifier.of(CrawlingChaos.MOD_ID, "textures/entity/eroded_zombie/eroded_zombie.png");
+    private static final String GLOW_TEXTURE_PATH = "textures/entity/eroded_zombie/eroded_zombie_glow.png";
 
     public ErodedZombieRenderer(EntityRendererFactory.Context context) {
         this(context,
@@ -21,6 +23,8 @@ public class ErodedZombieRenderer extends ZombieBaseEntityRenderer<ErodedZombieE
                 ModEntityModelLayers.ERODED_ZOMBIE_OUTER_ARMOR,
                 ModEntityModelLayers.ERODED_ZOMBIE_BABY_INNER_ARMOR,
                 ModEntityModelLayers.ERODED_ZOMBIE_BABY_OUTER_ARMOR);
+
+        this.addFeature(new CustomErodedZombieGlowFeature<>(this, GLOW_TEXTURE_PATH));
     }
 
     public ErodedZombieRenderer(EntityRendererFactory.Context context, EntityModelLayer body, EntityModelLayer baby, EntityModelLayer innerArmor, EntityModelLayer outerArmor, EntityModelLayer babyInnerArmor, EntityModelLayer babyOuterArmor) {
