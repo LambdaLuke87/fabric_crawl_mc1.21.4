@@ -145,6 +145,9 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+    public static final Item JELLY_APPLE = registerItem("jelly_apple", new Item(new Item.Settings()
+            .food(ModFoodComponents.JELLY_APPLE_COMPONENT)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "jelly_apple")))));
     public static final Item LUMINOUS_CHICKEN_STEW = registerItem("luminous_chicken_stew", new Item(new Item.Settings().maxCount(1)
             .food(ModFoodComponents.LUMINOUS_CHICKEN_COMPONENT, ModFoodComponents.LUMINOUS_CHICKEN_CONSUMABLE_COMPONENT).useRemainder(Items.BOWL)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "luminous_chicken_stew")))){
@@ -229,6 +232,8 @@ public class ModItems {
             //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm_spawn_egg")))));
     //public static final Item SERUPINEA_SPAWN_EGG = registerItem("serupinea_spawn_egg", new Item(new Item.Settings()
             //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_spawn_egg")))));
+    public static final Item PRISM_FROG_SPAWN_EGG = registerItem("prism_frog_spawn_egg", new SpawnEggItem(ModEntities.PRISM_FROG, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "prism_frog_spawn_egg")))));
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend_spawn_egg")))));
 

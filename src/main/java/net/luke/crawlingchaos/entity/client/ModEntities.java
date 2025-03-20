@@ -6,13 +6,11 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags;
 import net.luke.crawlingchaos.CrawlingChaos;
-import net.luke.crawlingchaos.entity.custom.AcarusEntity;
-import net.luke.crawlingchaos.entity.custom.LonegerEntity;
-import net.luke.crawlingchaos.entity.custom.ErodedZombieEntity;
-import net.luke.crawlingchaos.entity.custom.SkeletonFriendEntity;
+import net.luke.crawlingchaos.entity.custom.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.mob.SpiderEntity;
+import net.minecraft.entity.passive.FrogEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -37,6 +35,11 @@ public class ModEntities {
             EntityType.Builder.create(LonegerEntity::new, SpawnGroup.MISC)
                     .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "loneger"))));
 
+    public static final EntityType<PrismFrogEntity> PRISM_FROG =  Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(CrawlingChaos.MOD_ID, "prism_frog"),
+            EntityType.Builder.create(PrismFrogEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "prism_frog"))));
+
     public static final EntityType<SkeletonFriendEntity> SKELETON_FRIEND =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"),
             EntityType.Builder.create(SkeletonFriendEntity::new, SpawnGroup.MONSTER)
@@ -50,6 +53,7 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(ACARUS, SpiderEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createErodedZombieAttributes());
         FabricDefaultAttributeRegistry.register(LONEGER, LonegerEntity.createMobAttributes());
+        FabricDefaultAttributeRegistry.register(PRISM_FROG, FrogEntity.createFrogAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
     }
 

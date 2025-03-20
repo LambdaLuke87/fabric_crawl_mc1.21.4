@@ -45,6 +45,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.ACARUS, AcarusRenderer::new);
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
         EntityRendererRegistry.register(ModEntities.LONEGER, LonegerRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PRISM_FROG, PrismFrogRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ACACURS, AcarusModel::getTexturedModelData);

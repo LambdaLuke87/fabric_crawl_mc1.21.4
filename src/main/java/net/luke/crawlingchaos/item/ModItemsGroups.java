@@ -46,6 +46,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.FORMULA_POISON_VERMILION);
                         entries.add(ModItems.FORMULA_PURIFICATION);
                         entries.add(ModItems.HYOUROUGAN);
+                        entries.add(ModItems.JELLY_APPLE);
                         entries.add(ModItems.LUMINOUS_CHICKEN_STEW);
 
                         // Smithing Templates and Upgrades Items
@@ -77,6 +78,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.LONEGER_SPAWN_EGG);
                         //entries.add(ModItems.PARASITE_WORM_SPAWN_EGG);
                         //entries.add(ModItems.SERUPINEA_SPAWN_EGG);
+                        entries.add(ModItems.PRISM_FROG_SPAWN_EGG);
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks

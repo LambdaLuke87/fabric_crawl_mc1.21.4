@@ -27,5 +27,8 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
 
         getOrCreateTagBuilder(EntityTypeTags.SKELETONS)
                 .add(ModEntities.SKELETON_FRIEND);
+
+        getOrCreateTagBuilder(EntityTypeTags.IGNORES_POISON_AND_REGEN)
+                .add(ModEntities.PRISM_FROG);
     }
 }

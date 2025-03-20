@@ -6,6 +6,7 @@
   "entity.crawling-chaos.bug_oak_chest_boat": "Bug Oak Boat with Chest",
   "entity.crawling-chaos.eroded_zombie": "Eroded Zombie",
   "entity.crawling-chaos.loneger": "Loneger",
+  "entity.crawling-chaos.prism_frog": "Prism Frog",
   "entity.crawling-chaos.skeleton_friend": "Skeleton Friend",
 
   "block.crawling-chaos.biollanta": "Biollanta",
@@ -53,6 +54,7 @@
   "item.crawling-chaos.formula_purification": "Formula of Purification",
   "item.crawling-chaos.blight_rotten_flesh": "Blight Rotten Flesh",
   "item.crawling-chaos.hyourougan": "Hyourougan",
+  "item.crawling-chaos.jelly_apple": "Jelly Apple",
   "item.crawling-chaos.luminous_chicken_stew": "Luminous Chicken Stew",
   "item.crawling-chaos.tooth_dagger": "Tooth Dagger",
   "item.crawling-chaos.serupinea_exoskeleton": "Serupinea Exoskeleton",
@@ -79,6 +81,7 @@
   "item.crawling-chaos.knight_bug_spawn_egg": "Knight Bug Spawn Egg",
   "item.crawling-chaos.loneger_spawn_egg": "Loneger Spawn Egg",
   "item.crawling-chaos.parasite_worm_spawn_egg": "Parasite Worm Spawn Egg",
+  "item.crawling-chaos.prism_frog_spawn_egg": "Prism Frog Spawn Egg",
   "item.crawling-chaos.serupinea_spawn_egg": "Serupinea Spawn Egg",
   "item.crawling-chaos.skeleton_friend_spawn_egg": "Skeleton Friend Spawn Egg"
 }

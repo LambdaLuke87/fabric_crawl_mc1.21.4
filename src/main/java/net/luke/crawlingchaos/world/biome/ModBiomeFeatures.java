@@ -11,10 +11,11 @@ public class ModBiomeFeatures extends DefaultBiomeFeatures {
     }
 
     public static void addBugForestMobs(SpawnSettings.Builder builder) {
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.RABBIT, 4, 2, 3));
         addCaveMobs(builder);
         addMonsters(builder, 69, 1, 100, false);
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ACARUS, 60, 1, 4));
+        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.PRISM_FROG, 15, 4, 4));
+
+        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ACARUS, 35, 1, 4));
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ERODED_ZOMBIE, 30, 1, 2));
     }
 }

@@ -11,6 +11,7 @@ public class ModFoodComponents {
     public static FoodComponent BLIGHT_ROTTEN_FLESH_COMPONENT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.3F).build();
     public static FoodComponent LUMINOUS_CHICKEN_COMPONENT = new FoodComponent.Builder().nutrition(8).saturationModifier(0.6F).build();
     public static FoodComponent HYOUROUGAN_COMPONENT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.3F).build();
+    public static FoodComponent JELLY_APPLE_COMPONENT = new FoodComponent.Builder().nutrition(3).saturationModifier(0.3F).build();
     public static FoodComponent FORMULA_DRINK = new FoodComponent.Builder().nutrition(0).saturationModifier(0.0f).alwaysEdible().build();
 
     public static final ConsumableComponent BLIGHT_ROTTEN_FLESH_CONSUMABLE_COMPONENT = ConsumableComponents.food()

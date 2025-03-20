@@ -47,6 +47,8 @@ public class CrawlingChaos implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_STAIRS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_SLAB, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_FENCE, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_FENCE_GATE, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BUG_OAK_LEAVES, 30, 60);
 
 		// Signs
