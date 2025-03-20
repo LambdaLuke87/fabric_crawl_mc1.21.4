@@ -11,12 +11,12 @@ import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.util.Identifier;
 
 @Environment(value= EnvType.CLIENT)
-public class CustomErodedZombieGlowFeature<M extends ErodedZombieModel<ErodedZombieRenderState>>
+public class CustomErodedZombieGlowFeatureRenderer<M extends ErodedZombieModel<ErodedZombieRenderState>>
         extends EyesFeatureRenderer<ErodedZombieRenderState, M> {
 
     private final RenderLayer eyes;
 
-    public CustomErodedZombieGlowFeature(FeatureRendererContext<ErodedZombieRenderState, M> featureRendererContext, String path) {
+    public CustomErodedZombieGlowFeatureRenderer(FeatureRendererContext<ErodedZombieRenderState, M> featureRendererContext, String path) {
         super(featureRendererContext);
         eyes = RenderLayer.getEyes(Identifier.of(CrawlingChaos.MOD_ID, path));
     }

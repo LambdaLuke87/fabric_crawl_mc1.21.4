@@ -23,6 +23,8 @@ import java.util.List;
 public class ModItems {
     public static final int tooltip_effect_color = 0xA8C2A8;
 
+    public static final Item ACARUS_CHITIN = registerItem("acarus_chitin", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "acarus_chitin")))));
     public static final Item BUTTERFLY_WINGS = registerItem("butterfly_wings", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "butterfly_wings")))));
     public static final Item CRYSTALS_OF_VIRUS = registerItem("crystals_of_virus", new Item(new Item.Settings()
@@ -61,6 +63,24 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "virus_sprouts")))));
 
     // Foods
+    public static final Item BLIGHT_ROTTEN_FLESH = registerItem("blight_rotten_flesh", new Item(new Item.Settings()
+            .food(ModFoodComponents.BLIGHT_ROTTEN_FLESH_COMPONENT, ModFoodComponents.BLIGHT_ROTTEN_FLESH_CONSUMABLE_COMPONENT)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "blight_rotten_flesh")))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("effect.minecraft.hunger")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.1"))
+                    .append(Text.literal(" 00:30"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.poison")
+                    .append(Text.literal(" 00:15"))
+                    .append(Text.literal(" "))
+                    .append(Text.literal("in 50%"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item TEST_TUBE_WATER = registerItem("test_tube_water", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_DRINK_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "test_tube_water")))));
@@ -197,16 +217,18 @@ public class ModItems {
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
 
     // SpawnEggs
+    public static final Item ACARUS_SPAWN_EGG = registerItem("acarus_spawn_egg", new SpawnEggItem(ModEntities.ACARUS, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "acarus_spawn_egg")))));
     public static final Item ERODED_ZOMBIE_SPAWN_EGG = registerItem("eroded_zombie_spawn_egg", new SpawnEggItem(ModEntities.ERODED_ZOMBIE, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spawn_egg")))));
-    public static final Item KNIGHT_BUG_SPAWN_EGG = registerItem("knight_bug_spawn_egg", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_bug_spawn_egg")))));
+    //public static final Item KNIGHT_BUG_SPAWN_EGG = registerItem("knight_bug_spawn_egg", new Item(new Item.Settings()
+            //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_bug_spawn_egg")))));
     public static final Item LONEGER_SPAWN_EGG = registerItem("loneger_spawn_egg", new SpawnEggItem(ModEntities.LONEGER, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "loneger_spawn_egg")))));
-    public static final Item PARASITE_WORM_SPAWN_EGG = registerItem("parasite_worm_spawn_egg", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm_spawn_egg")))));
-    public static final Item SERUPINEA_SPAWN_EGG = registerItem("serupinea_spawn_egg", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_spawn_egg")))));
+    //public static final Item PARASITE_WORM_SPAWN_EGG = registerItem("parasite_worm_spawn_egg", new Item(new Item.Settings()
+            //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm_spawn_egg")))));
+    //public static final Item SERUPINEA_SPAWN_EGG = registerItem("serupinea_spawn_egg", new Item(new Item.Settings()
+            //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_spawn_egg")))));
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend_spawn_egg")))));
 

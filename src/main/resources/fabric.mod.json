@@ -5,14 +5,14 @@
 	"name": "Crawling Chaos",
 	"description": "Anti Plants Virus Mod Remake!",
 	"authors": [
-		"Luke and Alexys"
+		"LambdaLuke87 and ALEXYSSSJ4"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/crawling-chaos",
+		"sources": "https://github.com/LambdaLuke87/fabric_crawl_mc1.21.4"
 	},
 	"license": "AGPL-3.0-only",
-	"icon": "assets/crawling-chaos/icon.png",
+	"icon": "mod_logo.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

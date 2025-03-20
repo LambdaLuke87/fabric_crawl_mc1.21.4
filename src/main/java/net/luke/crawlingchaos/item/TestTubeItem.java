@@ -1,5 +1,6 @@
 package net.luke.crawlingchaos.item;
 
+import net.luke.crawlingchaos.sound.ModSounds;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.FluidTags;
@@ -33,7 +34,7 @@ public class TestTubeItem extends GlassBottleItem {
                 }
 
                 if (world.getFluidState(blockPos).isIn(FluidTags.WATER)) {
-                    world.playSound(user, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+                    world.playSound(user, user.getX(), user.getY(), user.getZ(), ModSounds.FILL_TEST_TUBE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
                     world.emitGameEvent(user, GameEvent.FLUID_PICKUP, blockPos);
                     return ActionResult.SUCCESS.withNewHandStack(this.fill(itemStack, user, new ItemStack(ModItems.TEST_TUBE_WATER)));
                 }

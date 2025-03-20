@@ -28,17 +28,15 @@ public class ModBiomes {
         DefaultBiomeFeatures.addDungeons(builder);
         DefaultBiomeFeatures.addMineables(builder);
         DefaultBiomeFeatures.addSprings(builder);
-        DefaultBiomeFeatures.addFrozenTopLayer(builder);
     }
 
     public static Biome testBiome(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.PIG, 2, 3, 5));
 
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.PIG, 2, 3, 5));
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.FROG, 5, 4, 4));
 
-        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        ModBiomeFeatures.addBugForestMobs(spawnBuilder);
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),

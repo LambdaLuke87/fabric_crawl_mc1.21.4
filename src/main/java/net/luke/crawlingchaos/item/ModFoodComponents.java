@@ -8,10 +8,16 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 
 public class ModFoodComponents {
+    public static FoodComponent BLIGHT_ROTTEN_FLESH_COMPONENT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.3F).build();
     public static FoodComponent LUMINOUS_CHICKEN_COMPONENT = new FoodComponent.Builder().nutrition(8).saturationModifier(0.6F).build();
     public static FoodComponent HYOUROUGAN_COMPONENT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.3F).build();
     public static FoodComponent FORMULA_DRINK = new FoodComponent.Builder().nutrition(0).saturationModifier(0.0f).alwaysEdible().build();
 
+    public static final ConsumableComponent BLIGHT_ROTTEN_FLESH_CONSUMABLE_COMPONENT = ConsumableComponents.food()
+            // The duration is in ticks, 20 ticks = 1 second
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.HUNGER, 30 * 20, 1), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.POISON, 15 * 20, 0), 0.5F))
+            .build();
     public static ConsumableComponent FORMULA_DRINK_COMPONENT = ConsumableComponents.drink().build();
     public static ConsumableComponent FORMULA_MOONLIGTH_COMPONENT = ConsumableComponents.drink()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 25 * 20, 0), 1.0f))

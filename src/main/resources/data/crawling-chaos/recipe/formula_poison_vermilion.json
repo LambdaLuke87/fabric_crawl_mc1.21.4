@@ -3,14 +3,14 @@
   "category": "misc",
   "key": {
     "R": "minecraft:red_mushroom",
-    "P": "minecraft:poisonous_potato",
+    "B": "crawling-chaos:blight_rotten_flesh",
     "V": "crawling-chaos:virus_seeds",
     "F": "crawling-chaos:test_tube_water",
     "T": "crawling-chaos:parasite_tooth"
   },
   "pattern": [
     " R ",
-    "PVT",
+    "BVT",
     " F "
   ],
   "result": {

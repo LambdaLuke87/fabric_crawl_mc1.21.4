@@ -19,6 +19,7 @@ public class ModItemsGroups {
                     .entries((displayContext, entries) -> {
 
                         // Normal Items
+                        entries.add(ModItems.ACARUS_CHITIN);
                         entries.add(ModItems.BUTTERFLY_WINGS);
                         entries.add(ModItems.CRYSTALS_OF_VIRUS);
                         entries.add(ModItems.GROWTH_ORGAN);
@@ -38,7 +39,8 @@ public class ModItemsGroups {
                         entries.add(ModItems.VIRUS_SEEDS);
                         entries.add(ModItems.VIRUS_SPROUTS);
 
-                        // Foods
+                        // Foods and Drinks
+                        entries.add(ModItems.BLIGHT_ROTTEN_FLESH);
                         entries.add(ModItems.TEST_TUBE_WATER);
                         entries.add(ModItems.FORMULA_MOONLIGTH);
                         entries.add(ModItems.FORMULA_POISON_VERMILION);
@@ -69,11 +71,12 @@ public class ModItemsGroups {
                         entries.add(ModItems.NIGHT_BOOTS);
 
                         // Spawn Eggs
+                        entries.add(ModItems.ACARUS_SPAWN_EGG);
                         entries.add(ModItems.ERODED_ZOMBIE_SPAWN_EGG);
-                        entries.add(ModItems.KNIGHT_BUG_SPAWN_EGG);
+                        //entries.add(ModItems.KNIGHT_BUG_SPAWN_EGG);
                         entries.add(ModItems.LONEGER_SPAWN_EGG);
-                        entries.add(ModItems.PARASITE_WORM_SPAWN_EGG);
-                        entries.add(ModItems.SERUPINEA_SPAWN_EGG);
+                        //entries.add(ModItems.PARASITE_WORM_SPAWN_EGG);
+                        //entries.add(ModItems.SERUPINEA_SPAWN_EGG);
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks

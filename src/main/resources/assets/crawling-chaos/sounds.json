@@ -13,5 +13,14 @@
     "sounds": [
       "crawling-chaos:item/fill_virus_template"
     ]
+  },
+  "item.fill_test_tube": {
+    "subtitle": "subtitles.crawling-chaos.item.fill_test_tube",
+    "sounds": [
+      "crawling-chaos:item/test_tube/fill1",
+      "crawling-chaos:item/test_tube/fill2",
+      "crawling-chaos:item/test_tube/fill3",
+      "crawling-chaos:item/test_tube/fill4"
+    ]
   }
 }

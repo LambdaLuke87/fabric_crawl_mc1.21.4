@@ -6,11 +6,13 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags;
 import net.luke.crawlingchaos.CrawlingChaos;
+import net.luke.crawlingchaos.entity.custom.AcarusEntity;
 import net.luke.crawlingchaos.entity.custom.LonegerEntity;
 import net.luke.crawlingchaos.entity.custom.ErodedZombieEntity;
 import net.luke.crawlingchaos.entity.custom.SkeletonFriendEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -20,6 +22,11 @@ import net.minecraft.util.Identifier;
 import java.util.function.Predicate;
 
 public class ModEntities {
+    public static final EntityType<AcarusEntity> ACARUS =  Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(CrawlingChaos.MOD_ID, "acarus"),
+            EntityType.Builder.create(AcarusEntity::new, SpawnGroup.MONSTER)
+                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "acarus"))));
+
     public static final EntityType<ErodedZombieEntity> ERODED_ZOMBIE =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"),
             EntityType.Builder.create(ErodedZombieEntity::new, SpawnGroup.MONSTER)
@@ -40,6 +47,7 @@ public class ModEntities {
     }
 
     public static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ACARUS, SpiderEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createErodedZombieAttributes());
         FabricDefaultAttributeRegistry.register(LONEGER, LonegerEntity.createMobAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
@@ -49,9 +57,11 @@ public class ModEntities {
         Predicate<BiomeSelectionContext> forest = BiomeSelectors.tag(ConventionalBiomeTags.IS_FOREST);
         Predicate<BiomeSelectionContext> jungle = BiomeSelectors.tag(ConventionalBiomeTags.IS_JUNGLE);
         Predicate<BiomeSelectionContext> plains = BiomeSelectors.tag(ConventionalBiomeTags.IS_PLAINS);
+        Predicate<BiomeSelectionContext> swamp = BiomeSelectors.tag(ConventionalBiomeTags.IS_SWAMP);
 
-        BiomeModifications.addSpawn(forest, SpawnGroup.MONSTER, ERODED_ZOMBIE, 10, 1, 4);
-        BiomeModifications.addSpawn(jungle, SpawnGroup.MONSTER, ERODED_ZOMBIE, 15, 1, 4);
-        BiomeModifications.addSpawn(plains, SpawnGroup.MONSTER, ERODED_ZOMBIE, 5, 1, 4);
+        BiomeModifications.addSpawn(swamp, SpawnGroup.MONSTER, ERODED_ZOMBIE, 18, 1, 2);
+        BiomeModifications.addSpawn(forest, SpawnGroup.MONSTER, ERODED_ZOMBIE, 15, 1, 2);
+        BiomeModifications.addSpawn(jungle, SpawnGroup.MONSTER, ERODED_ZOMBIE, 10, 1, 2);
+        BiomeModifications.addSpawn(plains, SpawnGroup.MONSTER, ERODED_ZOMBIE, 5, 1, 2);
     }
 }

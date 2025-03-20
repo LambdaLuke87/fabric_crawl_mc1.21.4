@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 public class ModSounds {
     public static final SoundEvent HEAL_SKELETON_FRIEND = registerSoundEvent("entity.skeleton_friend.heal");
     public static final SoundEvent FILL_VIRUS_TEMPLATE = registerSoundEvent("item.fill_virus_template");
+    public static final SoundEvent FILL_TEST_TUBE = registerSoundEvent("item.fill_test_tube");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(CrawlingChaos.MOD_ID, name);

@@ -1,7 +1,7 @@
 package net.luke.crawlingchaos.entity.client;
 
 import net.luke.crawlingchaos.CrawlingChaos;
-import net.luke.crawlingchaos.entity.client.feature.CustomErodedZombieGlowFeature;
+import net.luke.crawlingchaos.entity.client.feature.CustomErodedZombieGlowFeatureRenderer;
 import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.luke.crawlingchaos.entity.client.state.ErodedZombieRenderState;
@@ -24,7 +24,7 @@ public class ErodedZombieRenderer extends ZombieBaseEntityRenderer<ErodedZombieE
                 ModEntityModelLayers.ERODED_ZOMBIE_BABY_INNER_ARMOR,
                 ModEntityModelLayers.ERODED_ZOMBIE_BABY_OUTER_ARMOR);
 
-        this.addFeature(new CustomErodedZombieGlowFeature<>(this, GLOW_TEXTURE_PATH));
+        this.addFeature(new CustomErodedZombieGlowFeatureRenderer<>(this, GLOW_TEXTURE_PATH));
     }
 
     public ErodedZombieRenderer(EntityRendererFactory.Context context, EntityModelLayer body, EntityModelLayer baby, EntityModelLayer innerArmor, EntityModelLayer outerArmor, EntityModelLayer babyInnerArmor, EntityModelLayer babyOuterArmor) {

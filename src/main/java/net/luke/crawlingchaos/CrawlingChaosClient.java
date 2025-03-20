@@ -6,10 +6,8 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.luke.crawlingchaos.block.ModBlocks;
-import net.luke.crawlingchaos.entity.client.LonegerRenderer;
-import net.luke.crawlingchaos.entity.client.ModEntities;
-import net.luke.crawlingchaos.entity.client.ErodedZombieRenderer;
-import net.luke.crawlingchaos.entity.client.SkeletonFriendRenderer;
+import net.luke.crawlingchaos.entity.client.*;
+import net.luke.crawlingchaos.entity.client.model.AcarusModel;
 import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.luke.crawlingchaos.item.ModItems;
@@ -44,10 +42,12 @@ public class CrawlingChaosClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POISON_VINE, RenderLayer.getCutout());
 
         ModEntityModelLayers.registerEntityModelLayers();
+        EntityRendererRegistry.register(ModEntities.ACARUS, AcarusRenderer::new);
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
         EntityRendererRegistry.register(ModEntities.LONEGER, LonegerRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
 
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ACACURS, AcarusModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE, ErodedZombieModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_OUTER_ARMOR, () -> armorModelData);
@@ -58,7 +58,8 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);
 
-        RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "aloneger"));
+        RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "acarus"));
         RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"));
+        //RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "loneger"));
     }
 }
