@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "crawling-chaos:item/night_upgrade_smithing_template"
-  }
-}

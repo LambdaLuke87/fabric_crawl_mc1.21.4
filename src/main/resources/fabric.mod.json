@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "crawling-chaos",
-	"version": "${version}",
+	"version": "alpha-0.3",
 	"name": "Crawling Chaos",
 	"description": "Anti Plants Virus Mod Remake!",
 	"authors": [

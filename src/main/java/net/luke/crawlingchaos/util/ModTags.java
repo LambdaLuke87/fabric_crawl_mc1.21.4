@@ -18,9 +18,9 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> SERUPINEA_TOOL_MATERIALS = CreateTag("serupinea_tool_materials");
-        public static final TagKey<Item> NIGHT_TOOL_MATERIALS = CreateTag("night_tool_materials");
+        public static final TagKey<Item> KNIGHT_TOOL_MATERIALS = CreateTag("knight_tool_materials");
         public static final TagKey<Item> REPAIRS_SERUPINEA_ARMOR = CreateTag("repairs_serupinea_armor");
-        public static final TagKey<Item> REPAIRS_NIGHT_ARMOR = CreateTag("repairs_night_armor");
+        public static final TagKey<Item> REPAIRS_KNIGHT_ARMOR = CreateTag("repairs_knight_armor");
 
         private static TagKey<Item> CreateTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, name));

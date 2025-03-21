@@ -28,19 +28,20 @@ public class LonegerTradeOffers extends TradeOffers {
 
     static {
         LONEGER_TRADES = copyToFastUtilMap(ImmutableMap.of(1, new Factory[]{
-                // TEST: temporal new trades, not the final versions
-                        new SellItemCustom(ModItems.GROWTH_ORGAN, 10, 1, 5, 1),
-                        new SellItemCustom(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE, 22, 1, 5, 1),
-                        new BuyCustom(Items.ROTTEN_FLESH, 14, 5, 5, 1),
-                        new BuyCustom(Items.BONE, 8, 5, 5, 1),
-                        new SellItemCustom(ModItems.STORAGE_ORGAN, 2, 4, 5, 1),
-                        new SellItemCustom(ModItems.STORAGE_ORGAN_POISON, 2, 4, 5, 1),
-                        new BuyCustom(ModItems.SERUPINEA_EXOSKELETON, 1, 5, 5, 2)},
+                        new SellItemCustom(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE, 12, 1, 5, 1),
+                        new BuyCustom(ModItems.BLIGHT_ROTTEN_FLESH, 16, 5, 5, 2),
+                        new SellItemCustom(ModItems.JELLY_APPLE, 2, 6, 5, 1),
+                        new SellItemCustom(ModItems.FORMULA_MOONLIGTH, 1, 1, 5, 1),
+                        new SellItemCustom(ModItems.FORMULA_PURIFICATION, 1, 1, 5, 1),
+                        new SellItemCustom(ModItems.FORMULA_POISON_VERMILION, 1, 1, 5, 1),
+                        new SellItemCustom(ModItems.GROWTH_ORGAN, 1, 4, 5, 1),
+                        new SellItemCustom(ModItems.STORAGE_ORGAN, 2, 5, 5, 1),
+                        new SellItemCustom(ModItems.STORAGE_ORGAN_POISON, 2, 4, 5, 1)},
                 2, new Factory[]{
-                        new BuyCustom(Items.PHANTOM_MEMBRANE, 5, 4, 5, 1),
-                        new BuyCustom(ModItems.PARASITE_TOOTH, 5, 4, 5, 1),
-                        new BuyCustom(ModItems.NIGHT_EXOSKELETON, 5, 4, 5, 1),
-                        new BuyCustom(ModItems.SMALL_CRYSTALS, 5, 4, 5, 1)}));
+                        new BuyCustom(ModItems.ACARUS_CHITIN, 8, 5, 5, 1),
+                        new BuyCustom(ModItems.PARASITE_TOOTH, 6, 5, 5, 1),
+                        new BuyCustom(ModItems.SERUPINEA_EXOSKELETON, 12, 5, 5, 2),
+                        new BuyCustom(ModItems.KNIGHT_EXOSKELETON, 5, 5, 5, 4)}));
     }
 
     public static class BuyCustom implements Factory {

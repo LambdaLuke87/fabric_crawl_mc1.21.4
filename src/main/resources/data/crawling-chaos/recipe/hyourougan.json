@@ -6,13 +6,13 @@
     "K": "minecraft:cocoa_beans",
     "S": "minecraft:wheat_seeds",
     "V": "crawling-chaos:virus_seeds",
-    "A": "minecraft:apple",
+    "J": "crawling-chaos:jelly_apple",
     "W": "minecraft:wheat"
   },
   "pattern": [
     "KCK",
     "SVS",
-    "WAW"
+    "WJW"
   ],
   "result": {
     "count": 1,

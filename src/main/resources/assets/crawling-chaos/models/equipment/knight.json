@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "crawling-chaos:knight"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "crawling-chaos:knight"
+      }
+    ]
+  }
+}

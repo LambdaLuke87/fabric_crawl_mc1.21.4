@@ -22,12 +22,12 @@ public class ModItemsGroups {
                         entries.add(ModItems.ACARUS_CHITIN);
                         entries.add(ModItems.BUTTERFLY_WINGS);
                         entries.add(ModItems.CRYSTALS_OF_VIRUS);
+                        entries.add(ModItems.CRYSTALS_OF_VIRUS_SHARD);
                         entries.add(ModItems.GROWTH_ORGAN);
                         entries.add(ModItems.INSECT_WINGS);
-                        entries.add(ModItems.NIGHT_EXOSKELETON);
+                        entries.add(ModItems.KNIGHT_EXOSKELETON);
                         entries.add(ModItems.PARASITE_TOOTH);
                         entries.add(ModItems.SERUPINEA_EXOSKELETON);
-                        entries.add(ModItems.SMALL_CRYSTALS);
                         entries.add(ModItems.STORAGE_ORGAN);
                         entries.add(ModItems.STORAGE_ORGAN_POISON);
                         entries.add(ModItems.TEST_TUBE);
@@ -51,7 +51,7 @@ public class ModItemsGroups {
 
                         // Smithing Templates and Upgrades Items
                         entries.add(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE);
-                        entries.add(ModItems.NIGHT_UPGRADE_SMITHING_TEMPLATE);
+                        entries.add(ModItems.KNIGHT_UPGRADE_SMITHING_TEMPLATE);
 
                         // Tools Items
                         entries.add(ModItems.SERUPINEA_AXE);
@@ -66,10 +66,10 @@ public class ModItemsGroups {
                         entries.add(ModItems.SERUPINEA_CHESTPLATE);
                         entries.add(ModItems.SERUPINEA_LEGGINGS);
                         entries.add(ModItems.SERUPINEA_BOOTS);
-                        entries.add(ModItems.NIGHT_HELMET);
-                        entries.add(ModItems.NIGHT_CHESTPLATE);
-                        entries.add(ModItems.NIGHT_LEGGINGS);
-                        entries.add(ModItems.NIGHT_BOOTS);
+                        entries.add(ModItems.KNIGHT_HELMET);
+                        entries.add(ModItems.KNIGHT_CHESTPLATE);
+                        entries.add(ModItems.KNIGHT_LEGGINGS);
+                        entries.add(ModItems.KNIGHT_BOOTS);
 
                         // Spawn Eggs
                         entries.add(ModItems.ACARUS_SPAWN_EGG);

@@ -29,18 +29,18 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "butterfly_wings")))));
     public static final Item CRYSTALS_OF_VIRUS = registerItem("crystals_of_virus", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "crystals_of_virus")))));
+    public static final Item CRYSTALS_OF_VIRUS_SHARD = registerItem("crystals_of_virus_shard", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "crystals_of_virus_shard")))));
     public static final Item GROWTH_ORGAN = registerItem("growth_organ", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "growth_organ")))));
     public static final Item INSECT_WINGS = registerItem("insect_wings", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "insect_wings")))));
-    public static final Item NIGHT_EXOSKELETON = registerItem("night_exoskeleton", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "night_exoskeleton")))));
+    public static final Item KNIGHT_EXOSKELETON = registerItem("knight_exoskeleton", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_exoskeleton")))));
     public static final Item PARASITE_TOOTH = registerItem("parasite_tooth", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_tooth")))));
     public static final Item SERUPINEA_EXOSKELETON = registerItem("serupinea_exoskeleton", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_exoskeleton")))));
-    public static final Item SMALL_CRYSTALS = registerItem("small_crystals", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "small_crystals")))));
     public static final Item STORAGE_ORGAN = registerItem("storage_organ", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "storage_organ")))));
     public static final Item STORAGE_ORGAN_POISON = registerItem("storage_organ_poison", new Item(new Item.Settings()
@@ -163,8 +163,8 @@ public class ModItems {
     // Smithing Templates and Upgrades Items
     public static final Item SERUPINEA_UPGRADE_SMITHING_TEMPLATE = registerItem("serupinea_upgrade_smithing_template", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_upgrade_smithing_template"))).rarity(Rarity.UNCOMMON)));
-    public static final Item NIGHT_UPGRADE_SMITHING_TEMPLATE = registerItem("night_upgrade_smithing_template", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "night_upgrade_smithing_template"))).rarity(Rarity.UNCOMMON)));
+    public static final Item KNIGHT_UPGRADE_SMITHING_TEMPLATE = registerItem("knight_upgrade_smithing_template", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_upgrade_smithing_template"))).rarity(Rarity.UNCOMMON)));
 
     // Tools Items
     public static final Item SERUPINEA_AXE = registerItem("serupinea_axe",
@@ -202,21 +202,21 @@ public class ModItems {
             new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.BOOTS, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_boots")))));
 
-    public static final Item NIGHT_HELMET = registerItem("night_helmet",
-            new ArmorItem(NightArmorMaterial.INSTANCE, EquipmentType.HELMET, new Item.Settings()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "night_helmet")))
+    public static final Item KNIGHT_HELMET = registerItem("knight_helmet",
+            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.HELMET, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_helmet")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
-    public static final Item NIGHT_CHESTPLATE = registerItem("night_chestplate",
-            new ArmorItem(NightArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, new Item.Settings()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "night_chestplate")))
+    public static final Item KNIGHT_CHESTPLATE = registerItem("knight_chestplate",
+            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_chestplate")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
-    public static final Item NIGHT_LEGGINGS = registerItem("night_leggings",
-            new ArmorItem(NightArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, new Item.Settings()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "night_leggings")))
+    public static final Item KNIGHT_LEGGINGS = registerItem("knight_leggings",
+            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_leggings")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
-    public static final Item NIGHT_BOOTS = registerItem("night_boots",
-            new ArmorItem(NightArmorMaterial.INSTANCE, EquipmentType.BOOTS, new Item.Settings()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "night_boots")))
+    public static final Item KNIGHT_BOOTS = registerItem("knight_boots",
+            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.BOOTS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_boots")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
 
     // SpawnEggs
