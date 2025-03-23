@@ -10,7 +10,6 @@ import net.luke.crawlingchaos.entity.custom.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.mob.SpiderEntity;
-import net.minecraft.entity.passive.BatEntity;
 import net.minecraft.entity.passive.FrogEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -24,7 +23,7 @@ public class ModEntities {
     public static final EntityType<AcarusEntity> ACARUS =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "acarus"),
             EntityType.Builder.create(AcarusEntity::new, SpawnGroup.MONSTER)
-                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "acarus"))));
+                    .dimensions(1.4F, 0.9F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "acarus"))));
 
     public static final EntityType<ErodedZombieEntity> ERODED_ZOMBIE =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"),
@@ -34,7 +33,7 @@ public class ModEntities {
     public static final EntityType<HelenaEntity> HELENA =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "helena"),
             EntityType.Builder.create(HelenaEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "helena"))));
+                    .dimensions(0.4F, 0.4F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "helena"))));
 
     public static final EntityType<LonegerEntity> LONEGER = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "loneger"),
@@ -44,7 +43,7 @@ public class ModEntities {
     public static final EntityType<PrismFrogEntity> PRISM_FROG =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "prism_frog"),
             EntityType.Builder.create(PrismFrogEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "prism_frog"))));
+                    .dimensions(1.0F, 1.0F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "prism_frog"))));
 
     public static final EntityType<SkeletonFriendEntity> SKELETON_FRIEND =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"),
@@ -58,7 +57,7 @@ public class ModEntities {
     public static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(ACARUS, SpiderEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createErodedZombieAttributes());
-        FabricDefaultAttributeRegistry.register(HELENA, BatEntity.createBatAttributes());
+        FabricDefaultAttributeRegistry.register(HELENA, HelenaEntity.createHelenaAttributes());
         FabricDefaultAttributeRegistry.register(LONEGER, LonegerEntity.createMobAttributes());
         FabricDefaultAttributeRegistry.register(PRISM_FROG, FrogEntity.createFrogAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
