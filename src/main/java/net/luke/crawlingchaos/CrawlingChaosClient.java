@@ -9,6 +9,7 @@ import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.client.*;
 import net.luke.crawlingchaos.entity.client.model.AcarusModel;
 import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
+import net.luke.crawlingchaos.entity.client.model.HelenaModel;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.luke.crawlingchaos.item.ModItems;
 import net.minecraft.client.model.Dilation;
@@ -44,6 +45,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         ModEntityModelLayers.registerEntityModelLayers();
         EntityRendererRegistry.register(ModEntities.ACARUS, AcarusRenderer::new);
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
+        EntityRendererRegistry.register(ModEntities.HELENA, HelenaRenderer::new);
         EntityRendererRegistry.register(ModEntities.LONEGER, LonegerRenderer::new);
         EntityRendererRegistry.register(ModEntities.PRISM_FROG, PrismFrogRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
@@ -55,6 +57,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY, () -> TexturedModelData.of(ErodedZombieModel.getModelData(Dilation.NONE, 0f), 64, 64).transform(ErodedZombieModel.ERODED_ZOMBIE_BABY_TRANSFORMER));
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_OUTER_ARMOR, () -> armorModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.HELENA, HelenaModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND, SkeletonEntityModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);

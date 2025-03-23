@@ -74,6 +74,7 @@ public class ModItemsGroups {
                         // Spawn Eggs
                         entries.add(ModItems.ACARUS_SPAWN_EGG);
                         entries.add(ModItems.ERODED_ZOMBIE_SPAWN_EGG);
+                        entries.add(ModItems.HELENA_SPAWN_EGG);
                         //entries.add(ModItems.KNIGHT_BUG_SPAWN_EGG);
                         entries.add(ModItems.LONEGER_SPAWN_EGG);
                         //entries.add(ModItems.PARASITE_WORM_SPAWN_EGG);

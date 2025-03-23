@@ -10,6 +10,7 @@ import net.luke.crawlingchaos.entity.custom.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.mob.SpiderEntity;
+import net.minecraft.entity.passive.BatEntity;
 import net.minecraft.entity.passive.FrogEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -29,6 +30,11 @@ public class ModEntities {
             Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"),
             EntityType.Builder.create(ErodedZombieEntity::new, SpawnGroup.MONSTER)
                     .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"))));
+
+    public static final EntityType<HelenaEntity> HELENA =  Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(CrawlingChaos.MOD_ID, "helena"),
+            EntityType.Builder.create(HelenaEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "helena"))));
 
     public static final EntityType<LonegerEntity> LONEGER = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "loneger"),
@@ -52,6 +58,7 @@ public class ModEntities {
     public static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(ACARUS, SpiderEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createErodedZombieAttributes());
+        FabricDefaultAttributeRegistry.register(HELENA, BatEntity.createBatAttributes());
         FabricDefaultAttributeRegistry.register(LONEGER, LonegerEntity.createMobAttributes());
         FabricDefaultAttributeRegistry.register(PRISM_FROG, FrogEntity.createFrogAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
