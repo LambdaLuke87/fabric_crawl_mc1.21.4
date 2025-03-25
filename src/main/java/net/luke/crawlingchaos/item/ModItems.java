@@ -84,9 +84,9 @@ public class ModItems {
     public static final Item TEST_TUBE_WATER = registerItem("test_tube_water", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_DRINK_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "test_tube_water")))));
-    public static final Item FORMULA_MOONLIGTH = registerItem("formula_moonligth", new Item(new Item.Settings().maxCount(16)
-            .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_MOONLIGTH_COMPONENT).useRemainder(TEST_TUBE)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_moonligth")))){
+    public static final Item FORMULA_MOONLIGHT = registerItem("formula_moonlight", new Item(new Item.Settings().maxCount(16)
+            .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_MOONLIGHT_COMPONENT).useRemainder(TEST_TUBE)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_moonlight")))){
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("effect.minecraft.night_vision")

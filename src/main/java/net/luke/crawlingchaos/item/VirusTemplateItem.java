@@ -20,12 +20,12 @@ import java.util.Map;
 public class VirusTemplateItem extends Item {
     private static final Map<Block, Block> VIRUS_MAP_SAPLINGS =
             Map.of(
-                    Blocks.OAK_SAPLING, Blocks.AIR,
-                    Blocks.DARK_OAK_SAPLING, Blocks.AIR,
-                    Blocks.PALE_OAK_SAPLING, Blocks.AIR,
-                    ModBlocks.BUG_OAK_SAPLING, Blocks.AIR,
-                    Blocks.BIRCH_SAPLING, Blocks.AIR,
-                    Blocks.SPRUCE_SAPLING, Blocks.AIR
+                    Blocks.OAK_SAPLING, Blocks.DEAD_BUSH,
+                    Blocks.DARK_OAK_SAPLING, Blocks.DEAD_BUSH,
+                    Blocks.PALE_OAK_SAPLING, Blocks.DEAD_BUSH,
+                    ModBlocks.BUG_OAK_SAPLING, Blocks.DEAD_BUSH,
+                    Blocks.BIRCH_SAPLING, Blocks.DEAD_BUSH,
+                    Blocks.SPRUCE_SAPLING, Blocks.DEAD_BUSH
             );
     private static final Map<Block, Block> VIRUS_MAP_OTHERS =
             Map.of(

@@ -78,6 +78,19 @@ public class ModBlocks {
             new PoisonVineBlock(AbstractBlock.Settings.copy(Blocks.VINE)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "poison_vine")))));
 
+    public static final Block PATTERN_GLASS_FIELD_FLOWER = registerBlock("pattern_glass_field_flower",
+            new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_relaxing_melody")))));
+    public static final Block PATTERN_GLASS_RELAXING_MELODY = registerBlock("pattern_glass_relaxing_melody",
+            new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_field_flower")))));
+    public static final Block PATTERN_GLASS_SUNSHINE = registerBlock("pattern_glass_sunshine",
+            new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_sunshine")))));
+    public static final Block PATTERN_GLASS_DARK_GOTHIC_SHADES = registerBlock("pattern_glass_dark_gothic_shades",
+            new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_dark_gothic_shades")))));
+
     // Potted Flowers
     public static final Block POTTED_BIOLLANTA = registerBlock("potted_biollanta",
             new FlowerPotBlock(BIOLLANTA, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY)

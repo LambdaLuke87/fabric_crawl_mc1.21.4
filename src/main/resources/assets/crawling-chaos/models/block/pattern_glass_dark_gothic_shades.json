@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "crawling-chaos:block/pattern_glass_dark_gothic_shades"
+  }
+}

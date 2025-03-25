@@ -41,6 +41,10 @@ public class CrawlingChaosClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MYCENA_CHLOROPHOS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_MYCENA_CHLOROPHOS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POISON_VINE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_FIELD_FLOWER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_RELAXING_MELODY, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_SUNSHINE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_DARK_GOTHIC_SHADES, RenderLayer.getTranslucent());
 
         ModEntityModelLayers.registerEntityModelLayers();
         EntityRendererRegistry.register(ModEntities.ACARUS, AcarusRenderer::new);
@@ -51,10 +55,10 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ACACURS, AcarusModel::getTexturedModelData);
-        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE, ErodedZombieModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE, () -> TexturedModelData.of(ErodedZombieModel.getTexturedModelData(), 64, 64));
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_OUTER_ARMOR, () -> armorModelData);
-        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY, () -> TexturedModelData.of(ErodedZombieModel.getModelData(Dilation.NONE, 0f), 64, 64).transform(ErodedZombieModel.ERODED_ZOMBIE_BABY_TRANSFORMER));
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY, () -> TexturedModelData.of(ErodedZombieModel.getTexturedModelData(), 64, 64).transform(ErodedZombieModel.ERODED_ZOMBIE_BABY_TRANSFORMER));
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_OUTER_ARMOR, () -> armorModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.HELENA, HelenaModel::getTexturedModelData);

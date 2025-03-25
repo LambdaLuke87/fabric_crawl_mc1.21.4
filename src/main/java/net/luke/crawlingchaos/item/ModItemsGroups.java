@@ -42,7 +42,7 @@ public class ModItemsGroups {
                         // Foods and Drinks
                         entries.add(ModItems.BLIGHT_ROTTEN_FLESH);
                         entries.add(ModItems.TEST_TUBE_WATER);
-                        entries.add(ModItems.FORMULA_MOONLIGTH);
+                        entries.add(ModItems.FORMULA_MOONLIGHT);
                         entries.add(ModItems.FORMULA_POISON_VERMILION);
                         entries.add(ModItems.FORMULA_PURIFICATION);
                         entries.add(ModItems.HYOUROUGAN);
@@ -106,7 +106,10 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.BIOLLANTA);
                         entries.add(ModBlocks.TERAPIA);
                         entries.add(ModBlocks.POISON_VINE);
-
+                        entries.add(ModBlocks.PATTERN_GLASS_FIELD_FLOWER);
+                        entries.add(ModBlocks.PATTERN_GLASS_RELAXING_MELODY);
+                        entries.add(ModBlocks.PATTERN_GLASS_SUNSHINE);
+                        entries.add(ModBlocks.PATTERN_GLASS_DARK_GOTHIC_SHADES);
                     }).build());
 
     public static void registerItemsGroups() {

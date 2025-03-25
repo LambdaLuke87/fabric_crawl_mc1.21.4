@@ -32,7 +32,7 @@ public class ErodedZombieModel<S extends ErodedZombieRenderState> extends Zombie
         this.rightLeg = modelPart.getChild("left_leg");
     }
 
-    public static TexturedModelData getTexturedModelData() {
+    public static ModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
         ModelPartData modelPartData2 = modelPartData.addChild("head", ModelPartBuilder.create().uv(0, 0).cuboid(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new Dilation(0.0F)).mirrored(false), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
@@ -51,7 +51,7 @@ public class ErodedZombieModel<S extends ErodedZombieRenderState> extends Zombie
         ModelPartData bone3 = rightLeg.addChild("bone3", ModelPartBuilder.create().uv(16, 59).cuboid(-2.0F, -1.5F, -2.5F, 2.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-4.1F, 7.5F, 2.0F, 0.0F, 0.0F, -0.3491F));
         ModelPartData bone4 = rightLeg.addChild("bone4", ModelPartBuilder.create().uv(1, 52).mirrored().cuboid(0.2F, -0.4F, -3.0F, 2.0F, 3.0F, 2.0F, new Dilation(-0.1F)).mirrored(false), ModelTransform.of(-4.1F, 7.5F, 2.0F, 0.0F, 0.0F, -1.7453F));
 
-        return TexturedModelData.of(modelData, 64, 64);
+        return modelData;
     }
 
     @Override

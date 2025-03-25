@@ -31,7 +31,7 @@ public class LonegerTradeOffers extends TradeOffers {
                         new SellItemCustom(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE, 12, 1, 5, 1),
                         new BuyCustom(ModItems.BLIGHT_ROTTEN_FLESH, 16, 5, 5, 2),
                         new SellItemCustom(ModItems.JELLY_APPLE, 2, 6, 5, 1),
-                        new SellItemCustom(ModItems.FORMULA_MOONLIGTH, 1, 1, 5, 1),
+                        new SellItemCustom(ModItems.FORMULA_MOONLIGHT, 1, 1, 5, 1),
                         new SellItemCustom(ModItems.FORMULA_PURIFICATION, 1, 1, 5, 1),
                         new SellItemCustom(ModItems.FORMULA_POISON_VERMILION, 1, 1, 5, 1),
                         new SellItemCustom(ModItems.GROWTH_ORGAN, 1, 4, 5, 1),

@@ -20,7 +20,7 @@ public class ModFoodComponents {
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.POISON, 15 * 20, 0), 0.5F))
             .build();
     public static ConsumableComponent FORMULA_DRINK_COMPONENT = ConsumableComponents.drink().build();
-    public static ConsumableComponent FORMULA_MOONLIGTH_COMPONENT = ConsumableComponents.drink()
+    public static ConsumableComponent FORMULA_MOONLIGHT_COMPONENT = ConsumableComponents.drink()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 25 * 20, 0), 1.0f))
             .build();
     public static ConsumableComponent FORMULA_POISON_VERMILION_COMPONENT = ConsumableComponents.drink()
