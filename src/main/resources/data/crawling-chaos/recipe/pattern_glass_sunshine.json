@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stained_glass",
+  "key": {
+    "G": "minecraft:glass",
+    "R": "minecraft:red_dye",
+    "M": "minecraft:magenta_dye",
+    "O": "minecraft:orange_dye",
+    "Y": "minecraft:yellow_dye",
+    "B": "minecraft:light_blue_dye"
+  },
+  "pattern": [
+    "MO ",
+    "YB ",
+    "RG "
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:pattern_glass_sunshine"
+  }
+}

@@ -32,5 +32,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:entities/skeleton"
+  "random_sequence": "crawling-chaos:entities/skeleton_friend"
 }

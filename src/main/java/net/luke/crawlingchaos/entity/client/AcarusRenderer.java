@@ -23,10 +23,6 @@ public class AcarusRenderer <T extends AcarusEntity> extends MobEntityRenderer<T
         this.addFeature(new CustomAcarusGlowFeatureRenderer<>(this));
     }
 
-    protected float method_3919() {
-        return 180.0F;
-    }
-
     public void updateRenderState(T spiderEntity, LivingEntityRenderState livingEntityRenderState, float f) {
         super.updateRenderState(spiderEntity, livingEntityRenderState, f);
     }

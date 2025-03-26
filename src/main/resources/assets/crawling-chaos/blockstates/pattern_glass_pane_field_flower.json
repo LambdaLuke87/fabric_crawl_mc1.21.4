@@ -1,0 +1,77 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_side_alt"
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_side_alt",
+        "y": 90
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_noside"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_noside_alt"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_noside_alt",
+        "y": 90
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "crawling-chaos:block/pattern_glass_pane_field_flower_noside",
+        "y": 270
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

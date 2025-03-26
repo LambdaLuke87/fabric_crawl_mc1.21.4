@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "crawling-chaos:pattern_glass_dark_gothic_shades"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 16,
+    "id": "crawling-chaos:pattern_glass_pane_dark_gothic_shades"
+  }
+}

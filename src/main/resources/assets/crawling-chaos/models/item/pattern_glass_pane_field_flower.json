@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crawling-chaos:block/pattern_glass_field_flower"
+  }
+}

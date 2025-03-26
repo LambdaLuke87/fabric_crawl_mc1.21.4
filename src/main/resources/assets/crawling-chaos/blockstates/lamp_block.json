@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "activated=false": {
+      "model": "crawling-chaos:block/lamp_block_off"
+    },
+    "activated=true": {
+      "model": "crawling-chaos:block/lamp_block"
+    }
+  }
+}

@@ -226,14 +226,14 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spawn_egg")))));
     public static final Item HELENA_SPAWN_EGG = registerItem("helena_spawn_egg", new SpawnEggItem(ModEntities.HELENA, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "helena_spawn_egg")))));
-    //public static final Item KNIGHT_BUG_SPAWN_EGG = registerItem("knight_bug_spawn_egg", new Item(new Item.Settings()
-            //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_bug_spawn_egg")))));
+    public static final Item KNIGHT_BUG_SPAWN_EGG = registerItem("knight_bug_spawn_egg", new SpawnEggItem(ModEntities.KNIGHT_BUG, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_bug_spawn_egg")))));
     public static final Item LONEGER_SPAWN_EGG = registerItem("loneger_spawn_egg", new SpawnEggItem(ModEntities.LONEGER, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "loneger_spawn_egg")))));
-    //public static final Item PARASITE_WORM_SPAWN_EGG = registerItem("parasite_worm_spawn_egg", new Item(new Item.Settings()
-            //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm_spawn_egg")))));
-    //public static final Item SERUPINEA_SPAWN_EGG = registerItem("serupinea_spawn_egg", new Item(new Item.Settings()
-            //.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_spawn_egg")))));
+    public static final Item PARASITE_WORM_SPAWN_EGG = registerItem("parasite_worm_spawn_egg", new SpawnEggItem(ModEntities.PARASITE_WORM, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm_spawn_egg")))));
+    public static final Item SERUPINEA_SPAWN_EGG = registerItem("serupinea_spawn_egg", new SpawnEggItem(ModEntities.SERUPINEA, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_spawn_egg")))));
     public static final Item PRISM_FROG_SPAWN_EGG = registerItem("prism_frog_spawn_egg", new SpawnEggItem(ModEntities.PRISM_FROG, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "prism_frog_spawn_egg")))));
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()

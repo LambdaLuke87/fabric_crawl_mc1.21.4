@@ -80,16 +80,34 @@ public class ModBlocks {
 
     public static final Block PATTERN_GLASS_FIELD_FLOWER = registerBlock("pattern_glass_field_flower",
             new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
-                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_relaxing_melody")))));
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_field_flower")))));
     public static final Block PATTERN_GLASS_RELAXING_MELODY = registerBlock("pattern_glass_relaxing_melody",
             new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
-                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_field_flower")))));
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_relaxing_melody")))));
     public static final Block PATTERN_GLASS_SUNSHINE = registerBlock("pattern_glass_sunshine",
             new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_sunshine")))));
     public static final Block PATTERN_GLASS_DARK_GOTHIC_SHADES = registerBlock("pattern_glass_dark_gothic_shades",
             new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GLASS)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_dark_gothic_shades")))));
+    public static final Block PATTERN_GLASS_PANE_FIELD_FLOWER = registerBlock("pattern_glass_pane_field_flower",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.GLASS_PANE)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_pane_field_flower")))));
+    public static final Block PATTERN_GLASS_PANE_RELAXING_MELODY = registerBlock("pattern_glass_pane_relaxing_melody",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.GLASS_PANE)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_pane_relaxing_melody")))));
+    public static final Block PATTERN_GLASS_PANE_SUNSHINE = registerBlock("pattern_glass_pane_sunshine",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.GLASS_PANE)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_pane_sunshine")))));
+    public static final Block PATTERN_GLASS_PANE_DARK_GOTHIC_SHADES = registerBlock("pattern_glass_pane_dark_gothic_shades",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.GLASS_PANE)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_pane_dark_gothic_shades")))));
+
+    public static final Block LAMP_BLOCK = registerBlock("lamp_block",
+            new LampBlock(AbstractBlock.Settings.create().strength(3.5F)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "lamp_block")))
+                    .requiresTool().sounds(BlockSoundGroup.LANTERN)
+                    .luminance(LampBlock::getLuminance)));
 
     // Potted Flowers
     public static final Block POTTED_BIOLLANTA = registerBlock("potted_biollanta",

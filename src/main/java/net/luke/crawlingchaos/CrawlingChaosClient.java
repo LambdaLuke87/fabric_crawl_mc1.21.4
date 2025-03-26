@@ -7,10 +7,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.client.*;
-import net.luke.crawlingchaos.entity.client.model.AcarusModel;
-import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
-import net.luke.crawlingchaos.entity.client.model.HelenaModel;
-import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
+import net.luke.crawlingchaos.entity.client.model.*;
 import net.luke.crawlingchaos.item.ModItems;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.TexturedModelData;
@@ -45,13 +42,20 @@ public class CrawlingChaosClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_RELAXING_MELODY, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_SUNSHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_DARK_GOTHIC_SHADES, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_PANE_FIELD_FLOWER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_PANE_RELAXING_MELODY, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_PANE_SUNSHINE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_PANE_DARK_GOTHIC_SHADES, RenderLayer.getTranslucent());
 
         ModEntityModelLayers.registerEntityModelLayers();
         EntityRendererRegistry.register(ModEntities.ACARUS, AcarusRenderer::new);
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
         EntityRendererRegistry.register(ModEntities.HELENA, HelenaRenderer::new);
+        EntityRendererRegistry.register(ModEntities.KNIGHT_BUG, KnightBugRenderer::new);
         EntityRendererRegistry.register(ModEntities.LONEGER, LonegerRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PARASITE_WORM, ParasiteWormRenderer::new);
         EntityRendererRegistry.register(ModEntities.PRISM_FROG, PrismFrogRenderer::new);
+        EntityRendererRegistry.register(ModEntities.SERUPINEA, SerupineaRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ACACURS, AcarusModel::getTexturedModelData);
@@ -62,6 +66,9 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_OUTER_ARMOR, () -> armorModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.HELENA, HelenaModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.KNIGHT_BUG, KnightBugModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.PARASITE_WORM, ParasiteWormModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SERUPINEA, SerupineaModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND, SkeletonEntityModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);

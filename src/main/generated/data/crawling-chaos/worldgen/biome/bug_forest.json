@@ -157,6 +157,24 @@
         "weight": 35
       },
       {
+        "type": "crawling-chaos:serupinea",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 20
+      },
+      {
+        "type": "crawling-chaos:knight_bug",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      },
+      {
+        "type": "crawling-chaos:parasite_worm",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 15
+      },
+      {
         "type": "crawling-chaos:eroded_zombie",
         "maxCount": 2,
         "minCount": 1,

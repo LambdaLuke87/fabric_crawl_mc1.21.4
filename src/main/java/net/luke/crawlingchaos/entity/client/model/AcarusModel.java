@@ -36,7 +36,7 @@ public class AcarusModel extends SpiderEntityModel {
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData modelPartData2 =modelPartData.addChild("head", ModelPartBuilder.create().uv(21, 38).cuboid(-3.0F, -2.8333F, -3.3F, 6.0F, 5.0F, 3.0F, new Dilation(0.0F))
+        ModelPartData modelPartData2 = modelPartData.addChild("head", ModelPartBuilder.create().uv(21, 38).cuboid(-3.0F, -2.8333F, -3.3F, 6.0F, 5.0F, 3.0F, new Dilation(0.0F))
                 .uv(40, 41).cuboid(-2.0F, 0.1667F, -4.1F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
                 .uv(44, 41).cuboid(1.0F, 0.1667F, -4.1F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 16.8333F, -5.7F));
 

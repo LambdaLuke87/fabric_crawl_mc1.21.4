@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stained_glass",
+  "key": {
+    "G": "minecraft:glass",
+    "R": "minecraft:red_dye",
+    "L": "minecraft:lime_dye",
+    "P": "minecraft:purple_dye",
+    "B": "minecraft:light_blue_dye"
+  },
+  "pattern": [
+    "RP ",
+    "BL ",
+    "G  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:pattern_glass_relaxing_melody"
+  }
+}

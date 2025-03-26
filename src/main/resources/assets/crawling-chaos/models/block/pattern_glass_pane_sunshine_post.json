@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "edge": "crawling-chaos:block/pattern_glass_common_pane_top",
+    "pane": "crawling-chaos:block/pattern_glass_sunshine"
+  }
+}

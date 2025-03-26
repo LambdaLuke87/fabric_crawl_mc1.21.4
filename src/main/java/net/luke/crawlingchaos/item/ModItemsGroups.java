@@ -75,10 +75,10 @@ public class ModItemsGroups {
                         entries.add(ModItems.ACARUS_SPAWN_EGG);
                         entries.add(ModItems.ERODED_ZOMBIE_SPAWN_EGG);
                         entries.add(ModItems.HELENA_SPAWN_EGG);
-                        //entries.add(ModItems.KNIGHT_BUG_SPAWN_EGG);
+                        entries.add(ModItems.KNIGHT_BUG_SPAWN_EGG);
                         entries.add(ModItems.LONEGER_SPAWN_EGG);
-                        //entries.add(ModItems.PARASITE_WORM_SPAWN_EGG);
-                        //entries.add(ModItems.SERUPINEA_SPAWN_EGG);
+                        entries.add(ModItems.PARASITE_WORM_SPAWN_EGG);
+                        entries.add(ModItems.SERUPINEA_SPAWN_EGG);
                         entries.add(ModItems.PRISM_FROG_SPAWN_EGG);
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
 
@@ -106,10 +106,15 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.BIOLLANTA);
                         entries.add(ModBlocks.TERAPIA);
                         entries.add(ModBlocks.POISON_VINE);
+                        entries.add(ModBlocks.LAMP_BLOCK);
                         entries.add(ModBlocks.PATTERN_GLASS_FIELD_FLOWER);
                         entries.add(ModBlocks.PATTERN_GLASS_RELAXING_MELODY);
                         entries.add(ModBlocks.PATTERN_GLASS_SUNSHINE);
                         entries.add(ModBlocks.PATTERN_GLASS_DARK_GOTHIC_SHADES);
+                        entries.add(ModBlocks.PATTERN_GLASS_PANE_FIELD_FLOWER);
+                        entries.add(ModBlocks.PATTERN_GLASS_PANE_RELAXING_MELODY);
+                        entries.add(ModBlocks.PATTERN_GLASS_PANE_SUNSHINE);
+                        entries.add(ModBlocks.PATTERN_GLASS_PANE_DARK_GOTHIC_SHADES);
                     }).build());
 
     public static void registerItemsGroups() {

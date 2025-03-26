@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "crawling-chaos:block/pattern_glass_common_pane_top",
+    "pane": "crawling-chaos:block/pattern_glass_dark_gothic_shades"
+  }
+}

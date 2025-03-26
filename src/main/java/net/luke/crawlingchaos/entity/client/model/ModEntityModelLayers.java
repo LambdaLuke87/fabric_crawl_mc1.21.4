@@ -17,6 +17,9 @@ public class ModEntityModelLayers {
     public static final EntityModelLayer ERODED_ZOMBIE_BABY_INNER_ARMOR = createEntityModelLayer("eroded_zombie_baby", INNER_ARMOR);
     public static final EntityModelLayer ERODED_ZOMBIE_BABY_OUTER_ARMOR = createEntityModelLayer("eroded_zombie_baby", OUTER_ARMOR);
     public static final EntityModelLayer HELENA = createEntityModelLayer("helena", MAIN);
+    public static final EntityModelLayer KNIGHT_BUG = createEntityModelLayer("knight_bug", MAIN);
+    public static final EntityModelLayer PARASITE_WORM = createEntityModelLayer("parasite_worm", MAIN);
+    public static final EntityModelLayer SERUPINEA = createEntityModelLayer("serupinea", MAIN);
     public static final EntityModelLayer SKELETON_FRIEND = createEntityModelLayer("skeleton_friend", MAIN);
     public static final EntityModelLayer SKELETON_FRIEND_INNER_ARMOR = createEntityModelLayer("skeleton_friend", INNER_ARMOR);
     public static final EntityModelLayer SKELETON_FRIEND_OUTER_ARMOR = createEntityModelLayer("skeleton_friend", OUTER_ARMOR);
