@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:soul_lantern",
+    "X": "minecraft:iron_ingot",
+    "L": "minecraft:lever"
+  },
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XLX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:soul_lamp_block"
+  }
+}

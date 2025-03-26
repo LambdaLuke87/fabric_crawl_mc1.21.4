@@ -4,7 +4,9 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin",
-		"TreeDecoratorTypeInvoker"
+		"TreeDecoratorTypeInvoker",
+		"FertileSlimeCropBlock",
+		"FertileSlimeStemBlock"
 	],
 	"injectors": {
 		"defaultRequire": 1

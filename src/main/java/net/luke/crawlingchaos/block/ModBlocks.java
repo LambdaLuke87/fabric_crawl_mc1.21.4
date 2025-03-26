@@ -6,6 +6,7 @@ import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock
 import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luke.crawlingchaos.CrawlingChaos;
+import net.luke.crawlingchaos.sound.ModSounds;
 import net.luke.crawlingchaos.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
@@ -103,9 +104,18 @@ public class ModBlocks {
             new PaneBlock(AbstractBlock.Settings.copy(Blocks.GLASS_PANE)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "pattern_glass_pane_dark_gothic_shades")))));
 
+    public static final Block FERTILE_SLIME = registerBlock("fertile_slime",
+            new FertileSlimeBlock(AbstractBlock.Settings.copy(Blocks.DIRT).sounds(ModSounds.FERTILE_SLIME_SOUNDS).nonOpaque()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "fertile_slime")))));
+
     public static final Block LAMP_BLOCK = registerBlock("lamp_block",
             new LampBlock(AbstractBlock.Settings.create().strength(3.5F)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "lamp_block")))
+                    .requiresTool().sounds(BlockSoundGroup.LANTERN)
+                    .luminance(LampBlock::getLuminance)));
+    public static final Block SOUL_LAMP_BLOCK = registerBlock("soul_lamp_block",
+            new LampBlock(AbstractBlock.Settings.create().strength(3.5F)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "soul_lamp_block")))
                     .requiresTool().sounds(BlockSoundGroup.LANTERN)
                     .luminance(LampBlock::getLuminance)));
 

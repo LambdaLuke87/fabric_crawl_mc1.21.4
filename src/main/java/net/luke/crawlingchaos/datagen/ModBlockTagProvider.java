@@ -35,5 +35,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.BUG_OAK_DOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.BUG_OAK_PRESSURE_PLATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.BUG_OAK_BUTTON);
+        getOrCreateTagBuilder(BlockTags.PIGLIN_REPELLENTS).add(ModBlocks.SOUL_LAMP_BLOCK);
     }
 }

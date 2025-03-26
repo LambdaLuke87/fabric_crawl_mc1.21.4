@@ -106,7 +106,9 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.BIOLLANTA);
                         entries.add(ModBlocks.TERAPIA);
                         entries.add(ModBlocks.POISON_VINE);
+                        entries.add(ModBlocks.FERTILE_SLIME);
                         entries.add(ModBlocks.LAMP_BLOCK);
+                        entries.add(ModBlocks.SOUL_LAMP_BLOCK);
                         entries.add(ModBlocks.PATTERN_GLASS_FIELD_FLOWER);
                         entries.add(ModBlocks.PATTERN_GLASS_RELAXING_MELODY);
                         entries.add(ModBlocks.PATTERN_GLASS_SUNSHINE);

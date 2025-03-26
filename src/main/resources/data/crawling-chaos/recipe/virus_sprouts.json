@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "crawling-chaos:virus_seeds",
+    "O": "crawling-chaos:storage_organ"
+  },
+  "pattern": [
+    " # ",
+    "#O#",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:virus_sprouts"
+  }
+}

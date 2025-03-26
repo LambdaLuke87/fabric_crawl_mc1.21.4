@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "crawling-chaos:crystals_of_virus_shard"
+  },
+  "pattern": [
+    "## ",
+    "## "
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:crystals_of_virus"
+  }
+}

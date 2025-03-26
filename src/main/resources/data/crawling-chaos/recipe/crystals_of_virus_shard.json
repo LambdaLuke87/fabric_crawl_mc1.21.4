@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "crawling-chaos:crystals_of_virus"
+  ],
+  "result": {
+    "count": 4,
+    "id": "crawling-chaos:crystals_of_virus_shard"
+  }
+}

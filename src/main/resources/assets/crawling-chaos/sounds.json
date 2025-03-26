@@ -22,5 +22,150 @@
       "crawling-chaos:item/test_tube/fill3",
       "crawling-chaos:item/test_tube/fill4"
     ]
+  },
+  "block.fertile_slime.break": {
+    "sounds": [
+      {
+        "name": "crawling-chaos:block/fertile_slime/break1",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break2",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break3",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break4",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break5",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break6",
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.fertile_slime.fall": {
+    "sounds": [
+      {
+        "name": "crawling-chaos:block/fertile_slime/step1",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step2",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step3",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step4",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step5",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step6",
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.fertile_slime.hit": {
+    "sounds": [
+      {
+        "name": "crawling-chaos:block/fertile_slime/step1",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step2",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step3",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step4",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step5",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step6",
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.fertile_slime.place": {
+    "sounds": [
+      {
+        "name": "crawling-chaos:block/fertile_slime/break1",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break2",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break3",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break4",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break5",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/break6",
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.fertile_slime.step": {
+    "sounds": [
+      {
+        "name": "crawling-chaos:block/fertile_slime/step1",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step2",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step3",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step4",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step5",
+        "volume": 0.5
+      },
+      {
+        "name": "crawling-chaos:block/fertile_slime/step6",
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
   }
 }

@@ -46,6 +46,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_PANE_RELAXING_MELODY, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_PANE_SUNSHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PATTERN_GLASS_PANE_DARK_GOTHIC_SHADES, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FERTILE_SLIME, RenderLayer.getTranslucent());
 
         ModEntityModelLayers.registerEntityModelLayers();
         EntityRendererRegistry.register(ModEntities.ACARUS, AcarusRenderer::new);

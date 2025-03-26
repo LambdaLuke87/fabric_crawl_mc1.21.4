@@ -34,6 +34,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BUG_OAK_DOOR);
         addDrop(ModBlocks.BUG_OAK_TRAPDOOR);
         addDrop(ModBlocks.MYCENA_CHLOROPHOS);
+        addDrop(ModBlocks.FERTILE_SLIME);
         addPottedPlantDrops(ModBlocks.POTTED_MYCENA_CHLOROPHOS);
         addDrop(ModBlocks.TERAPIA);
         addPottedPlantDrops(ModBlocks.POTTED_TERAPIA);
