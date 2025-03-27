@@ -29,6 +29,7 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
                 .add(ModEntities.SKELETON_FRIEND);
 
         getOrCreateTagBuilder(EntityTypeTags.IGNORES_POISON_AND_REGEN)
+                .add(ModEntities.HELENA)
                 .add(ModEntities.PRISM_FROG);
     }
 }

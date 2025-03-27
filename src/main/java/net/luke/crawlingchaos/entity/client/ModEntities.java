@@ -9,7 +9,6 @@ import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.entity.custom.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.entity.mob.SilverfishEntity;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.passive.FrogEntity;
 import net.minecraft.registry.Registries;
@@ -49,7 +48,7 @@ public class ModEntities {
     public static final EntityType<ParasiteWormEntity> PARASITE_WORM =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm"),
             EntityType.Builder.create(ParasiteWormEntity::new, SpawnGroup.MONSTER)
-                    .dimensions(1.4F, 0.9F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm"))));
+                    .dimensions(0.8F, 0.9F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "parasite_worm"))));
 
     public static final EntityType<PrismFrogEntity> PRISM_FROG =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "prism_frog"),
@@ -76,7 +75,7 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(HELENA, HelenaEntity.createHelenaAttributes());
         FabricDefaultAttributeRegistry.register(KNIGHT_BUG, KnightBugEntity.createKnightBugAttributes());
         FabricDefaultAttributeRegistry.register(LONEGER, LonegerEntity.createMobAttributes());
-        FabricDefaultAttributeRegistry.register(PARASITE_WORM, SilverfishEntity.createSilverfishAttributes());
+        FabricDefaultAttributeRegistry.register(PARASITE_WORM, ParasiteWormEntity.createParasiteWormAttributes());
         FabricDefaultAttributeRegistry.register(PRISM_FROG, FrogEntity.createFrogAttributes());
         FabricDefaultAttributeRegistry.register(SERUPINEA, SpiderEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());

@@ -3,13 +3,13 @@ package net.luke.crawlingchaos.entity.client;
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.luke.crawlingchaos.entity.client.model.ParasiteWormModel;
-import net.luke.crawlingchaos.entity.client.model.SerupineaModel;
 import net.luke.crawlingchaos.entity.client.state.CommonRenderState;
 import net.luke.crawlingchaos.entity.custom.ParasiteWormEntity;
-import net.luke.crawlingchaos.entity.custom.SerupineaEntity;
+import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 public class ParasiteWormRenderer <T extends ParasiteWormEntity> extends MobEntityRenderer<T, CommonRenderState, ParasiteWormModel> {
@@ -35,5 +35,10 @@ public class ParasiteWormRenderer <T extends ParasiteWormEntity> extends MobEnti
     @Override
     public Identifier getTexture(CommonRenderState state) {
         return TEXTURE;
+    }
+
+    public void render(CommonRenderState state, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
+        matrixStack.scale(0.3f, 0.3f, 0.3f);
+        super.render(state, matrixStack, vertexConsumerProvider, i);
     }
 }

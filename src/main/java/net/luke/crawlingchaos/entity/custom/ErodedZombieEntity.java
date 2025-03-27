@@ -1,12 +1,12 @@
 package net.luke.crawlingchaos.entity.custom;
 
-import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
+import net.luke.crawlingchaos.entity.client.ModEntities;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.conversion.EntityConversionContext;
+import net.minecraft.entity.conversion.EntityConversionType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
@@ -16,6 +16,7 @@ import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.scoreboard.Team;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
@@ -53,6 +54,25 @@ public class ErodedZombieEntity extends ZombieEntity {
             ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 140 * (int)f), this);
         }
         return bl;
+    }
+
+    public void remove(Entity.RemovalReason reason) {
+        if (!this.getWorld().isClient && this.isDead()) {
+            float f = this.getDimensions(this.getPose()).width();
+            float g = f / 2.0F;
+            int k = 2 + this.random.nextInt(3);
+            Team team = this.getScoreboardTeam();
+
+            for (int l = 0; l < k; ++l) {
+                float h = ((float) (l % 2) - 0.5F) * g;
+                float m = ((float) (l / 2) - 0.5F) * g;
+                this.convertTo(ModEntities.PARASITE_WORM, new EntityConversionContext(EntityConversionType.SPLIT_ON_DEATH, false, false, team), SpawnReason.TRIGGERED, (newParasite) -> {
+                    newParasite.refreshPositionAndAngles(this.getX() + (double) h, this.getY() + (double) 0.5F, this.getZ() + (double) m, this.random.nextFloat() * 360.0F, 0.0F);
+                });
+            }
+        }
+
+        super.remove(reason);
     }
 
     public static boolean shouldBeBaby(Random random) {

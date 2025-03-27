@@ -1,6 +1,7 @@
 package net.luke.crawlingchaos.block;
 
 import com.google.common.collect.ImmutableMap;
+import net.luke.crawlingchaos.entity.client.ModEntities;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.VineBlock;
@@ -22,7 +23,7 @@ public class PoisonVineBlock extends VineBlock {
 
     protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (world instanceof ServerWorld serverWorld) {
-            if (world.getDifficulty() != Difficulty.PEACEFUL && entity instanceof LivingEntity livingEntity) {
+            if (world.getDifficulty() != Difficulty.PEACEFUL && entity instanceof LivingEntity livingEntity && entity.getType() != ModEntities.PARASITE_WORM) {
                 // && entity.getType() != EntityType.BEE
                 //entity.damage(serverWorld, world.getDamageSources().sweetBerryBush(), 0.5F);
                 livingEntity.addStatusEffect(this.getPoisonEffect());

@@ -5,9 +5,11 @@ import net.luke.crawlingchaos.entity.client.model.ModEntityModelLayers;
 import net.luke.crawlingchaos.entity.client.model.SerupineaModel;
 import net.luke.crawlingchaos.entity.client.state.CommonRenderState;
 import net.luke.crawlingchaos.entity.custom.SerupineaEntity;
+import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 public class SerupineaRenderer <T extends SerupineaEntity> extends MobEntityRenderer<T, CommonRenderState, SerupineaModel> {
@@ -33,5 +35,10 @@ public class SerupineaRenderer <T extends SerupineaEntity> extends MobEntityRend
     @Override
     public Identifier getTexture(CommonRenderState state) {
         return TEXTURE;
+    }
+
+    public void render(CommonRenderState state, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
+        matrixStack.scale(0.4f, 0.4f, 0.4f);
+        super.render(state, matrixStack, vertexConsumerProvider, i);
     }
 }
