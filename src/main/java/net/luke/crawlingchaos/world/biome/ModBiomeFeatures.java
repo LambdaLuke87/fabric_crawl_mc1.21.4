@@ -1,6 +1,6 @@
 package net.luke.crawlingchaos.world.biome;
 
-import net.luke.crawlingchaos.entity.client.ModEntities;
+import net.luke.crawlingchaos.entity.ModEntities;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.SpawnSettings;
@@ -20,8 +20,9 @@ public class ModBiomeFeatures extends DefaultBiomeFeatures {
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.SKELETON, 100, 4, 4));
 
         // add mod monsters
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ACARUS, 35, 1, 4));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.SERUPINEA, 20, 1, 2));
+        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ACARUS, 25, 1, 4));
+        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.CARRIER_BUG, 20, 1, 1));
+        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.SERUPINEA, 12, 1, 2));
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.KNIGHT_BUG, 1, 1, 1));
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.PARASITE_WORM, 15, 1, 3));
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ERODED_ZOMBIE, 30, 1, 2));

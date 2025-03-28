@@ -1,6 +1,6 @@
 package net.luke.crawlingchaos.entity.custom;
 
-import net.luke.crawlingchaos.entity.client.ModEntities;
+import net.luke.crawlingchaos.entity.ModEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -71,7 +71,8 @@ public class ParasiteWormEntity extends HostileEntity {
 
     public boolean tryAttack(ServerWorld world, Entity target) {
         boolean bl = super.tryAttack(world, target);
-        if (target instanceof ZombieEntity zombieEntity) {
+        if (target instanceof ZombieEntity zombieEntity && target.getType() != EntityType.HUSK
+                && target.getType() != EntityType.ZOMBIE_VILLAGER) {
             if (this.random.nextBoolean()) {
                 return bl;
             }

@@ -1,4 +1,4 @@
-package net.luke.crawlingchaos.entity.client;
+package net.luke.crawlingchaos.entity;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
@@ -24,6 +24,11 @@ public class ModEntities {
             Identifier.of(CrawlingChaos.MOD_ID, "acarus"),
             EntityType.Builder.create(AcarusEntity::new, SpawnGroup.MONSTER)
                     .dimensions(1.4F, 0.9F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "acarus"))));
+
+    public static final EntityType<CarrierBugEntity> CARRIER_BUG =  Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(CrawlingChaos.MOD_ID, "carrier_bug"),
+            EntityType.Builder.create(CarrierBugEntity::new, SpawnGroup.MONSTER)
+                    .dimensions(1.4F, 0.9F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "carrier_bug"))));
 
     public static final EntityType<ErodedZombieEntity> ERODED_ZOMBIE =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"),
@@ -71,13 +76,14 @@ public class ModEntities {
 
     public static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(ACARUS, SpiderEntity.createSpiderAttributes());
+        FabricDefaultAttributeRegistry.register(CARRIER_BUG, CarrierBugEntity.createCarrierBugAttributes());
         FabricDefaultAttributeRegistry.register(ERODED_ZOMBIE, ErodedZombieEntity.createErodedZombieAttributes());
         FabricDefaultAttributeRegistry.register(HELENA, HelenaEntity.createHelenaAttributes());
         FabricDefaultAttributeRegistry.register(KNIGHT_BUG, KnightBugEntity.createKnightBugAttributes());
         FabricDefaultAttributeRegistry.register(LONEGER, LonegerEntity.createMobAttributes());
         FabricDefaultAttributeRegistry.register(PARASITE_WORM, ParasiteWormEntity.createParasiteWormAttributes());
         FabricDefaultAttributeRegistry.register(PRISM_FROG, FrogEntity.createFrogAttributes());
-        FabricDefaultAttributeRegistry.register(SERUPINEA, SpiderEntity.createSpiderAttributes());
+        FabricDefaultAttributeRegistry.register(SERUPINEA, SerupineaEntity.createSerupineaBugAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
     }
 

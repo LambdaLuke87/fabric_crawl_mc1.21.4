@@ -1,21 +1,24 @@
 package net.luke.crawlingchaos.entity.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.passive.IronGolemEntity;
+import net.minecraft.entity.passive.SnowGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class SerupineaEntity extends HostileEntity {
+public class CarrierBugEntity extends HostileEntity {
 
-    public SerupineaEntity(EntityType<? extends SerupineaEntity> entityType, World world) {
+    public CarrierBugEntity(EntityType<? extends CarrierBugEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -25,18 +28,24 @@ public class SerupineaEntity extends HostileEntity {
         this.goalSelector.add(4, new MeleeAttackGoal(this, (double)1.0F, false));
         this.targetSelector.add(1, (new RevengeGoal(this, new Class[0])).setGroupRevenge(new Class[0]));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SnowGolemEntity.class, true));
     }
 
-    public static DefaultAttributeContainer.Builder createSerupineaBugAttributes() {
-        return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)18.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.25F).add(EntityAttributes.ATTACK_DAMAGE, (double)3.0F).add(EntityAttributes.KNOCKBACK_RESISTANCE, (double)1.0F);
+    public static DefaultAttributeContainer.Builder createCarrierBugAttributes() {
+        return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)50.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.28F).add(EntityAttributes.ATTACK_DAMAGE, (double)4.0F);
+    }
+
+    protected Entity.MoveEffect getMoveEffect() {
+        return MoveEffect.EVENTS;
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_SILVERFISH_AMBIENT;
+        return SoundEvents.ENTITY_SPIDER_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_SILVERFISH_HURT;
+        return SoundEvents.ENTITY_SPIDER_HURT;
     }
 
     protected SoundEvent getDeathSound() {

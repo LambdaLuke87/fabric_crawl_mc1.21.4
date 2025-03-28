@@ -3,7 +3,7 @@ package net.luke.crawlingchaos.item;
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luke.crawlingchaos.CrawlingChaos;
-import net.luke.crawlingchaos.entity.client.ModEntities;
+import net.luke.crawlingchaos.entity.ModEntities;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.DamageResistantComponent;
 import net.minecraft.item.*;
@@ -222,6 +222,8 @@ public class ModItems {
     // SpawnEggs
     public static final Item ACARUS_SPAWN_EGG = registerItem("acarus_spawn_egg", new SpawnEggItem(ModEntities.ACARUS, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "acarus_spawn_egg")))));
+    public static final Item CARRIER_BUG_SPAWN_EGG = registerItem("carrier_bug_spawn_egg", new SpawnEggItem(ModEntities.CARRIER_BUG, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "carrier_bug_spawn_egg")))));
     public static final Item ERODED_ZOMBIE_SPAWN_EGG = registerItem("eroded_zombie_spawn_egg", new SpawnEggItem(ModEntities.ERODED_ZOMBIE, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spawn_egg")))));
     public static final Item HELENA_SPAWN_EGG = registerItem("helena_spawn_egg", new SpawnEggItem(ModEntities.HELENA, new Item.Settings()

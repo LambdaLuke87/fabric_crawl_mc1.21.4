@@ -124,13 +124,19 @@
         "type": "crawling-chaos:acarus",
         "maxCount": 4,
         "minCount": 1,
-        "weight": 35
+        "weight": 25
+      },
+      {
+        "type": "crawling-chaos:carrier_bug",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 20
       },
       {
         "type": "crawling-chaos:serupinea",
         "maxCount": 2,
         "minCount": 1,
-        "weight": 20
+        "weight": 12
       },
       {
         "type": "crawling-chaos:knight_bug",

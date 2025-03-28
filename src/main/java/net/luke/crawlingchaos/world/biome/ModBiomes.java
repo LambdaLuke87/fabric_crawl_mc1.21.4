@@ -1,9 +1,6 @@
 package net.luke.crawlingchaos.world.biome;
 
 import net.luke.crawlingchaos.CrawlingChaos;
-import net.luke.crawlingchaos.entity.client.ModEntities;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

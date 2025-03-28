@@ -10,6 +10,7 @@ public class ModEntityModelLayers {
     private static final String OUTER_ARMOR = "outer_armor";
 
     public static final EntityModelLayer ACACURS = createEntityModelLayer("acarus", MAIN);
+    public static final EntityModelLayer CARRIER_BUG = createEntityModelLayer("carrier_bug", MAIN);
     public static final EntityModelLayer ERODED_ZOMBIE = createEntityModelLayer("eroded_zombie", MAIN);
     public static final EntityModelLayer ERODED_ZOMBIE_INNER_ARMOR = createEntityModelLayer("eroded_zombie", INNER_ARMOR);
     public static final EntityModelLayer ERODED_ZOMBIE_OUTER_ARMOR = createEntityModelLayer("eroded_zombie", OUTER_ARMOR);

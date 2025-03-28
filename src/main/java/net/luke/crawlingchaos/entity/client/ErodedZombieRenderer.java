@@ -46,9 +46,4 @@ public class ErodedZombieRenderer extends ZombieBaseEntityRenderer<ErodedZombieE
     public Identifier getTexture(ErodedZombieRenderState state) {
         return TEXTURE;
     }
-
-    public void updateRenderState(ErodedZombieEntity erodedZombieEntity, ErodedZombieRenderState erodedZombieRenderState, float f) {
-        super.updateRenderState(erodedZombieEntity, erodedZombieRenderState, f);
-        erodedZombieRenderState.idleAnimationState.copyFrom(erodedZombieEntity.idleAnimationState);
-    }
 }

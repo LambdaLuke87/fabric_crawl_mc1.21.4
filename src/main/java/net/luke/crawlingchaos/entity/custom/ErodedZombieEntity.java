@@ -1,6 +1,6 @@
 package net.luke.crawlingchaos.entity.custom;
 
-import net.luke.crawlingchaos.entity.client.ModEntities;
+import net.luke.crawlingchaos.entity.ModEntities;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -18,13 +18,9 @@ import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.scoreboard.Team;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class ErodedZombieEntity extends ZombieEntity {
-    private static final int MAX_HEALTH = 60;
-    public final AnimationState idleAnimationState = new AnimationState();
-    private int idleAnimationTimeout = 0;
 
     public static DefaultAttributeContainer.Builder createErodedZombieAttributes() {
         return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)60.0F) .add(EntityAttributes.FOLLOW_RANGE, (double)35.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.23F).add(EntityAttributes.ATTACK_DAMAGE, (double)3.0F).add(EntityAttributes.ARMOR, (double)2.0F).add(EntityAttributes.SPAWN_REINFORCEMENTS);
@@ -75,24 +71,7 @@ public class ErodedZombieEntity extends ZombieEntity {
         super.remove(reason);
     }
 
-    public static boolean shouldBeBaby(Random random) {
+    protected boolean canConvertInWater() {
         return false;
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-        if(this.getWorld().isClient()) {
-            setupAnimationStates();
-        }
-    }
-
-    private void setupAnimationStates() {
-        if (this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = this.random.nextInt(40) + 80;
-            this.idleAnimationState.start(this.age);
-        } else {
-            --this.idleAnimationTimeout;
-        }
     }
 }

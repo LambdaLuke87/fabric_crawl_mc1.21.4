@@ -2,7 +2,6 @@ package net.luke.crawlingchaos.entity.client.model;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.luke.crawlingchaos.entity.client.ErodedZombieAnimations;
 import net.luke.crawlingchaos.entity.client.state.ErodedZombieRenderState;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.entity.model.*;
@@ -57,8 +56,6 @@ public class ErodedZombieModel<S extends ErodedZombieRenderState> extends Zombie
     @Override
     public void setAngles(S erodedzombieRenderState) {
         super.setAngles(erodedzombieRenderState);
-
-        this.animate(erodedzombieRenderState.idleAnimationState, ErodedZombieAnimations.ANIM_ERODED_ZOMBIE_IDLE, erodedzombieRenderState.age, 1f);
 
         float g = erodedzombieRenderState.limbFrequency;
         float h = erodedzombieRenderState.limbAmplitudeMultiplier;

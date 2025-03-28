@@ -3,63 +3,81 @@ package net.luke.crawlingchaos.entity.client.model;
 import net.luke.crawlingchaos.entity.client.state.CommonRenderState;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.render.entity.model.SilverfishEntityModel;
 
 public class ParasiteWormModel extends EntityModel<CommonRenderState> {
-    private final ModelPart Head;
-    private final ModelPart bone8;
-    private final ModelPart bone9;
-    private final ModelPart bone10;
-    private final ModelPart bone11;
-    private final ModelPart bone12;
-    private final ModelPart bone15;
-    private final ModelPart bone13;
-    private final ModelPart bone14;
-    private final ModelPart bone2;
-    private final ModelPart bone3;
-    private final ModelPart bone4;
-    private final ModelPart bone5;
-    private final ModelPart bone6;
-    private final ModelPart bone7;
+    private final ModelPart root;
+    private final ModelPart head;
+    private final ModelPart u_tusk_top;
+    private final ModelPart u_tusk_end;
+    private final ModelPart d_tusk_top;
+    private final ModelPart d_tusk_end;
+    private final ModelPart l_tusk_top;
+    private final ModelPart l_tusk_end;
+    private final ModelPart r_tusk_top;
+    private final ModelPart r_tusk_end;
+    private final ModelPart section1;
+    private final ModelPart section2;
+    private final ModelPart section3;
+    private final ModelPart section4;
+    private final ModelPart section5;
+    private final ModelPart tail;
 
-    public ParasiteWormModel(ModelPart modelPart) {
-        super(modelPart);
-        this.Head = modelPart.getChild("Head");
-        this.bone8 = this.Head.getChild("bone8");
-        this.bone9 = this.Head.getChild("bone9");
-        this.bone10 = this.Head.getChild("bone10");
-        this.bone11 = this.Head.getChild("bone11");
-        this.bone12 = this.Head.getChild("bone12");
-        this.bone15 = this.Head.getChild("bone15");
-        this.bone13 = this.Head.getChild("bone13");
-        this.bone14 = this.Head.getChild("bone14");
-        this.bone2 = modelPart.getChild("bone2");
-        this.bone3 = modelPart.getChild("bone3");
-        this.bone4 = modelPart.getChild("bone4");
-        this.bone5 = modelPart.getChild("bone5");
-        this.bone6 = modelPart.getChild("bone6");
-        this.bone7 = modelPart.getChild("bone7");
+    public ParasiteWormModel(ModelPart root) {
+        super(root);
+        this.root = root.getChild("root");
+        this.head = this.root.getChild("head");
+        this.u_tusk_top = this.head.getChild("u_tusk_top");
+        this.u_tusk_end = this.u_tusk_top.getChild("u_tusk_end");
+        this.d_tusk_top = this.head.getChild("d_tusk_top");
+        this.d_tusk_end = this.d_tusk_top.getChild("d_tusk_end");
+        this.l_tusk_top = this.head.getChild("l_tusk_top");
+        this.l_tusk_end = this.l_tusk_top.getChild("l_tusk_end");
+        this.r_tusk_top = this.head.getChild("r_tusk_top");
+        this.r_tusk_end = this.r_tusk_top.getChild("r_tusk_end");
+        this.section1 = this.root.getChild("section1");
+        this.section2 = this.root.getChild("section2");
+        this.section3 = this.root.getChild("section3");
+        this.section4 = this.root.getChild("section4");
+        this.section5 = this.root.getChild("section5");
+        this.tail = this.root.getChild("tail");
     }
 
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData Head = modelPartData.addChild("Head", ModelPartBuilder.create().uv(206, 0).cuboid(-4.9444F, -8.8333F, -14.2222F, 9.0F, 9.0F, 16.0F, new Dilation(-0.8F)), ModelTransform.pivot(-0.0556F, -0.1667F, -18.7778F));
+        ModelPartData root = modelPartData.addChild("root", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 
-        ModelPartData bone8 = Head.addChild("bone8", ModelPartBuilder.create().uv(61, 30).cuboid(13.3564F, -2.0F, 3.134F, 1.0F, 3.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(-0.9444F, -24.3333F, -14.2222F, 0.0F, 0.5236F, 1.5708F));
-        ModelPartData bone9 = Head.addChild("bone9", ModelPartBuilder.create().uv(80, 30).cuboid(-0.5F, 11.1139F, -13.5506F, 2.0F, 1.0F, 7.0F, new Dilation(0.1F)), ModelTransform.of(-0.9444F, -24.3333F, -20.7222F, 0.6981F, 0.0F, 0.0F));
-        ModelPartData bone10 = Head.addChild("bone10", ModelPartBuilder.create().uv(61, 30).cuboid(20.3564F, -2.0F, -16.866F, 1.0F, 3.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(-0.9444F, -24.3333F, -14.2222F, 0.0F, -0.5236F, 1.5708F));
-        ModelPartData bone11 = Head.addChild("bone11", ModelPartBuilder.create().uv(80, 30).cuboid(-0.5F, 18.3995F, 12.0186F, 2.0F, 1.0F, 7.0F, new Dilation(0.1F)), ModelTransform.of(-0.9444F, -24.3333F, -20.7222F, -0.6981F, 0.0F, 0.0F));
-        ModelPartData bone12 = Head.addChild("bone12", ModelPartBuilder.create().uv(61, 30).cuboid(2.8264F, -22.0F, -3.9848F, 1.0F, 3.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(-0.9444F, -24.3333F, -14.2222F, 0.0F, -0.1745F, 3.1416F));
-        ModelPartData bone15 = Head.addChild("bone15", ModelPartBuilder.create().uv(80, 30).cuboid(19.5F, 2.5471F, -2.9044F, 2.0F, 1.0F, 7.0F, new Dilation(0.1F)), ModelTransform.of(-0.9444F, -24.3333F, -20.7222F, -0.2618F, 0.0F, 1.5708F));
-        ModelPartData bone13 = Head.addChild("bone13", ModelPartBuilder.create().uv(61, 30).cuboid(1.2412F, -26.5F, -1.5956F, 1.0F, 3.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(1.5556F, -28.8333F, -14.2222F, 0.0F, -2.8798F, 3.1416F));
-        ModelPartData bone14 = Head.addChild("bone14", ModelPartBuilder.create().uv(80, 30).cuboid(19.5F, -4.8412F, -2.9044F, 2.0F, 1.0F, 7.0F, new Dilation(0.1F)), ModelTransform.of(-0.9444F, -24.3333F, -20.7222F, 0.2618F, 0.0F, 1.5708F));
-        ModelPartData bone2 = modelPartData.addChild("bone2", ModelPartBuilder.create().uv(157, 0).cuboid(-4.0F, -7.0521F, -8.3618F, 8.0F, 8.0F, 16.0F, new Dilation(-0.8F)), ModelTransform.of(0.0F, 1.4292F, -11.1055F, -0.3491F, 0.0F, 0.0F));
-        ModelPartData bone3 = modelPartData.addChild("bone3", ModelPartBuilder.create().uv(108, 0).cuboid(-5.0F, 7.5622F, -18.4643F, 8.0F, 8.0F, 16.0F, new Dilation(-0.8F)), ModelTransform.of(0.0F, 12.106F, 15.5426F, -1.1345F, 0.0F, 0.0873F));
-        ModelPartData bone4 = modelPartData.addChild("bone4", ModelPartBuilder.create().uv(65, 0).cuboid(-3.0F, -12.5357F, -0.5622F, 6.0F, 6.0F, 15.0F, new Dilation(-0.8F)), ModelTransform.of(0.0F, 24.0F, 0.0F, -0.4363F, 0.0F, -0.0873F));
-        ModelPartData bone5 = modelPartData.addChild("bone5", ModelPartBuilder.create().uv(216, 27).cuboid(-3.0F, -3.0229F, -1.6228F, 6.0F, 5.0F, 14.0F, new Dilation(-0.8F)), ModelTransform.of(0.0F, 21.5F, 17.4F, -0.0873F, 0.0F, 0.0873F));
-        ModelPartData bone6 = modelPartData.addChild("bone6", ModelPartBuilder.create().uv(181, 26).cuboid(-2.5F, -2.5F, 0.0F, 5.0F, 5.0F, 12.0F, new Dilation(-0.8F)), ModelTransform.of(0.5F, 22.5F, 28.0F, 0.0F, 0.0F, -0.0873F));
-        ModelPartData bone7 = modelPartData.addChild("bone7", ModelPartBuilder.create().uv(156, 26).cuboid(-1.0F, -2.0F, 38.0F, 3.0F, 3.0F, 9.0F, new Dilation(-0.8F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
+        ModelPartData head = root.addChild("head", ModelPartBuilder.create().uv(206, 0).cuboid(-4.5F, -4.75F, -16.0F, 9.0F, 9.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(-0.5F, -27.25F, -18.0F));
+        head.addChild("head_r1", ModelPartBuilder.create().uv(0, 40).cuboid(-1.0F, -0.5F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -0.75F, 0.5F, -0.1745F, 0.0F, 0.0F));
+
+        ModelPartData u_tusk_top = head.addChild("u_tusk_top", ModelPartBuilder.create().uv(80, 30).cuboid(-1.5F, -1.0F, -5.8F, 3.0F, 2.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -4.1361F, -15.2F, -0.6545F, 0.0F, 0.0F));
+        u_tusk_top.addChild("u_tusk_end", ModelPartBuilder.create().uv(0, 20).cuboid(-0.5F, -0.5F, -6.0F, 2.0F, 1.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(-0.5F, -0.6139F, -5.8F, 1.5708F, 0.0F, 0.0F));
+        ModelPartData d_tusk_top = head.addChild("d_tusk_top", ModelPartBuilder.create().uv(80, 30).cuboid(-1.5F, -1.0F, -5.0F, 3.0F, 2.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 3.8639F, -16.0506F, 0.6545F, 0.0F, 0.0F));
+        d_tusk_top.addChild("d_tusk_end", ModelPartBuilder.create().uv(0, 20).cuboid(-1.0F, -0.5F, -6.0F, 2.0F, 1.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.5F, -5.0F, -1.5708F, 0.0F, 0.0F));
+        ModelPartData l_tusk_top = head.addChild("l_tusk_top", ModelPartBuilder.create().uv(60, 30).cuboid(-1.5F, -1.5F, -5.9044F, 2.0F, 3.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(4.0F, -0.25F, -14.5956F, 0.0F, -0.6458F, 0.0F));
+        ModelPartData l_tusk_end = l_tusk_top.addChild("l_tusk_end", ModelPartBuilder.create(), ModelTransform.pivot(-0.5F, 0.0F, -6.0F));
+        l_tusk_end.addChild("l_tusk_end_r1", ModelPartBuilder.create().uv(0, 10).cuboid(-1.0F, -1.0F, -7.4044F, 1.0F, 2.0F, 7.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, 0.0F, -0.5F, 0.0F, 1.5708F, 0.0F));
+        ModelPartData r_tusk_top = head.addChild("r_tusk_top", ModelPartBuilder.create().uv(60, 30).cuboid(-1.0F, -1.5F, -4.9044F, 2.0F, 3.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(-4.0F, -0.25F, -15.5956F, 0.0F, 0.6458F, 0.0F));
+        r_tusk_top.addChild("r_tusk_end", ModelPartBuilder.create().uv(0, 10).cuboid(-1.0F, -1.0F, -5.5F, 1.0F, 2.0F, 7.0F, new Dilation(0.0F)), ModelTransform.of(0.5F, 0.0F, -4.5F, 0.0F, -1.5708F, 0.0F));
+
+        root.addChild("section1", ModelPartBuilder.create().uv(157, 0).cuboid(-4.0F, -3.153F, -11.9837F, 8.0F, 8.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 50).cuboid(-1.0F, -0.153F, 3.4489F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-0.2962F, -24.847F, -6.4489F, -0.3142F, 0.0262F, 0.0F));
+        root.addChild("section2", ModelPartBuilder.create().uv(108, 0).cuboid(-5.0F, 7.5622F, -18.4643F, 8.0F, 8.0F, 16.0F, new Dilation(0.0F))
+                .uv(0, 50).cuboid(-2.0F, 12.394F, -3.0426F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -12.894F, 16.5426F, -1.0472F, 0.0F, 0.0873F));
+        root.addChild("section3", ModelPartBuilder.create().uv(65, 0).cuboid(-4.0F, -13.5F, 0.4378F, 7.0F, 7.0F, 14.0F, new Dilation(0.0F))
+                .uv(0, 50).cuboid(-2.0F, -10.0F, 13.5F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -0.4363F, 0.0F, -0.0873F));
+        root.addChild("section4", ModelPartBuilder.create().uv(216, 26).cuboid(-3.0F, -4.0229F, -2.8F, 6.0F, 6.0F, 14.0F, new Dilation(0.0F)), ModelTransform.of(-1.0F, -1.5F, 19.4F, -0.0873F, 0.0F, 0.0873F));
+        root.addChild("section5", ModelPartBuilder.create().uv(181, 26).cuboid(-2.5F, -2.5F, 0.1F, 5.0F, 5.0F, 12.0F, new Dilation(0.0F)), ModelTransform.of(-0.5F, -1.5F, 30.0F, 0.0F, 0.0F, -0.0873F));
+
+        root.addChild("tail", ModelPartBuilder.create().uv(156, 26).cuboid(-1.5F, -1.5F, -0.5F, 3.0F, 3.0F, 9.0F, new Dilation(0.0F)), ModelTransform.pivot(-0.5F, -1.5F, 42.5F));
         return TexturedModelData.of(modelData, 256, 64);
+    }
+
+    @Override
+    public void setAngles(CommonRenderState commonState) {
+        super.setAngles(commonState);
+
+        this.head.yaw = commonState.yawDegrees * ((float)Math.PI / 180F);
+        this.head.pitch = commonState.pitch * ((float)Math.PI / 180F);
     }
 }
