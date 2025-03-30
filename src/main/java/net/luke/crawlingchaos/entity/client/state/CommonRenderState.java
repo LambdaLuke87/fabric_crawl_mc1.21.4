@@ -6,6 +6,8 @@ import net.minecraft.client.render.entity.state.LivingEntityRenderState;
 
 @Environment(EnvType.CLIENT)
 public class CommonRenderState extends LivingEntityRenderState {
+    public boolean renderOverlay;
+
     public CommonRenderState() {
     }
 }

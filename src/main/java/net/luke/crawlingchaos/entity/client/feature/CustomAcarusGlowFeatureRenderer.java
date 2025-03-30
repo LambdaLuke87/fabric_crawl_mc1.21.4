@@ -3,16 +3,11 @@ package net.luke.crawlingchaos.entity.client.feature;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.luke.crawlingchaos.CrawlingChaos;
-import net.luke.crawlingchaos.entity.client.model.AcarusModel;
-import net.luke.crawlingchaos.entity.client.model.ErodedZombieModel;
-import net.luke.crawlingchaos.entity.client.state.ErodedZombieRenderState;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.feature.EyesFeatureRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRendererContext;
-import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.SpiderEntityModel;
 import net.minecraft.client.render.entity.state.LivingEntityRenderState;
-import net.minecraft.client.render.entity.state.SkeletonEntityRenderState;
 import net.minecraft.util.Identifier;
 
 @Environment(value= EnvType.CLIENT)

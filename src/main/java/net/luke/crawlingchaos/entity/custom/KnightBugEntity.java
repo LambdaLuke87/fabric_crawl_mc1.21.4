@@ -30,7 +30,7 @@ public class KnightBugEntity extends HostileEntity {
             BossBar.Color.RED, BossBar.Style.NOTCHED_10);
 
     public static DefaultAttributeContainer.Builder createKnightBugAttributes() {
-        return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)200.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.3F).add(EntityAttributes.ATTACK_DAMAGE, (double)8.0F).add(EntityAttributes.KNOCKBACK_RESISTANCE, (double)1.0F);
+        return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)600.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.3F).add(EntityAttributes.ATTACK_DAMAGE, (double)8.0F).add(EntityAttributes.KNOCKBACK_RESISTANCE, (double)1.0F);
     }
 
     protected void initGoals() {
@@ -57,6 +57,10 @@ public class KnightBugEntity extends HostileEntity {
         this.playSound(SoundEvents.ENTITY_IRON_GOLEM_STEP, 1.0F, 2.0F);
     }
 
+    public boolean shouldRenderOverlay() {
+        return this.getHealth() <= 150.0F;
+    }
+
     /* BOSS BAR */
     @Override
     public void onStartedTrackingBy(ServerPlayerEntity player) {
@@ -72,6 +76,7 @@ public class KnightBugEntity extends HostileEntity {
 
     protected void mobTick(ServerWorld world) {
         super.mobTick(world);
+        boolean bl = this.shouldRenderOverlay();
         this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
     }
 }

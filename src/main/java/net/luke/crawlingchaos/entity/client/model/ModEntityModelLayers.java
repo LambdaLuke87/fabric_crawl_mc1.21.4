@@ -6,6 +6,7 @@ import net.minecraft.util.Identifier;
 
 public class ModEntityModelLayers {
     private static final String MAIN = "main";
+    private static final String ARMOR = "armor";
     private static final String INNER_ARMOR = "inner_armor";
     private static final String OUTER_ARMOR = "outer_armor";
 
@@ -19,6 +20,7 @@ public class ModEntityModelLayers {
     public static final EntityModelLayer ERODED_ZOMBIE_BABY_OUTER_ARMOR = createEntityModelLayer("eroded_zombie_baby", OUTER_ARMOR);
     public static final EntityModelLayer HELENA = createEntityModelLayer("helena", MAIN);
     public static final EntityModelLayer KNIGHT_BUG = createEntityModelLayer("knight_bug", MAIN);
+    public static final EntityModelLayer KNIGHT_BUG_ARMOR = createEntityModelLayer("knight_bug", ARMOR);
     public static final EntityModelLayer PARASITE_WORM = createEntityModelLayer("parasite_worm", MAIN);
     public static final EntityModelLayer SERUPINEA = createEntityModelLayer("serupinea", MAIN);
     public static final EntityModelLayer SKELETON_FRIEND = createEntityModelLayer("skeleton_friend", MAIN);
