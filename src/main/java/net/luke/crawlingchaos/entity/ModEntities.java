@@ -70,6 +70,11 @@ public class ModEntities {
             EntityType.Builder.create(SkeletonFriendEntity::new, SpawnGroup.MONSTER)
                     .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"))));
 
+    public static final EntityType<ErodedZombieSpitEntity> ERODED_ZOMBIE_SPIT =  Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spit"),
+            EntityType.Builder.<ErodedZombieSpitEntity>create(ErodedZombieSpitEntity::new, SpawnGroup.MISC).dropsNothing().maxTrackingRange(4).trackingTickInterval(10)
+                    .dimensions(0.25F, 0.25F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spit"))));
+
     public static void registerModEntities() {
         CrawlingChaos.LOGGER.info("Registering Mod Entities for " + CrawlingChaos.MOD_ID);
     }

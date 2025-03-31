@@ -3,6 +3,7 @@ package net.luke.crawlingchaos;
 import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.luke.crawlingchaos.block.ModBlocks;
@@ -10,10 +11,13 @@ import net.luke.crawlingchaos.entity.ModEntities;
 import net.luke.crawlingchaos.entity.client.*;
 import net.luke.crawlingchaos.entity.client.model.*;
 import net.luke.crawlingchaos.item.ModItems;
+import net.luke.crawlingchaos.particle.AcidBubbleParticle;
+import net.luke.crawlingchaos.particle.ModParticles;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.TexturedModelData;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.model.ArmorEntityModel;
+import net.minecraft.client.render.entity.model.LlamaSpitEntityModel;
 import net.minecraft.client.render.entity.model.SkeletonEntityModel;
 
 public class CrawlingChaosClient implements ClientModInitializer {
@@ -50,6 +54,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.ACARUS, AcarusRenderer::new);
         EntityRendererRegistry.register(ModEntities.CARRIER_BUG, CarrierBugRenderer::new);
         EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE, ErodedZombieRenderer::new);
+        EntityRendererRegistry.register(ModEntities.ERODED_ZOMBIE_SPIT, ErodedZombieSpitRenderer::new);
         EntityRendererRegistry.register(ModEntities.HELENA, HelenaRenderer::new);
         EntityRendererRegistry.register(ModEntities.KNIGHT_BUG, KnightBugRenderer::new);
         EntityRendererRegistry.register(ModEntities.LONEGER, LonegerRenderer::new);
@@ -66,6 +71,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY, () -> TexturedModelData.of(ErodedZombieModel.getTexturedModelData(), 64, 64).transform(ErodedZombieModel.ERODED_ZOMBIE_BABY_TRANSFORMER));
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_BABY_OUTER_ARMOR, () -> armorModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ERODED_ZOMBIE_SPIT, LlamaSpitEntityModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.HELENA, HelenaModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.KNIGHT_BUG, KnightBugModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.KNIGHT_BUG_ARMOR, KnightBugModel::getTexturedModelData);
@@ -74,5 +80,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND, SkeletonEntityModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);
+
+        ParticleFactoryRegistry.getInstance().register(ModParticles.ACID_BUBBLES_PARTICLE, AcidBubbleParticle.Factory::new);
     }
 }

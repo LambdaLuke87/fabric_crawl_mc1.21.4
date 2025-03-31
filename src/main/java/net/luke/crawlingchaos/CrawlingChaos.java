@@ -9,6 +9,7 @@ import net.luke.crawlingchaos.entity.ModEntities;
 import net.luke.crawlingchaos.gen.ModWorldGeneration;
 import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.item.ModItemsGroups;
+import net.luke.crawlingchaos.particle.ModParticles;
 import net.luke.crawlingchaos.sound.ModSounds;
 import net.luke.crawlingchaos.world.treedecorator.ModTreeDecorators;
 import net.minecraft.item.*;
@@ -36,6 +37,7 @@ public class CrawlingChaos implements ModInitializer {
 		ModSounds.registerSounds();
 		ModWorldGeneration.generateModWorldGen();
 		ModTreeDecorators.register();
+		ModParticles.registerParticles();
 
 		StrippableBlockRegistry.register(ModBlocks.BUG_OAK_LOG, ModBlocks.STRIPPED_BUG_OAK_LOG);
 		StrippableBlockRegistry.register(ModBlocks.BUG_OAK_WOOD, ModBlocks.STRIPPED_BUG_OAK_WOOD);
