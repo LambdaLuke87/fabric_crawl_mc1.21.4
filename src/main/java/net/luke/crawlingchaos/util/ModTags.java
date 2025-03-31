@@ -2,6 +2,7 @@ package net.luke.crawlingchaos.util;
 
 import net.luke.crawlingchaos.CrawlingChaos;
 import net.minecraft.block.Block;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -24,6 +25,15 @@ public class ModTags {
 
         private static TagKey<Item> CreateTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, name));
+        }
+    }
+
+    public static class EntityTypeTags {
+        public static final TagKey<EntityType<?>> PARASITE_INFECTS = CreateTag("parasite_infects");
+        public static final TagKey<EntityType<?>> POISON_VINES_IGNORES = CreateTag("poison_vines_ignores");
+
+        private static TagKey<EntityType<?>> CreateTag(String name) {
+            return TagKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, name));
         }
     }
 }

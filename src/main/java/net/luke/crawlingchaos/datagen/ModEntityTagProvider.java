@@ -3,6 +3,8 @@ package net.luke.crawlingchaos.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.luke.crawlingchaos.entity.ModEntities;
+import net.luke.crawlingchaos.util.ModTags;
+import net.minecraft.entity.EntityType;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.EntityTypeTags;
 
@@ -28,5 +30,14 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
         getOrCreateTagBuilder(EntityTypeTags.IGNORES_POISON_AND_REGEN)
                 .add(ModEntities.HELENA)
                 .add(ModEntities.PRISM_FROG);
+
+        getOrCreateTagBuilder(ModTags.EntityTypeTags.PARASITE_INFECTS)
+                .add(EntityType.ZOMBIE);
+
+        getOrCreateTagBuilder(ModTags.EntityTypeTags.POISON_VINES_IGNORES)
+                .add(ModEntities.CARRIER_BUG)
+                .add(ModEntities.KNIGHT_BUG)
+                .add(ModEntities.PARASITE_WORM)
+                .add(ModEntities.SERUPINEA);
     }
 }

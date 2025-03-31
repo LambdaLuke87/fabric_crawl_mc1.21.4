@@ -1,6 +1,7 @@
 package net.luke.crawlingchaos.entity.custom;
 
 import net.luke.crawlingchaos.entity.ModEntities;
+import net.luke.crawlingchaos.util.ModTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -30,7 +31,7 @@ public class ParasiteWormEntity extends HostileEntity {
         this.goalSelector.add(4, new MeleeAttackGoal(this, (double)1.0F, false));
         this.targetSelector.add(1, (new RevengeGoal(this, new Class[0])).setGroupRevenge(new Class[0]));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, ZombieEntity.class, 5, false, false,
-                (entity, world) -> entity instanceof Monster && !(entity instanceof ErodedZombieEntity || entity instanceof DrownedEntity)));
+                (entity, world) -> entity instanceof Monster && (entity.getType().isIn(ModTags.EntityTypeTags.PARASITE_INFECTS))));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
     }
 
@@ -71,8 +72,7 @@ public class ParasiteWormEntity extends HostileEntity {
 
     public boolean tryAttack(ServerWorld world, Entity target) {
         boolean bl = super.tryAttack(world, target);
-        if (target instanceof ZombieEntity zombieEntity && target.getType() != EntityType.HUSK
-                && target.getType() != EntityType.ZOMBIE_VILLAGER) {
+        if (target instanceof ZombieEntity zombieEntity && target.getType().isIn(ModTags.EntityTypeTags.PARASITE_INFECTS)) {
             if (this.random.nextBoolean()) {
                 return bl;
             }

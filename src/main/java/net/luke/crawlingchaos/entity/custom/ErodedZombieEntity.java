@@ -26,6 +26,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 
 public class ErodedZombieEntity extends ZombieEntity implements RangedAttackMob {
+    int next_spit = 0;
 
     public static DefaultAttributeContainer.Builder createErodedZombieAttributes() {
         return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)60.0F) .add(EntityAttributes.FOLLOW_RANGE, (double)35.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.23F).add(EntityAttributes.ATTACK_DAMAGE, (double)3.0F).add(EntityAttributes.ARMOR, (double)2.0F).add(EntityAttributes.SPAWN_REINFORCEMENTS);
@@ -91,8 +92,10 @@ public class ErodedZombieEntity extends ZombieEntity implements RangedAttackMob 
     public boolean damage(ServerWorld world, DamageSource source, float amount) {
         if (super.damage(world, source, amount) && this.getAttacker() != null) {
             double spit_distance = this.squaredDistanceTo(this.getAttacker());
-            if (spit_distance < (double)76.0F) {
+            next_spit++;
+            if (spit_distance < (double)76.0F && next_spit >= 3) {
                 this.spitAt(this.getAttacker());
+                next_spit = 0;
             }
             return true;
         } else {
