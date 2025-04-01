@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": "crawling-chaos:virus_seeds",
+    "T": "crawling-chaos:test_tube_water",
+    "F": "minecraft:phantom_membrane"
+  },
+  "pattern": [
+    "FFF",
+    "VTV",
+    "FFF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:formula_phantom_limbs"
+  }
+}

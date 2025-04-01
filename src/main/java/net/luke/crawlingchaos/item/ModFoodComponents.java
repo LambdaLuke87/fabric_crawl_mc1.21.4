@@ -20,8 +20,23 @@ public class ModFoodComponents {
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.POISON, 15 * 20, 0), 0.5F))
             .build();
     public static ConsumableComponent FORMULA_DRINK_COMPONENT = ConsumableComponents.drink().build();
+    public static ConsumableComponent FORMULA_ABYSSAL_GAZE_COMPONENT = ConsumableComponents.drink()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 120 * 20, 0), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 120 * 20, 0), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 80 * 20, 0), 1.0f))
+            .build();
+    public static ConsumableComponent FORMULA_CRIMSON_BURST_COMPONENT = ConsumableComponents.drink()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SPEED, 120 * 20, 1), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.HASTE, 120 * 20, 1), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.HUNGER, 80 * 20, 1), 1.0f))
+            .build();
     public static ConsumableComponent FORMULA_MOONLIGHT_COMPONENT = ConsumableComponents.drink()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 25 * 20, 0), 1.0f))
+            .build();
+    public static ConsumableComponent FORMULA_PHANTOM_LIMBS_COMPONENT = ConsumableComponents.drink()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 120 * 20, 2), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 120 * 20, 0), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 80 * 20, 1), 1.0f))
             .build();
     public static ConsumableComponent FORMULA_POISON_VERMILION_COMPONENT = ConsumableComponents.drink()
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 120 * 20, 1), 1.0f))
@@ -31,6 +46,11 @@ public class ModFoodComponents {
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 120 * 20, 2), 1.0f))
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 80 * 20, 1), 1.0f))
             .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 80 * 20, 0), 1.0f))
+            .build();
+    public static ConsumableComponent FORMULA_VOLTAIC_SURGE_COMPONENT = ConsumableComponents.drink()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.SPEED, 120 * 20, 2), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 120 * 20, 0), 1.0f))
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 80 * 20, 1), 1.0f))
             .build();
     public static final ConsumableComponent LUMINOUS_CHICKEN_CONSUMABLE_COMPONENT = ConsumableComponents.food()
             // The duration is in ticks, 20 ticks = 1 second

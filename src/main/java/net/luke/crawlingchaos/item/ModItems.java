@@ -84,6 +84,46 @@ public class ModItems {
     public static final Item TEST_TUBE_WATER = registerItem("test_tube_water", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_DRINK_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "test_tube_water")))));
+    public static final Item FORMULA_ABYSSAL_GAZE = registerItem("formula_abyssal_gaze", new Item(new Item.Settings().maxCount(16)
+            .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_ABYSSAL_GAZE_COMPONENT).useRemainder(TEST_TUBE)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_abyssal_gaze")))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("effect.minecraft.water_breathing")
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.night_vision")
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.blindness")
+                    .append(Text.literal(" 01:20"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item FORMULA_CRIMSON_BURST = registerItem("formula_crimson_burst", new Item(new Item.Settings().maxCount(16)
+            .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_CRIMSON_BURST_COMPONENT).useRemainder(TEST_TUBE)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_crimson_burst")))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("effect.minecraft.speed")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.1"))
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.haste")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.1"))
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.hunger")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.1"))
+                    .append(Text.literal(" 01:20"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
     public static final Item FORMULA_MOONLIGHT = registerItem("formula_moonlight", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_MOONLIGHT_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_moonlight")))){
@@ -91,6 +131,27 @@ public class ModItems {
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("effect.minecraft.night_vision")
                     .append(Text.literal(" 00:25"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item FORMULA_PHANTOM_LIMBS = registerItem("formula_phantom_limbs", new Item(new Item.Settings().maxCount(16)
+            .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_PHANTOM_LIMBS_COMPONENT).useRemainder(TEST_TUBE)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_phantom_limbs")))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("effect.minecraft.jump_boost")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.2"))
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.slow_falling")
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.weakness")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.1"))
+                    .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
             super.appendTooltip(stack, context, tooltip, type);
         }
@@ -127,6 +188,27 @@ public class ModItems {
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
             tooltip.add(Text.translatable("effect.minecraft.mining_fatigue")
+                    .append(Text.literal(" 01:20"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item FORMULA_VOLTAIC_SURGE = registerItem("formula_voltaic_surge", new Item(new Item.Settings().maxCount(16)
+            .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_VOLTAIC_SURGE_COMPONENT).useRemainder(TEST_TUBE)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_voltaic_surge")))){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("effect.minecraft.speed")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.2"))
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.resistance")
+                    .append(Text.literal(" 02:00"))
+                    .styled(style -> style.withColor(tooltip_effect_color)));
+            tooltip.add(Text.translatable("effect.minecraft.weakness")
+                    .append(Text.literal(" "))
+                    .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
             super.appendTooltip(stack, context, tooltip, type);

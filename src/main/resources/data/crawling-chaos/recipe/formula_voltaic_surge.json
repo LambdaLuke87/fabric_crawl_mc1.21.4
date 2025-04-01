@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": "crawling-chaos:virus_seeds",
+    "T": "crawling-chaos:test_tube_water",
+    "J": "crawling-chaos:jelly_apple",
+    "S": "minecraft:sugar"
+  },
+  "pattern": [
+    "SJS",
+    "VTV",
+    "SJS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:formula_voltaic_surge"
+  }
+}

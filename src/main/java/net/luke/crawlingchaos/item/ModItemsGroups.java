@@ -42,9 +42,13 @@ public class ModItemsGroups {
                         // Foods and Drinks
                         entries.add(ModItems.BLIGHT_ROTTEN_FLESH);
                         entries.add(ModItems.TEST_TUBE_WATER);
+                        entries.add(ModItems.FORMULA_ABYSSAL_GAZE);
+                        entries.add(ModItems.FORMULA_CRIMSON_BURST);
                         entries.add(ModItems.FORMULA_MOONLIGHT);
+                        entries.add(ModItems.FORMULA_PHANTOM_LIMBS);
                         entries.add(ModItems.FORMULA_POISON_VERMILION);
                         entries.add(ModItems.FORMULA_PURIFICATION);
+                        entries.add(ModItems.FORMULA_VOLTAIC_SURGE);
                         entries.add(ModItems.HYOUROUGAN);
                         entries.add(ModItems.JELLY_APPLE);
                         entries.add(ModItems.LUMINOUS_CHICKEN_STEW);

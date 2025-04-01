@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": "crawling-chaos:virus_seeds",
+    "F": "crawling-chaos:test_tube_water",
+    "P": "minecraft:pufferfish",
+    "C": "minecraft:golden_carrot"
+  },
+  "pattern": [
+    " C ",
+    "VPF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:formula_abyssal_gaze"
+  }
+}

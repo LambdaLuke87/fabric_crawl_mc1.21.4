@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": "crawling-chaos:virus_seeds",
+    "F": "crawling-chaos:test_tube_water",
+    "B": "crawling-chaos:blight_rotten_flesh",
+    "S": "minecraft:sweet_berries",
+    "G": "minecraft:glow_berries"
+  },
+  "pattern": [
+    "BG ",
+    "VSF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:formula_crimson_burst"
+  }
+}

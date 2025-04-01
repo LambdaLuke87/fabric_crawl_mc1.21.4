@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "crawling-chaos:item/formula_liquid",
+    "layer1": "crawling-chaos:item/test_tube"
+  }
+}
