@@ -39,8 +39,13 @@ public class ModItemsGroups {
                         entries.add(ModItems.VIRUS_SEEDS);
                         entries.add(ModItems.VIRUS_SPROUTS);
 
-                        // Foods and Drinks
+                        // Foods
                         entries.add(ModItems.BLIGHT_ROTTEN_FLESH);
+                        entries.add(ModItems.HYOUROUGAN);
+                        entries.add(ModItems.JELLY_APPLE);
+                        entries.add(ModItems.LUMINOUS_CHICKEN_STEW);
+
+                        // Drinks
                         entries.add(ModItems.TEST_TUBE_WATER);
                         entries.add(ModItems.FORMULA_ABYSSAL_GAZE);
                         entries.add(ModItems.FORMULA_CRIMSON_BURST);
@@ -49,9 +54,6 @@ public class ModItemsGroups {
                         entries.add(ModItems.FORMULA_POISON_VERMILION);
                         entries.add(ModItems.FORMULA_PURIFICATION);
                         entries.add(ModItems.FORMULA_VOLTAIC_SURGE);
-                        entries.add(ModItems.HYOUROUGAN);
-                        entries.add(ModItems.JELLY_APPLE);
-                        entries.add(ModItems.LUMINOUS_CHICKEN_STEW);
 
                         // Smithing Templates and Upgrades Items
                         entries.add(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE);

@@ -13,6 +13,7 @@ public class ModBiomeFeatures extends DefaultBiomeFeatures {
     public static void addBugForestMobs(SpawnSettings.Builder builder) {
         addCaveMobs(builder);
         builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.PRISM_FROG, 15, 4, 4));
+        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.HELENA, 5, 3, 4));
 
         // add vanilla monsters
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE, 69, 4, 4));

@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "crawling-chaos:item/spawn_egg",
+        "layer1": "crawling-chaos:item/spawn_egg_overlay"
+    }
+}

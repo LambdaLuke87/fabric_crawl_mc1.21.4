@@ -98,6 +98,11 @@ public class ModEntities {
         Predicate<BiomeSelectionContext> plains = BiomeSelectors.tag(ConventionalBiomeTags.IS_PLAINS);
         Predicate<BiomeSelectionContext> swamp = BiomeSelectors.tag(ConventionalBiomeTags.IS_SWAMP);
 
+        BiomeModifications.addSpawn(swamp, SpawnGroup.CREATURE, HELENA, 26, 3, 4);
+        BiomeModifications.addSpawn(forest, SpawnGroup.CREATURE, HELENA, 25, 2, 4);
+        BiomeModifications.addSpawn(jungle, SpawnGroup.CREATURE, HELENA, 10, 1, 3);
+        BiomeModifications.addSpawn(plains, SpawnGroup.CREATURE, HELENA, 18, 4, 4);
+
         BiomeModifications.addSpawn(swamp, SpawnGroup.MONSTER, ERODED_ZOMBIE, 18, 1, 2);
         BiomeModifications.addSpawn(forest, SpawnGroup.MONSTER, ERODED_ZOMBIE, 15, 1, 2);
         BiomeModifications.addSpawn(jungle, SpawnGroup.MONSTER, ERODED_ZOMBIE, 10, 1, 2);

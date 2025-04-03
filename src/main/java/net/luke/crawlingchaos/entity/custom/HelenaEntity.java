@@ -101,6 +101,10 @@ public class HelenaEntity extends AnimalEntity {
         return null;
     }
 
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(SoundEvents.ENTITY_SILVERFISH_STEP, 0.0F, 1.0F);
+    }
+
     class ButterflyWanderAroundGoal extends Goal {
         ButterflyWanderAroundGoal() {
             this.setControls(EnumSet.of(Control.MOVE));

@@ -98,6 +98,12 @@
         "maxCount": 4,
         "minCount": 4,
         "weight": 15
+      },
+      {
+        "type": "crawling-chaos:helena",
+        "maxCount": 4,
+        "minCount": 3,
+        "weight": 5
       }
     ],
     "misc": [],

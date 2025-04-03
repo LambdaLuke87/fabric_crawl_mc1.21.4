@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "crawling-chaos:knight_exoskeleton",
+    "S": "crawling-chaos:serupinea_upgrade_smithing_template"
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:knight_upgrade_smithing_template"
+  }
+}
