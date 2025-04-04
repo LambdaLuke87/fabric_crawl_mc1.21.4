@@ -89,7 +89,7 @@ public class LonegerEntity extends MerchantEntity {
 
     protected void fillRecipes() {
         if (this.getWorld().getEnabledFeatures().contains(FeatureFlags.TRADE_REBALANCE)) {
-            this.fillRebalancedRecipes();
+            this.fillRecipes();
         } else {
             LonegerTradeOffers.Factory[] factorys = (LonegerTradeOffers.Factory[]) LonegerTradeOffers.LONEGER_TRADES.get(1);
             LonegerTradeOffers.Factory[] factorys2 = (LonegerTradeOffers.Factory[]) LonegerTradeOffers.LONEGER_TRADES.get(2);
@@ -105,16 +105,6 @@ public class LonegerEntity extends MerchantEntity {
 
             }
         }
-    }
-
-    private void fillRebalancedRecipes() {
-        TradeOfferList tradeOfferList = this.getOffers();
-
-        for(Pair<TradeOffers.Factory[], Integer> pair : TradeOffers.REBALANCED_WANDERING_TRADER_TRADES) {
-            TradeOffers.Factory[] factorys = (TradeOffers.Factory[])pair.getLeft();
-            this.fillRecipesFromPool(tradeOfferList, factorys, (Integer)pair.getRight());
-        }
-
     }
 
     protected void afterUsing(TradeOffer offer) {

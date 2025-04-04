@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "crawling-chaos:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -16732241
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 16758474
-      }
-    ]
+    "model": "crawling-chaos:item/eroded_zombie_spawn_egg"
   }
 }

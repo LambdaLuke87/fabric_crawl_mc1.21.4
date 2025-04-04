@@ -28,7 +28,7 @@ public class TestTubeItem extends GlassBottleItem {
         } else {
             if (blockHitResult.getType() == HitResult.Type.BLOCK) {
                 BlockPos blockPos = blockHitResult.getBlockPos();
-                if (!world.canPlayerModifyAt(user, blockPos)) {
+                if (!world.canEntityModifyAt(user, blockPos)) {
                     return ActionResult.PASS;
                 }
 

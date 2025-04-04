@@ -39,7 +39,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// TerraBlender API
-	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.4-4.3.0.2'
+	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.5-5.0.0.0'
 
 	// TerraForm API
 	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:13.0.0-alpha.2"

@@ -6,6 +6,7 @@ import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock
 import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luke.crawlingchaos.CrawlingChaos;
+import net.luke.crawlingchaos.particle.ModParticles;
 import net.luke.crawlingchaos.sound.ModSounds;
 import net.luke.crawlingchaos.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
@@ -46,7 +47,7 @@ public class ModBlocks {
             new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_pressure_plate")))));
     public static final Block BUG_OAK_LEAVES = registerBlock("bug_oak_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
+            new UntintedParticleLeavesBlock(0.02F, ModParticles.BUG_LEAVES , AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "bug_oak_leaves")))));
     public static final Block BUG_OAK_STAIRS = registerBlock("bug_oak_stairs",
             new StairsBlock(ModBlocks.BUG_OAK_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)

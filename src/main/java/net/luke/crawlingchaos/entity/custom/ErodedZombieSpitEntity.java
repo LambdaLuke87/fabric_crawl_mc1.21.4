@@ -49,7 +49,7 @@ public class ErodedZombieSpitEntity extends ProjectileEntity {
         float g = 0.99F;
         if (this.getWorld().getStatesInBox(this.getBoundingBox()).noneMatch(AbstractBlock.AbstractBlockState::isAir)) {
             this.discard();
-        } else if (this.isInsideWaterOrBubbleColumn()) {
+        } else if (this.isTouchingWater()) {
             this.discard();
         } else {
             this.setVelocity(vec3d.multiply((double)0.99F));
@@ -99,7 +99,7 @@ public class ErodedZombieSpitEntity extends ProjectileEntity {
 
         for(int i = 0; i < 7; ++i) {
             double g = 0.4 + 0.1 * (double)i;
-            this.getWorld().addParticle(ModParticles.ACID_BUBBLES_PARTICLE, this.getX(), this.getY(), this.getZ(), d * g, e, f * g);
+            this.getWorld().addParticleClient(ModParticles.ACID_BUBBLES_PARTICLE, this.getX(), this.getY(), this.getZ(), d * g, e, f * g);
         }
 
         this.setVelocity(d, e, f);

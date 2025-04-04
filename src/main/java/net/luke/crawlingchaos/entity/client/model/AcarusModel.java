@@ -38,13 +38,13 @@ public class AcarusModel extends SpiderEntityModel {
         ModelPartData modelPartData = modelData.getRoot();
         ModelPartData modelPartData2 = modelPartData.addChild("head", ModelPartBuilder.create().uv(21, 38).cuboid(-3.0F, -2.8333F, -3.3F, 6.0F, 5.0F, 3.0F, new Dilation(0.0F))
                 .uv(40, 41).cuboid(-2.0F, 0.1667F, -4.1F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
-                .uv(44, 41).cuboid(1.0F, 0.1667F, -4.1F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 16.8333F, -5.7F));
+                .uv(44, 41).cuboid(1.0F, 0.1667F, -4.1F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F)), ModelTransform.origin(0.0F, 16.8333F, -5.7F));
 
-        modelPartData2.addChild("eye", ModelPartBuilder.create().uv(39, 37).cuboid(-1.5F, -1.0F, -1.0F, 3.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -2.3333F, -2.8F));
-        //ModelPartData close_eye = head.addChild("close_eye", ModelPartBuilder.create().uv(39, 33).cuboid(-1.5F, -1.0F, -1.0F, 3.0F, 2.0F, 2.0F, new Dilation(0.02F)), ModelTransform.pivot(0.0F, -2.3333F, -2.8F));
+        modelPartData2.addChild("eye", ModelPartBuilder.create().uv(39, 37).cuboid(-1.5F, -1.0F, -1.0F, 3.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.origin(0.0F, -2.3333F, -2.8F));
+        //ModelPartData close_eye = head.addChild("close_eye", ModelPartBuilder.create().uv(39, 33).cuboid(-1.5F, -1.0F, -1.0F, 3.0F, 2.0F, 2.0F, new Dilation(0.02F)), ModelTransform.origin(0.0F, -2.3333F, -2.8F));
 
-        modelPartData.addChild("body0", ModelPartBuilder.create().uv(0, 37).cuboid(-4.0F, -3.5F, -2.0F, 8.0F, 7.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 16.5F, -4.0F));
-        modelPartData.addChild("body1", ModelPartBuilder.create().uv(0, 0).cuboid(-5.5F, -4.5F, -6.5F, 11.0F, 9.0F, 13.0F, new Dilation(0.0F)), ModelTransform.pivot(0.05F, 16.5F, 2.5F));
+        modelPartData.addChild("body0", ModelPartBuilder.create().uv(0, 37).cuboid(-4.0F, -3.5F, -2.0F, 8.0F, 7.0F, 2.0F, new Dilation(0.0F)), ModelTransform.origin(0.0F, 16.5F, -4.0F));
+        modelPartData.addChild("body1", ModelPartBuilder.create().uv(0, 0).cuboid(-5.5F, -4.5F, -6.5F, 11.0F, 9.0F, 13.0F, new Dilation(0.0F)), ModelTransform.origin(0.05F, 16.5F, 2.5F));
 
         modelPartData.addChild("right_hind_leg", ModelPartBuilder.create().uv(0, 33).mirrored().cuboid(-15.0F, -1.0F, -1.0F, 16.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false), ModelTransform.of(-4.0F, 16.0F, 2.0F, 0.0F, 0.7854F, -0.6109F));
         modelPartData.addChild("left_hind_leg", ModelPartBuilder.create().uv(0, 29).cuboid(-1.0F, -1.0F, -1.0F, 16.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(4.0F, 16.0F, 2.0F, 0.0F, -0.7854F, 0.6109F));

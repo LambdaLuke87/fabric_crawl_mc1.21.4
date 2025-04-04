@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "crawling-chaos",
-	"version": "beta-1.1",
+	"version": "beta-1.2",
 	"name": "Crawling Chaos",
 	"description": "Anti Plants Virus Mod Remake!",
 	"authors": [
@@ -32,8 +32,8 @@
 		"crawling-chaos.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.4",
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.21.5",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

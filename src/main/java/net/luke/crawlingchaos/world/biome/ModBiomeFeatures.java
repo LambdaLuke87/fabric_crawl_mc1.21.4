@@ -12,20 +12,20 @@ public class ModBiomeFeatures extends DefaultBiomeFeatures {
 
     public static void addBugForestMobs(SpawnSettings.Builder builder) {
         addCaveMobs(builder);
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.PRISM_FROG, 15, 4, 4));
-        builder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.HELENA, 5, 3, 4));
+        builder.spawn(SpawnGroup.CREATURE, 15, new SpawnSettings.SpawnEntry(ModEntities.PRISM_FROG, 4, 4));
+        builder.spawn(SpawnGroup.CREATURE, 5, new SpawnSettings.SpawnEntry(ModEntities.HELENA, 3, 4));
 
         // add vanilla monsters
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE, 69, 4, 4));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE_VILLAGER, 1, 1, 1));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.SKELETON, 100, 4, 4));
+        builder.spawn(SpawnGroup.MONSTER, 69, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE, 4, 4));
+        builder.spawn(SpawnGroup.MONSTER, 1, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE_VILLAGER, 1, 1));
+        builder.spawn(SpawnGroup.MONSTER, 100, new SpawnSettings.SpawnEntry(EntityType.SKELETON, 4, 4));
 
         // add mod monsters
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ACARUS, 25, 1, 4));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.CARRIER_BUG, 20, 1, 1));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.SERUPINEA, 12, 1, 2));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.KNIGHT_BUG, 1, 1, 1));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.PARASITE_WORM, 15, 1, 3));
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.ERODED_ZOMBIE, 30, 1, 2));
+        builder.spawn(SpawnGroup.MONSTER, 25, new SpawnSettings.SpawnEntry(ModEntities.ACARUS,1, 4));
+        builder.spawn(SpawnGroup.MONSTER, 20, new SpawnSettings.SpawnEntry(ModEntities.CARRIER_BUG,1, 1));
+        builder.spawn(SpawnGroup.MONSTER, 12, new SpawnSettings.SpawnEntry(ModEntities.SERUPINEA, 1, 2));
+        builder.spawn(SpawnGroup.MONSTER, 1, new SpawnSettings.SpawnEntry(ModEntities.KNIGHT_BUG, 1, 1));
+        builder.spawn(SpawnGroup.MONSTER, 15, new SpawnSettings.SpawnEntry(ModEntities.PARASITE_WORM, 1, 3));
+        builder.spawn(SpawnGroup.MONSTER, 30 ,new SpawnSettings.SpawnEntry(ModEntities.ERODED_ZOMBIE, 1, 2));
     }
 }

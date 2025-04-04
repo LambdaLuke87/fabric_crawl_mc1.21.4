@@ -35,9 +35,9 @@ public class SerupineaModel extends EntityModel<CommonRenderState> {
                 .uv(0, 120).cuboid(-7.0F, -11.0F, 31.0F, 13.0F, 1.0F, 5.0F, new Dilation(0.0F))
                 .uv(0, 120).cuboid(-7.0F, -11.0F, 26.0F, 13.0F, 1.0F, 5.0F, new Dilation(0.0F))
                 .uv(-1, 130).cuboid(-9.0F, -10.0F, 35.0F, 17.0F, 0.0F, 6.0F, new Dilation(0.0F))
-                .uv(0, 178).cuboid(-7.0F, -10.5F, -23.0F, 11.0F, 2.0F, 54.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 20.0F, 0.0F));
+                .uv(0, 178).cuboid(-7.0F, -10.5F, -23.0F, 11.0F, 2.0F, 54.0F, new Dilation(0.0F)), ModelTransform.origin(0.0F, 20.0F, 0.0F));
 
-        ModelPartData head = body.addChild("head", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+        ModelPartData head = body.addChild("head", ModelPartBuilder.create(), ModelTransform.origin(0.0F, 0.0F, 0.0F));
         head.addChild("head_top", ModelPartBuilder.create().uv(160, 125).cuboid(-6.875F, -0.45F, -0.5625F, 13.0F, 1.0F, 1.0F, new Dilation(0.0F))
                 .uv(160, 130).cuboid(-5.875F, -0.45F, -1.5625F, 11.0F, 1.0F, 1.0F, new Dilation(0.0F))
                 .uv(1, 20).cuboid(-9.875F, -0.25F, -6.5625F, 19.0F, 0.0F, 11.0F, new Dilation(0.0F))
@@ -62,7 +62,7 @@ public class SerupineaModel extends EntityModel<CommonRenderState> {
                 .uv(220, 220).cuboid(-14.6F, -0.56F, 1.5F, 2.0F, 1.0F, 1.0F, new Dilation(0.0F))
                 .uv(160, 200).cuboid(-14.6F, -0.66F, -6.5F, 29.0F, 1.0F, 8.0F, new Dilation(0.0F)), ModelTransform.of(-0.4F, -10.44F, -5.5F, 0.0698F, 0.0F, 0.0F));
 
-        ModelPartData legs_r = modelPartData.addChild("legs_r", ModelPartBuilder.create(), ModelTransform.pivot(-3.0F, 19.0F, -6.0F));
+        ModelPartData legs_r = modelPartData.addChild("legs_r", ModelPartBuilder.create(), ModelTransform.origin(-3.0F, 19.0F, -6.0F));
         legs_r.addChild("bone2_r1", ModelPartBuilder.create().uv(140, 0).mirrored().cuboid(-5.5F, 10.0F, -10.0F, 10.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false)
                 .uv(140, 0).mirrored().cuboid(-5.0F, 10.0F, -1.0F, 10.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false)
                 .uv(110, 0).mirrored().cuboid(-5.5F, 11.0F, -20.0F, 10.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false), ModelTransform.of(0.0F, 1.0F, 7.0F, 0.0F, 0.0F, -2.138F));
@@ -75,7 +75,7 @@ public class SerupineaModel extends EntityModel<CommonRenderState> {
         legs_r.addChild("bone5_r1", ModelPartBuilder.create().uv(140, 10).mirrored().cuboid(-3.0F, -0.5F, -1.0F, 8.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false)
                 .uv(140, 10).mirrored().cuboid(-3.0F, -0.5F, -10.0F, 8.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false)
                 .uv(140, 10).mirrored().cuboid(-3.0F, -0.5F, -20.0F, 8.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false), ModelTransform.of(17.0F, -2.5F, 7.0F, 0.0F, 0.0F, 2.618F));
-        ModelPartData legs_l = modelPartData.addChild("legs_l", ModelPartBuilder.create(), ModelTransform.pivot(5.0F, 19.0F, -4.0F));
+        ModelPartData legs_l = modelPartData.addChild("legs_l", ModelPartBuilder.create(), ModelTransform.origin(5.0F, 19.0F, -4.0F));
         legs_l.addChild("bone8_r1", ModelPartBuilder.create().uv(139, 61).mirrored().cuboid(3.5F, 0.5F, -1.0F, 3.0F, 1.0F, 1.0F, new Dilation(0.0F)).mirrored(false)
                 .uv(139, 61).mirrored().cuboid(3.5F, 0.5F, -10.0F, 3.0F, 1.0F, 1.0F, new Dilation(0.0F)).mirrored(false), ModelTransform.of(-27.0F, 8.5F, 7.0F, 0.0F, 0.0F, -1.2217F));
         legs_l.addChild("bone7_r2", ModelPartBuilder.create().uv(140, 55).mirrored().cuboid(-1.5F, -0.5F, -1.0F, 7.0F, 2.0F, 2.0F, new Dilation(0.0F)).mirrored(false)

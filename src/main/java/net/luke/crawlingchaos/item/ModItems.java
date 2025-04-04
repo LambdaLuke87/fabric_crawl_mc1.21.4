@@ -6,6 +6,7 @@ import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.entity.ModEntities;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.DamageResistantComponent;
+import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.item.tooltip.TooltipType;
@@ -19,6 +20,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ModItems {
     public static final int tooltip_effect_color = 0xA8C2A8;
@@ -66,20 +68,20 @@ public class ModItems {
     public static final Item BLIGHT_ROTTEN_FLESH = registerItem("blight_rotten_flesh", new Item(new Item.Settings()
             .food(ModFoodComponents.BLIGHT_ROTTEN_FLESH_COMPONENT, ModFoodComponents.BLIGHT_ROTTEN_FLESH_CONSUMABLE_COMPONENT)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "blight_rotten_flesh")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.hunger")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.hunger")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 00:30"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.poison")
+            textConsumer.accept(Text.translatable("effect.minecraft.poison")
                     .append(Text.literal(" 00:15"))
                     .append(Text.literal(" "))
                     .append(Text.literal("in 50%"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item TEST_TUBE_WATER = registerItem("test_tube_water", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_DRINK_COMPONENT).useRemainder(TEST_TUBE)
@@ -87,145 +89,145 @@ public class ModItems {
     public static final Item FORMULA_ABYSSAL_GAZE = registerItem("formula_abyssal_gaze", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_ABYSSAL_GAZE_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_abyssal_gaze")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.water_breathing")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.water_breathing")
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.night_vision")
+            textConsumer.accept(Text.translatable("effect.minecraft.night_vision")
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.blindness")
+            textConsumer.accept(Text.translatable("effect.minecraft.blindness")
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item FORMULA_CRIMSON_BURST = registerItem("formula_crimson_burst", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_CRIMSON_BURST_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_crimson_burst")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.speed")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.speed")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.haste")
+            textConsumer.accept(Text.translatable("effect.minecraft.haste")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.hunger")
+            textConsumer.accept(Text.translatable("effect.minecraft.hunger")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item FORMULA_MOONLIGHT = registerItem("formula_moonlight", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_MOONLIGHT_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_moonlight")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.night_vision")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.night_vision")
                     .append(Text.literal(" 00:25"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item FORMULA_PHANTOM_LIMBS = registerItem("formula_phantom_limbs", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_PHANTOM_LIMBS_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_phantom_limbs")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.jump_boost")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.jump_boost")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.2"))
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.slow_falling")
+            textConsumer.accept(Text.translatable("effect.minecraft.slow_falling")
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.weakness")
+            textConsumer.accept(Text.translatable("effect.minecraft.weakness")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item FORMULA_POISON_VERMILION = registerItem("formula_poison_vermilion", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_POISON_VERMILION_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_poison_vermilion")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.strength")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.strength")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.poison")
+            textConsumer.accept(Text.translatable("effect.minecraft.poison")
                             .append(Text.literal(" 00:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item FORMULA_PURIFICATION = registerItem("formula_purification", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_PURIFICATION_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_purification")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.health_boost")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.health_boost")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.2"))
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.slowness")
+            textConsumer.accept(Text.translatable("effect.minecraft.slowness")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.mining_fatigue")
+            textConsumer.accept(Text.translatable("effect.minecraft.mining_fatigue")
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item FORMULA_VOLTAIC_SURGE = registerItem("formula_voltaic_surge", new Item(new Item.Settings().maxCount(16)
             .food(ModFoodComponents.FORMULA_DRINK, ModFoodComponents.FORMULA_VOLTAIC_SURGE_COMPONENT).useRemainder(TEST_TUBE)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "formula_voltaic_surge")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.speed")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.speed")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.2"))
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.resistance")
+            textConsumer.accept(Text.translatable("effect.minecraft.resistance")
                     .append(Text.literal(" 02:00"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            tooltip.add(Text.translatable("effect.minecraft.weakness")
+            textConsumer.accept(Text.translatable("effect.minecraft.weakness")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 01:20"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item HYOUROUGAN = registerItem("hyourougan", new Item(new Item.Settings()
             .food(ModFoodComponents.HYOUROUGAN_COMPONENT, ModFoodComponents.HYOUROUGAN_CONSUMABLE_COMPONENT)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "hyourougan")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.health_boost")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.health_boost")
                     .append(Text.literal(" "))
                     .append(Text.translatable("potion.potency.1"))
                     .append(Text.literal(" 00:50"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
     public static final Item JELLY_APPLE = registerItem("jelly_apple", new Item(new Item.Settings()
             .food(ModFoodComponents.JELLY_APPLE_COMPONENT)
@@ -233,13 +235,13 @@ public class ModItems {
     public static final Item LUMINOUS_CHICKEN_STEW = registerItem("luminous_chicken_stew", new Item(new Item.Settings().maxCount(1)
             .food(ModFoodComponents.LUMINOUS_CHICKEN_COMPONENT, ModFoodComponents.LUMINOUS_CHICKEN_CONSUMABLE_COMPONENT).useRemainder(Items.BOWL)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "luminous_chicken_stew")))){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("effect.minecraft.night_vision")
+        /*@Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+            textConsumer.accept(Text.translatable("effect.minecraft.night_vision")
                     .append(Text.literal(" 00:40"))
                     .styled(style -> style.withColor(tooltip_effect_color)));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
+            super.appendTooltip(stack, context, displayComponent, textConsumer, type);
+        }*/
     });
 
     // Smithing Templates and Upgrades Items
@@ -256,48 +258,48 @@ public class ModItems {
             new HoeItem(ModToolMaterials.SERUPINEA, -2.0F, -1.0F, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_hoe")))));
     public static final Item SERUPINEA_PICKAXE = registerItem("serupinea_pickaxe",
-            new PickaxeItem(ModToolMaterials.SERUPINEA, 1.5F, -2.8F, new Item.Settings()
+            new Item(new Item.Settings().pickaxe(ModToolMaterials.SERUPINEA, 1.5F, -2.8F)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_pickaxe")))));
     public static final Item SERUPINEA_SHOVEL = registerItem("serupinea_shovel",
             new ShovelItem(ModToolMaterials.SERUPINEA, 2.0F, -3.0F, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_shovel")))));
     public static final Item SERUPINEA_SWORD = registerItem("serupinea_sword",
-            new SwordItem(ModToolMaterials.SERUPINEA, 3.5F, -2.4f, new Item.Settings()
+            new Item(new Item.Settings().sword(ModToolMaterials.SERUPINEA, 3.5F, -2.4f)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_sword")))));
 
     public static final Item TOOTH_DAGGER = registerItem("tooth_dagger",
-            new SwordItem(ToolMaterial.STONE, 3.0F, -2.0F, new Item.Settings()
+            new Item(new Item.Settings().sword(ToolMaterial.STONE, 3.0F, -2.0F)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "tooth_dagger")))));
 
 
     // Armor Items
     public static final Item SERUPINEA_HELMET = registerItem("serupinea_helmet",
-            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.HELMET, new Item.Settings()
+            new Item(new Item.Settings().armor(SerupineaArmorMaterial.INSTANCE, EquipmentType.HELMET)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_helmet")))));
     public static final Item SERUPINEA_CHESTPLATE = registerItem("serupinea_chestplate",
-            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, new Item.Settings()
+            new Item(new Item.Settings().armor(SerupineaArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_chestplate")))));
     public static final Item SERUPINEA_LEGGINGS = registerItem("serupinea_leggings",
-            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, new Item.Settings()
+            new Item(new Item.Settings().armor(SerupineaArmorMaterial.INSTANCE, EquipmentType.LEGGINGS)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_leggings")))));
     public static final Item SERUPINEA_BOOTS = registerItem("serupinea_boots",
-            new ArmorItem(SerupineaArmorMaterial.INSTANCE, EquipmentType.BOOTS, new Item.Settings()
+            new Item(new Item.Settings().armor(SerupineaArmorMaterial.INSTANCE, EquipmentType.BOOTS)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_boots")))));
 
     public static final Item KNIGHT_HELMET = registerItem("knight_helmet",
-            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.HELMET, new Item.Settings()
+            new Item(new Item.Settings().armor(KnightArmorMaterial.INSTANCE, EquipmentType.HELMET)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_helmet")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
     public static final Item KNIGHT_CHESTPLATE = registerItem("knight_chestplate",
-            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, new Item.Settings()
+            new Item(new Item.Settings().armor(KnightArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_chestplate")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
     public static final Item KNIGHT_LEGGINGS = registerItem("knight_leggings",
-            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, new Item.Settings()
+            new Item(new Item.Settings().armor(KnightArmorMaterial.INSTANCE, EquipmentType.LEGGINGS)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_leggings")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
     public static final Item KNIGHT_BOOTS = registerItem("knight_boots",
-            new ArmorItem(KnightArmorMaterial.INSTANCE, EquipmentType.BOOTS, new Item.Settings()
+            new Item(new Item.Settings().armor(KnightArmorMaterial.INSTANCE, EquipmentType.BOOTS)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_boots")))
                     .component(DataComponentTypes.DAMAGE_RESISTANT, new DamageResistantComponent(DamageTypeTags.IS_EXPLOSION))));
 
