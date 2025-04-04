@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "crawling-chaos:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": 12327707
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 3540743
-      }
-    ]
+    "model": "crawling-chaos:item/prism_frog_spawn_egg"
   }
 }

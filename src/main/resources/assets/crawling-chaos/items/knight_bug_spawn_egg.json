@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "crawling-chaos:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": 255
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 16711680
-      }
-    ]
+    "model": "crawling-chaos:item/knight_bug_spawn_egg"
   }
 }

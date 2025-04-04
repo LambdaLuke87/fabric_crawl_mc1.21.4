@@ -71,9 +71,9 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:trees_plains",
       "minecraft:forest_flowers",
       "minecraft:patch_large_fern",
+      "minecraft:patch_bush",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_pumpkin",

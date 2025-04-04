@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "crawling-chaos:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -4079167
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 4456448
-      }
-    ]
+    "model": "crawling-chaos:item/skeleton_friend_spawn_egg"
   }
 }

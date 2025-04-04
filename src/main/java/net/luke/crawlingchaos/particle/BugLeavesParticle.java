@@ -43,15 +43,15 @@ public class BugLeavesParticle extends LeavesParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class BugLeavesFactory implements ParticleFactory<SimpleParticleType> {
+    public static class Factory implements ParticleFactory<SimpleParticleType> {
         private final SpriteProvider spriteProvider;
 
-        public BugLeavesFactory(SpriteProvider spriteProvider) {
+        public Factory(SpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
         public Particle createParticle(SimpleParticleType simpleParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new BugLeavesParticle(clientWorld, d, e, f, this.spriteProvider, 0.25F, 2.0F, false, true, 1.0F, 0.0F);
+            return new BugLeavesParticle(clientWorld, d, e, f, this.spriteProvider, 0.07F, 10.0F, false, true, 2.0F, 0.021F);
         }
     }
 }

@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "crawling-chaos:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": 1670555
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 6566500
-      }
-    ]
+    "model": "crawling-chaos:item/loneger_spawn_egg"
   }
 }

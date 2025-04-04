@@ -12,6 +12,7 @@ import net.luke.crawlingchaos.entity.client.*;
 import net.luke.crawlingchaos.entity.client.model.*;
 import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.particle.AcidBubbleParticle;
+import net.luke.crawlingchaos.particle.BugLeavesParticle;
 import net.luke.crawlingchaos.particle.ModParticles;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.TexturedModelData;
@@ -82,5 +83,6 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.ACID_BUBBLES_PARTICLE, AcidBubbleParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.BUG_LEAVES, BugLeavesParticle.Factory::new);
     }
 }
