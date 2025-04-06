@@ -51,7 +51,7 @@ public class BugLeavesParticle extends LeavesParticle {
         }
 
         public Particle createParticle(SimpleParticleType simpleParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new BugLeavesParticle(clientWorld, d, e, f, this.spriteProvider, 0.07F, 10.0F, false, true, 2.0F, 0.021F);
+            return new BugLeavesParticle(clientWorld, d, e, f, this.spriteProvider, 0.07F, 10.0F, true, false, 2.0F, 0.021F);
         }
     }
 }

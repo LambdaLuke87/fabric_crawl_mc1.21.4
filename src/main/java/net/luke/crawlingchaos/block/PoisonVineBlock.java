@@ -6,6 +6,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.VineBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityCollisionHandler;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -21,7 +22,7 @@ public class PoisonVineBlock extends VineBlock {
         super(settings);
     }
 
-    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
         if (world instanceof ServerWorld serverWorld) {
             if (world.getDifficulty() != Difficulty.PEACEFUL && entity instanceof LivingEntity livingEntity && !entity.getType().isIn(ModTags.EntityTypeTags.POISON_VINES_IGNORES)) {
                 livingEntity.addStatusEffect(this.getPoisonEffect());

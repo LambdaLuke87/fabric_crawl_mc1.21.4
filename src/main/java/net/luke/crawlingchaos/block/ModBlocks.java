@@ -75,6 +75,7 @@ public class ModBlocks {
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "stripped_bug_oak_wood")))));
     public static final Block MYCENA_CHLOROPHOS = registerBlock("mycena_chlorophos",
             new FlowerBlock(StatusEffects.NIGHT_VISION, 5.0F, AbstractBlock.Settings.copy(Blocks.RED_MUSHROOM)
+                    .luminance((state) -> 3)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "mycena_chlorophos")))));
     public static final Block POISON_VINE = registerBlock("poison_vine",
             new PoisonVineBlock(AbstractBlock.Settings.copy(Blocks.VINE)

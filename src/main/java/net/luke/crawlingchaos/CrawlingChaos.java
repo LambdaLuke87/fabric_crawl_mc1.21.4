@@ -11,6 +11,7 @@ import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.item.ModItemsGroups;
 import net.luke.crawlingchaos.particle.ModParticles;
 import net.luke.crawlingchaos.sound.ModSounds;
+import net.luke.crawlingchaos.util.TooltipItems;
 import net.luke.crawlingchaos.world.treedecorator.ModTreeDecorators;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -27,17 +28,18 @@ public class CrawlingChaos implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		//LOGGER.info("Hello Fabric world!");
 		ModItemsGroups.registerItemsGroups();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
+		ModEntities.registerSpawnRestrictions();
 		ModEntities.registerAttributes();
 		ModEntities.addMobsToBiome();
 		ModSounds.registerSounds();
 		ModWorldGeneration.generateModWorldGen();
 		ModTreeDecorators.register();
 		ModParticles.registerParticles();
+		TooltipItems.registerTooltipItems();
 
 		StrippableBlockRegistry.register(ModBlocks.BUG_OAK_LOG, ModBlocks.STRIPPED_BUG_OAK_LOG);
 		StrippableBlockRegistry.register(ModBlocks.BUG_OAK_WOOD, ModBlocks.STRIPPED_BUG_OAK_WOOD);

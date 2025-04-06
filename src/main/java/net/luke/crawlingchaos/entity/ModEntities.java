@@ -9,6 +9,8 @@ import net.luke.crawlingchaos.CrawlingChaos;
 import net.luke.crawlingchaos.entity.custom.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.SpawnLocationTypes;
+import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.passive.FrogEntity;
 import net.minecraft.registry.Registries;
@@ -16,6 +18,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.Heightmap;
 
 import java.util.function.Predicate;
 
@@ -77,6 +80,13 @@ public class ModEntities {
 
     public static void registerModEntities() {
         CrawlingChaos.LOGGER.info("Registering Mod Entities for " + CrawlingChaos.MOD_ID);
+    }
+
+    public static void registerSpawnRestrictions() {
+        SpawnRestriction.register(CARRIER_BUG, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CarrierBugEntity::canSpawn);
+        SpawnRestriction.register(ERODED_ZOMBIE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ErodedZombieEntity::canSpawn);
+        SpawnRestriction.register(KNIGHT_BUG, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, KnightBugEntity::canSpawn);
+        SpawnRestriction.register(PARASITE_WORM, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ParasiteWormEntity::canSpawn);
     }
 
     public static void registerAttributes() {

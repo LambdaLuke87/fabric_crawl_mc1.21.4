@@ -30,7 +30,7 @@ public class KnightBugEntity extends HostileEntity {
     }
 
     private final ServerBossBar bossBar = new ServerBossBar(Text.literal("Knight Bug"),
-            BossBar.Color.RED, BossBar.Style.NOTCHED_10);
+            BossBar.Color.BLUE, BossBar.Style.NOTCHED_6);
 
     public static DefaultAttributeContainer.Builder createKnightBugAttributes() {
         return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)600.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.3F).add(EntityAttributes.ATTACK_DAMAGE, (double)8.0F).add(EntityAttributes.KNOCKBACK_RESISTANCE, (double)1.0F);
