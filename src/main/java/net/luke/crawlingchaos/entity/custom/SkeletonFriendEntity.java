@@ -25,7 +25,7 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
     }
 
     public static DefaultAttributeContainer.Builder createSkeletonFriendAttributes() {
-        return HostileEntity.createHostileAttributes().add(EntityAttributes.MOVEMENT_SPEED, (double)0.25F);
+        return HostileEntity.createHostileAttributes().add(EntityAttributes.MAX_HEALTH, (double)35.0F).add(EntityAttributes.MOVEMENT_SPEED, (double)0.25F);
     }
 
     protected void initGoals() {

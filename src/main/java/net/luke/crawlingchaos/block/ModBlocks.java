@@ -150,6 +150,11 @@ public class ModBlocks {
             new TerraformWallHangingSignBlock(BUG_OAK_HANGING_SIGN_TEXTURE_ID, BUG_OAK_HANGING_SIGN_GUI_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN).sounds(BlockSoundGroup.HANGING_SIGN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID,"bug_oak_wall_hanging_sign")))));
 
+    // Special Blocks
+    public static final Block SOULBONE_CAULDRON = registerBlock("soulbone_cauldron",
+            new SoulboneCauldron(AbstractBlock.Settings.copy(Blocks.BONE_BLOCK).nonOpaque()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "soulbone_cauldron")))));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, name), block);

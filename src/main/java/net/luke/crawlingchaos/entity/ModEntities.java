@@ -83,10 +83,7 @@ public class ModEntities {
     }
 
     public static void registerSpawnRestrictions() {
-        SpawnRestriction.register(CARRIER_BUG, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CarrierBugEntity::canSpawn);
-        SpawnRestriction.register(ERODED_ZOMBIE, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ErodedZombieEntity::canSpawn);
         SpawnRestriction.register(KNIGHT_BUG, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, KnightBugEntity::canSpawn);
-        SpawnRestriction.register(PARASITE_WORM, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ParasiteWormEntity::canSpawn);
     }
 
     public static void registerAttributes() {

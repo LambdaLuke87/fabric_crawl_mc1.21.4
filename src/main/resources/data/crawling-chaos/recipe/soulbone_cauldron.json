@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:bone_block",
+    "S": "minecraft:sculk_shrieker"
+  },
+  "pattern": [
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:soulbone_cauldron"
+  }
+}

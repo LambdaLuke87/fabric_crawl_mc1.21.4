@@ -114,6 +114,7 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.TERAPIA);
                         entries.add(ModBlocks.POISON_VINE);
                         entries.add(ModBlocks.FERTILE_SLIME);
+                        entries.add(ModBlocks.SOULBONE_CAULDRON);
                         entries.add(ModBlocks.LAMP_BLOCK);
                         entries.add(ModBlocks.SOUL_LAMP_BLOCK);
                         entries.add(ModBlocks.PATTERN_GLASS_FIELD_FLOWER);
