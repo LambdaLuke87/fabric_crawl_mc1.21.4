@@ -5,12 +5,10 @@ import net.luke.crawlingchaos.entity.custom.SkeletonFriendEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -32,7 +30,7 @@ public class SoulboneCauldron extends Block {
         if (skeletonfriendEntity != null) {
             skeletonfriendEntity.refreshPositionAndAngles((double)pos.getX() + (double)0.5F, (double)pos.getY() + 1.0f, (double)pos.getZ() + (double)0.5F, 0.0F, 0.0F);
             world.spawnEntity(skeletonfriendEntity);
-            skeletonfriendEntity.playSpawnEffects();
+            skeletonfriendEntity.playSummonEffects();
         }
 
     }

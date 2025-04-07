@@ -8,6 +8,12 @@
       "crawling-chaos:entity/skeleton_friend/heal4"
     ]
   },
+  "entity.skeleton_friend.commit": {
+    "subtitle": "subtitles.crawling-chaos.entity.skeleton_friend.commit",
+    "sounds": [
+      "crawling-chaos:entity/skeleton_friend/commit"
+    ]
+  },
   "item.fill_virus_template": {
     "subtitle": "subtitles.crawling-chaos.item.fill_virus_template",
     "sounds": [
