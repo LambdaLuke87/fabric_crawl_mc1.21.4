@@ -49,18 +49,12 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
     public void playSummonEffects() {
         this.playSound(ModSounds.COMMIT_SKELETON_FRIEND, 1.0F, 1.0F);
 
-        if (this.getWorld().isClient) {
-            for(int i = 0; i < 20; ++i) {
-                double d = this.random.nextGaussian() * 0.02;
-                double e = this.random.nextGaussian() * 0.02;
-                double f = this.random.nextGaussian() * 0.02;
-                double g = (double)10.0F;
-                this.getWorld().addParticleClient(ParticleTypes.SCULK_SOUL, this.getParticleX((double)1.0F) - d * (double)10.0F, this.getRandomBodyY() - e * (double)10.0F, this.getParticleZ((double)1.0F) - f * (double)10.0F, d, e, f);
-            }
-        } else {
-            this.getWorld().sendEntityStatus(this, (byte)20);
+        for(int i = 0; i < 20; ++i) {
+            double d = this.random.nextGaussian() * 0.02;
+            double e = this.random.nextGaussian() * 0.02;
+            double f = this.random.nextGaussian() * 0.02;
+            this.getWorld().addParticleClient(ParticleTypes.SCULK_SOUL, this.getParticleX((double)1.0F) - d * (double)10.0F, this.getRandomBodyY() - e * (double)10.0F, this.getParticleZ((double)1.0F) - f * (double)10.0F, d, e, f);
         }
-
     }
 
     protected boolean isAffectedByDaylight() {

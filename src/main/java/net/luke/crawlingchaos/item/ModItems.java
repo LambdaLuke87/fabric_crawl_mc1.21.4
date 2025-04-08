@@ -174,6 +174,8 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "prism_frog_spawn_egg")))));
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend_spawn_egg")))));
+    public static final Item WITHER_SKELETON_FRIEND_SPAWN_EGG = registerItem("wither_skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.WITHER_SKELETON_FRIEND, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "wither_skeleton_friend_spawn_egg")))));
 
     // Boats
     public static final Identifier BUG_OAK_BOATS_ID = Identifier.of(CrawlingChaos.MOD_ID, "bug_oak");

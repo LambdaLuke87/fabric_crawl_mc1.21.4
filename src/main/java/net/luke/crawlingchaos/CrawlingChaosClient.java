@@ -63,6 +63,7 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.PRISM_FROG, PrismFrogRenderer::new);
         EntityRendererRegistry.register(ModEntities.SERUPINEA, SerupineaRenderer::new);
         EntityRendererRegistry.register(ModEntities.SKELETON_FRIEND, SkeletonFriendRenderer::new);
+        EntityRendererRegistry.register(ModEntities.WITHER_SKELETON_FRIEND, WitherSkeletonFriendRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ACACURS, AcarusModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.CARRIER_BUG, CarrierBugModel::getTexturedModelData);
@@ -81,6 +82,9 @@ public class CrawlingChaosClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND, SkeletonEntityModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_INNER_ARMOR, () -> hatModelData);
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.WITHER_SKELETON_FRIEND, SkeletonEntityModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.WITHER_SKELETON_FRIEND_INNER_ARMOR, () -> hatModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.WITHER_SKELETON_FRIEND_OUTER_ARMOR, () -> armorModelData);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.ACID_BUBBLES_PARTICLE, AcidBubbleParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.BUG_LEAVES, BugLeavesParticle.Factory::new);

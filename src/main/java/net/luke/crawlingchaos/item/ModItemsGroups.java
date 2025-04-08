@@ -88,6 +88,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.SERUPINEA_SPAWN_EGG);
                         entries.add(ModItems.PRISM_FROG_SPAWN_EGG);
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
+                        entries.add(ModItems.WITHER_SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks
                         entries.add(ModBlocks.BUG_OAK_LOG);

@@ -36,7 +36,8 @@ public class ModEntities {
     public static final EntityType<ErodedZombieEntity> ERODED_ZOMBIE =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"),
             EntityType.Builder.create(ErodedZombieEntity::new, SpawnGroup.MONSTER)
-                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"))));
+                    .dimensions(0.6F, 1.95F).eyeHeight(1.74F).passengerAttachments(2.0125F).vehicleAttachment(-0.7F).maxTrackingRange(8)
+                    .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie"))));
 
     public static final EntityType<HelenaEntity> HELENA =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "helena"),
@@ -71,7 +72,14 @@ public class ModEntities {
     public static final EntityType<SkeletonFriendEntity> SKELETON_FRIEND =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"),
             EntityType.Builder.create(SkeletonFriendEntity::new, SpawnGroup.MONSTER)
-                    .dimensions(0.6F, 1.95F).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"))));
+                    .dimensions(0.6F, 1.95F).eyeHeight(1.74F).vehicleAttachment(-0.7F).maxTrackingRange(8)
+                    .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"))));
+
+    public static final EntityType<WitherSkeletonFriendEntity> WITHER_SKELETON_FRIEND =  Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(CrawlingChaos.MOD_ID, "wither_skeleton_friend"),
+            EntityType.Builder.create(WitherSkeletonFriendEntity::new, SpawnGroup.MONSTER)
+                    .makeFireImmune().dimensions(0.7F, 2.4F).eyeHeight(2.1F).vehicleAttachment(-0.875F).maxTrackingRange(8)
+                    .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "wither_skeleton_friend"))));
 
     public static final EntityType<ErodedZombieSpitEntity> ERODED_ZOMBIE_SPIT =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spit"),
@@ -97,6 +105,7 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(PRISM_FROG, FrogEntity.createFrogAttributes());
         FabricDefaultAttributeRegistry.register(SERUPINEA, SerupineaEntity.createSerupineaBugAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
+        FabricDefaultAttributeRegistry.register(WITHER_SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
     }
 
     public static void addMobsToBiome() {

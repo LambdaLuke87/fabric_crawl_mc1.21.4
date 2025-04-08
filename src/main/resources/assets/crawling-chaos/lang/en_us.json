@@ -13,6 +13,7 @@
   "entity.crawling-chaos.prism_frog": "Prism Frog",
   "entity.crawling-chaos.serupinea": "Serupinea",
   "entity.crawling-chaos.skeleton_friend": "Skeleton Friend",
+  "entity.crawling-chaos.wither_skeleton_friend": "Wither Skeleton Friend",
 
   "block.crawling-chaos.biollanta": "Biollanta",
   "block.crawling-chaos.bug_oak_sapling": "Bug Oak Sapling",
@@ -106,5 +107,6 @@
   "item.crawling-chaos.parasite_worm_spawn_egg": "Parasite Worm Spawn Egg",
   "item.crawling-chaos.prism_frog_spawn_egg": "Prism Frog Spawn Egg",
   "item.crawling-chaos.serupinea_spawn_egg": "Serupinea Spawn Egg",
-  "item.crawling-chaos.skeleton_friend_spawn_egg": "Skeleton Friend Spawn Egg"
+  "item.crawling-chaos.skeleton_friend_spawn_egg": "Skeleton Friend Spawn Egg",
+  "item.crawling-chaos.wither_skeleton_friend_spawn_egg": "Wither Skeleton Friend Spawn Egg"
 }
