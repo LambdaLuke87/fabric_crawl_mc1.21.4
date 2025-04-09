@@ -95,6 +95,13 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "luminous_chicken_stew")))));
 
     // Smithing Templates and Upgrades Items
+    public static final Item BONE_WITHERED_UPGRADE = registerItem("bone_withered_upgrade", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_withered_upgrade")))));
+    public static final Item BONE_MOSSY_UPGRADE = registerItem("bone_mossy_upgrade", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_mossy_upgrade")))));
+    public static final Item BONE_FLAME_UPGRADE = registerItem("bone_flame_upgrade", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_flame_upgrade")))));
+
     public static final Item SERUPINEA_UPGRADE_SMITHING_TEMPLATE = registerItem("serupinea_upgrade_smithing_template", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_upgrade_smithing_template"))).rarity(Rarity.UNCOMMON)));
     public static final Item KNIGHT_UPGRADE_SMITHING_TEMPLATE = registerItem("knight_upgrade_smithing_template", new Item(new Item.Settings()
@@ -174,8 +181,6 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "prism_frog_spawn_egg")))));
     public static final Item SKELETON_FRIEND_SPAWN_EGG = registerItem("skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.SKELETON_FRIEND, new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend_spawn_egg")))));
-    public static final Item WITHER_SKELETON_FRIEND_SPAWN_EGG = registerItem("wither_skeleton_friend_spawn_egg", new SpawnEggItem(ModEntities.WITHER_SKELETON_FRIEND, new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "wither_skeleton_friend_spawn_egg")))));
 
     // Boats
     public static final Identifier BUG_OAK_BOATS_ID = Identifier.of(CrawlingChaos.MOD_ID, "bug_oak");

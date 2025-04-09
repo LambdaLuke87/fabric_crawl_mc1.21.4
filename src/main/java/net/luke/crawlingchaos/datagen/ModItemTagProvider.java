@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.item.ModItems;
+import net.luke.crawlingchaos.util.ModTags;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
@@ -18,6 +19,11 @@ public class ModItemTagProvider extends FabricTagProvider<Item> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(ModTags.Items.SKELETON_FRIEND_UPGRADES)
+                .add(ModItems.BONE_FLAME_UPGRADE)
+                .add(ModItems.BONE_MOSSY_UPGRADE)
+                .add(ModItems.BONE_WITHERED_UPGRADE);
+
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.SERUPINEA_AXE);
         getOrCreateTagBuilder(ItemTags.HOES)

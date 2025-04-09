@@ -56,6 +56,9 @@ public class ModItemsGroups {
                         entries.add(ModItems.FORMULA_VOLTAIC_SURGE);
 
                         // Smithing Templates and Upgrades Items
+                        entries.add(ModItems.BONE_FLAME_UPGRADE);
+                        entries.add(ModItems.BONE_MOSSY_UPGRADE);
+                        entries.add(ModItems.BONE_WITHERED_UPGRADE);
                         entries.add(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE);
                         entries.add(ModItems.KNIGHT_UPGRADE_SMITHING_TEMPLATE);
 
@@ -88,7 +91,6 @@ public class ModItemsGroups {
                         entries.add(ModItems.SERUPINEA_SPAWN_EGG);
                         entries.add(ModItems.PRISM_FROG_SPAWN_EGG);
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
-                        entries.add(ModItems.WITHER_SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks
                         entries.add(ModBlocks.BUG_OAK_LOG);

@@ -27,9 +27,6 @@ public class ModEntityModelLayers {
     public static final EntityModelLayer SKELETON_FRIEND = createEntityModelLayer("skeleton_friend", MAIN);
     public static final EntityModelLayer SKELETON_FRIEND_INNER_ARMOR = createEntityModelLayer("skeleton_friend", INNER_ARMOR);
     public static final EntityModelLayer SKELETON_FRIEND_OUTER_ARMOR = createEntityModelLayer("skeleton_friend", OUTER_ARMOR);
-    public static final EntityModelLayer WITHER_SKELETON_FRIEND = createEntityModelLayer("wither_skeleton_friend", MAIN);
-    public static final EntityModelLayer WITHER_SKELETON_FRIEND_INNER_ARMOR = createEntityModelLayer("wither_skeleton_friend", INNER_ARMOR);
-    public static final EntityModelLayer WITHER_SKELETON_FRIEND_OUTER_ARMOR = createEntityModelLayer("wither_skeleton_friend", OUTER_ARMOR);
 
     public static void registerEntityModelLayers() {
         CrawlingChaos.LOGGER.info("Registering Model Layers for " + CrawlingChaos.MOD_ID);

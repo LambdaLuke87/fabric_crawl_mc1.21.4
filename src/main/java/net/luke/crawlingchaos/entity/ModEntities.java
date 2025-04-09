@@ -75,12 +75,6 @@ public class ModEntities {
                     .dimensions(0.6F, 1.95F).eyeHeight(1.74F).vehicleAttachment(-0.7F).maxTrackingRange(8)
                     .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"))));
 
-    public static final EntityType<WitherSkeletonFriendEntity> WITHER_SKELETON_FRIEND =  Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(CrawlingChaos.MOD_ID, "wither_skeleton_friend"),
-            EntityType.Builder.create(WitherSkeletonFriendEntity::new, SpawnGroup.MONSTER)
-                    .makeFireImmune().dimensions(0.7F, 2.4F).eyeHeight(2.1F).vehicleAttachment(-0.875F).maxTrackingRange(8)
-                    .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "wither_skeleton_friend"))));
-
     public static final EntityType<ErodedZombieSpitEntity> ERODED_ZOMBIE_SPIT =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "eroded_zombie_spit"),
             EntityType.Builder.<ErodedZombieSpitEntity>create(ErodedZombieSpitEntity::new, SpawnGroup.MISC).dropsNothing().maxTrackingRange(4).trackingTickInterval(10)
@@ -105,7 +99,6 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(PRISM_FROG, FrogEntity.createFrogAttributes());
         FabricDefaultAttributeRegistry.register(SERUPINEA, SerupineaEntity.createSerupineaBugAttributes());
         FabricDefaultAttributeRegistry.register(SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
-        FabricDefaultAttributeRegistry.register(WITHER_SKELETON_FRIEND, SkeletonFriendEntity.createSkeletonFriendAttributes());
     }
 
     public static void addMobsToBiome() {

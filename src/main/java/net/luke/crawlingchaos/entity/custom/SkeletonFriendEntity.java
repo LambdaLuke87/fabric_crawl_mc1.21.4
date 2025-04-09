@@ -1,11 +1,20 @@
 package net.luke.crawlingchaos.entity.custom;
 
+import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.sound.ModSounds;
+import net.luke.crawlingchaos.util.ModTags;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.*;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.TurtleEntity;
@@ -13,9 +22,12 @@ import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -23,10 +35,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.UUID;
 
 public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
+    private static final TrackedData<Float> SKELETON_FRIEND_MODE;
     private int disabledSlots;
 
     public SkeletonFriendEntity(EntityType<? extends SkeletonEntity> entityType, World world) {
         super(entityType, world);
+        //this.setSFMode(0);
     }
 
     public static DefaultAttributeContainer.Builder createSkeletonFriendAttributes() {
@@ -55,6 +69,39 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
             double f = this.random.nextGaussian() * 0.02;
             this.getWorld().addParticleClient(ParticleTypes.SCULK_SOUL, this.getParticleX((double)1.0F) - d * (double)10.0F, this.getRandomBodyY() - e * (double)10.0F, this.getParticleZ((double)1.0F) - f * (double)10.0F, d, e, f);
         }
+    }
+
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        nbt.putFloat("SkellyMode", this.getSFMode());
+    }
+
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        this.setSFMode(nbt.getFloat("SkellyMode", this.getSFMode()));
+    }
+
+    protected void initDataTracker(DataTracker.Builder builder) {
+        super.initDataTracker(builder);
+        builder.add(SKELETON_FRIEND_MODE, 0.0f);
+    }
+
+    public float getSFMode() {
+        return (Float) this.getDataTracker().get(SKELETON_FRIEND_MODE);
+    }
+
+    public void setSFMode(float mode) {
+        this.dataTracker.set(SKELETON_FRIEND_MODE, MathHelper.clamp(mode, mode, this.getMaxHealth()));
+    }
+
+    public boolean isWithered() {
+        return this.getSFMode() == 1;
+    }
+
+    public boolean isBurned() {
+        return this.getSFMode() == 2;
+    }
+
+    public boolean isMossy() {
+        return this.getSFMode() == 3;
     }
 
     protected boolean isAffectedByDaylight() {
@@ -95,7 +142,22 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
     public ActionResult interactAt(PlayerEntity player, Vec3d hitPos, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
 
-        if (!itemStack.isOf(Items.NAME_TAG) && !itemStack.isOf(Items.BONE)) {
+
+        if (itemStack.isIn(ModTags.Items.SKELETON_FRIEND_UPGRADES)) {
+            if (this.getSFMode() == 0) {
+                if (itemStack.isOf(ModItems.BONE_WITHERED_UPGRADE)) {
+                    this.setSFMode(1);
+                } else if (itemStack.isOf(ModItems.BONE_FLAME_UPGRADE)) {
+                    this.setSFMode(2);
+                } else if (itemStack.isOf(ModItems.BONE_MOSSY_UPGRADE)) {
+                    this.setSFMode(3);
+                }
+
+                itemStack.decrementUnlessCreative(1, player);
+            }
+            return ActionResult.SUCCESS;
+        }
+        else if (!itemStack.isOf(Items.NAME_TAG) && !itemStack.isOf(Items.BONE)) {
             if (player.isSpectator()) {
                 return ActionResult.SUCCESS;
             } else if (player.getWorld().isClient) {
@@ -151,6 +213,19 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
         return equipmentSlot;
     }
 
+    public boolean tryAttack(ServerWorld world, Entity target) {
+        boolean bl = super.tryAttack(world, target);
+        if (bl && this.getMainHandStack().isEmpty() && target instanceof LivingEntity) {
+            float f = this.getWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
+            if (isWithered()) {
+                ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 140 * (int) f), this);
+            } else if (isMossy()) {
+                ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 140 * (int) f), this);
+            }
+        }
+        return bl;
+    }
+
     public boolean canImmediatelyDespawn(double distanceSquared) {
         return false;
     }
@@ -178,5 +253,9 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
     @Override
     public void chooseRandomAngerTime() {
 
+    }
+
+    static {
+        SKELETON_FRIEND_MODE = DataTracker.registerData(SkeletonFriendEntity.class, TrackedDataHandlerRegistry.FLOAT);
     }
 }

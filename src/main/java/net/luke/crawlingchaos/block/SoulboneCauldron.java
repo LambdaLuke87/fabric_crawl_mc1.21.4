@@ -2,7 +2,6 @@ package net.luke.crawlingchaos.block;
 
 import net.luke.crawlingchaos.entity.ModEntities;
 import net.luke.crawlingchaos.entity.custom.SkeletonFriendEntity;
-import net.luke.crawlingchaos.entity.custom.WitherSkeletonFriendEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -26,36 +25,20 @@ public class SoulboneCauldron extends Block {
         return ActionResult.SUCCESS;
     }
 
-    private void spawnskeletonfriend(World world, BlockPos pos, boolean IsWitherSkelly) {
-        if (IsWitherSkelly)
-        {
-            WitherSkeletonFriendEntity witherskeletonfriendEntity = (WitherSkeletonFriendEntity) ModEntities.WITHER_SKELETON_FRIEND.create(world, SpawnReason.MOB_SUMMONED);
-            if (witherskeletonfriendEntity != null) {
-                witherskeletonfriendEntity.refreshPositionAndAngles((double) pos.getX() + (double) 0.5F, (double) pos.getY() + 1.0f, (double) pos.getZ() + (double) 0.5F, 0.0F, 0.0F);
-                world.spawnEntity(witherskeletonfriendEntity);
-                witherskeletonfriendEntity.playSummonEffects();
-            }
+    private void spawnskeletonfriend(World world, BlockPos pos) {
+        SkeletonFriendEntity skeletonfriendEntity = (SkeletonFriendEntity) ModEntities.SKELETON_FRIEND.create(world, SpawnReason.MOB_SUMMONED);
+        if (skeletonfriendEntity != null) {
+            skeletonfriendEntity.refreshPositionAndAngles((double) pos.getX() + (double) 0.5F, (double) pos.getY() + 1.0f, (double) pos.getZ() + (double) 0.5F, 0.0F, 0.0F);
+            world.spawnEntity(skeletonfriendEntity);
+            skeletonfriendEntity.playSummonEffects();
         }
-        else
-        {
-            SkeletonFriendEntity skeletonfriendEntity = (SkeletonFriendEntity) ModEntities.SKELETON_FRIEND.create(world, SpawnReason.MOB_SUMMONED);
-            if (skeletonfriendEntity != null) {
-                skeletonfriendEntity.refreshPositionAndAngles((double) pos.getX() + (double) 0.5F, (double) pos.getY() + 1.0f, (double) pos.getZ() + (double) 0.5F, 0.0F, 0.0F);
-                world.spawnEntity(skeletonfriendEntity);
-                skeletonfriendEntity.playSummonEffects();
-            }
-        }
-
     }
 
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity) {
             if(itemEntity.getStack().getItem() == Items.SKELETON_SKULL) {
-                this.spawnskeletonfriend(world, pos, false);
-            }
-            else if(itemEntity.getStack().getItem() == Items.WITHER_SKELETON_SKULL) {
-                this.spawnskeletonfriend(world, pos, true);
+                this.spawnskeletonfriend(world, pos);
             }
             itemEntity.discard();
         }

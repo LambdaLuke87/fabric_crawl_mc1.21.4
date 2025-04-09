@@ -23,6 +23,8 @@ public class ModTags {
         public static final TagKey<Item> REPAIRS_SERUPINEA_ARMOR = CreateTag("repairs_serupinea_armor");
         public static final TagKey<Item> REPAIRS_KNIGHT_ARMOR = CreateTag("repairs_knight_armor");
 
+        public static final TagKey<Item> SKELETON_FRIEND_UPGRADES = CreateTag("skeleton_friend_upgrades");
+
         private static TagKey<Item> CreateTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, name));
         }
