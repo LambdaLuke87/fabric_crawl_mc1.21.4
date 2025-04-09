@@ -14,6 +14,8 @@ public class SkeletonFriendRenderer extends AbstractSkeletonEntityRenderer<Skele
     private static final Identifier TEXTURE_WITHERED = Identifier.of(CrawlingChaos.MOD_ID, "textures/entity/skeleton_friend/skeleton_friend_withered.png");
     private static final Identifier TEXTURE_MOSSY = Identifier.of(CrawlingChaos.MOD_ID, "textures/entity/skeleton_friend/skeleton_friend_mossy.png");
     private static final Identifier TEXTURE_BURNED = Identifier.of(CrawlingChaos.MOD_ID, "textures/entity/skeleton_friend/skeleton_friend_burned.png");
+    private static final Identifier TEXTURE_OBSIDIAN = Identifier.of(CrawlingChaos.MOD_ID, "textures/entity/skeleton_friend/skeleton_friend_obsidian.png");
+    private static final Identifier TEXTURE_FROZEN = Identifier.of(CrawlingChaos.MOD_ID, "textures/entity/skeleton_friend/skeleton_friend_frozen.png");
     private static final String EYES_TEXTURE_PATH = "textures/entity/skeleton_friend/skeleton_friend_glow.png";
 
     public SkeletonFriendRenderer(EntityRendererFactory.Context context) {
@@ -31,11 +33,14 @@ public class SkeletonFriendRenderer extends AbstractSkeletonEntityRenderer<Skele
     public Identifier getTexture(SkeletonFriendRenderState state) {
         if (state.withered) {
             return TEXTURE_WITHERED;
-        }
-        else if (state.burned) {
+        } else if (state.burned) {
             return TEXTURE_BURNED;
         } else if (state.mossy) {
             return TEXTURE_MOSSY;
+        } else if (state.obsidian) {
+            return TEXTURE_OBSIDIAN;
+        } else if (state.frozen) {
+            return TEXTURE_FROZEN;
         } else {
             return TEXTURE;
         }
@@ -47,5 +52,7 @@ public class SkeletonFriendRenderer extends AbstractSkeletonEntityRenderer<Skele
         state.withered = skeletonfriendEntity.isWithered();
         state.burned = skeletonfriendEntity.isBurned();
         state.mossy = skeletonfriendEntity.isMossy();
+        state.obsidian = skeletonfriendEntity.isObsidian();
+        state.frozen = skeletonfriendEntity.isFrozen();
     }
 }

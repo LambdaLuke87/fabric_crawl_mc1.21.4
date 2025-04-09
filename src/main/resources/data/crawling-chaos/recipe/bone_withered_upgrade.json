@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "skeleton_friend_upgrade",
+  "key": {
+    "B": "minecraft:bone",
+    "C": "minecraft:coal",
+    "#": "crawling-chaos:virus_seeds"
+  },
+  "pattern": [
+    "BCB",
+    "C#C",
+    "BCB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:bone_withered_upgrade"
+  }
+}

@@ -95,12 +95,16 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "luminous_chicken_stew")))));
 
     // Smithing Templates and Upgrades Items
-    public static final Item BONE_WITHERED_UPGRADE = registerItem("bone_withered_upgrade", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_withered_upgrade")))));
-    public static final Item BONE_MOSSY_UPGRADE = registerItem("bone_mossy_upgrade", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_mossy_upgrade")))));
     public static final Item BONE_FLAME_UPGRADE = registerItem("bone_flame_upgrade", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_flame_upgrade")))));
+    public static final Item BONE_FROZEN_UPGRADE = registerItem("bone_frozen_upgrade", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_frozen_upgrade")))));
+    public static final Item BONE_MOSSY_UPGRADE = registerItem("bone_mossy_upgrade", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_mossy_upgrade")))));
+    public static final Item BONE_OBSIDIAN_UPGRADE = registerItem("bone_obsidian_upgrade", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_obsidian_upgrade")))));
+    public static final Item BONE_WITHERED_UPGRADE = registerItem("bone_withered_upgrade", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "bone_withered_upgrade")))));
 
     public static final Item SERUPINEA_UPGRADE_SMITHING_TEMPLATE = registerItem("serupinea_upgrade_smithing_template", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_upgrade_smithing_template"))).rarity(Rarity.UNCOMMON)));

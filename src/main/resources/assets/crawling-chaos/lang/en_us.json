@@ -53,6 +53,8 @@
   "item.crawling-chaos.bone_withered_upgrade": "Bone Withered Upgrade",
   "item.crawling-chaos.bone_flame_upgrade": "Bone Flame Upgrade",
   "item.crawling-chaos.bone_mossy_upgrade": "Bone Mossy Upgrade",
+  "item.crawling-chaos.bone_obsidian_upgrade": "Bone Obsidian Upgrade",
+  "item.crawling-chaos.bone_frozen_upgrade": "Bone Frozen Upgrade",
   "item.crawling-chaos.bug_oak_boat": "Bug Oak Boat",
   "item.crawling-chaos.bug_oak_chest_boat": "Bug Oak Boat with Chest",
   "item.crawling-chaos.butterfly_wings": "Butterfly Wings",
@@ -111,5 +113,12 @@
   "item.crawling-chaos.prism_frog_spawn_egg": "Prism Frog Spawn Egg",
   "item.crawling-chaos.serupinea_spawn_egg": "Serupinea Spawn Egg",
   "item.crawling-chaos.skeleton_friend_spawn_egg": "Skeleton Friend Spawn Egg",
-  "item.crawling-chaos.wither_skeleton_friend_spawn_egg": "Wither Skeleton Friend Spawn Egg"
+  "item.crawling-chaos.wither_skeleton_friend_spawn_egg": "Wither Skeleton Friend Spawn Egg",
+
+  "tooltip.crawling-chaos.in_half_percent": "in 50%",
+  "tooltip.crawling-chaos.bone_flame_upgrade": "Flame Skeleton Friend",
+  "tooltip.crawling-chaos.bone_frozen_upgrade": "Frozen Skeleton Friend",
+  "tooltip.crawling-chaos.bone_mossy_upgrade": "Mossy Skeleton Friend",
+  "tooltip.crawling-chaos.bone_obsidian_upgrade": "Obsidian Skeleton Friend",
+  "tooltip.crawling-chaos.bone_withered_upgrade": "Withered Skeleton Friend"
 }

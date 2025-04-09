@@ -1,7 +1,9 @@
 {
   "values": [
     "crawling-chaos:bone_flame_upgrade",
+    "crawling-chaos:bone_frozen_upgrade",
     "crawling-chaos:bone_mossy_upgrade",
+    "crawling-chaos:bone_obsidian_upgrade",
     "crawling-chaos:bone_withered_upgrade"
   ]
 }

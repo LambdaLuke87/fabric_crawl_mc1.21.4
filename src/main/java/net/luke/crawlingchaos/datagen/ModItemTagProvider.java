@@ -21,7 +21,9 @@ public class ModItemTagProvider extends FabricTagProvider<Item> {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModTags.Items.SKELETON_FRIEND_UPGRADES)
                 .add(ModItems.BONE_FLAME_UPGRADE)
+                .add(ModItems.BONE_FROZEN_UPGRADE)
                 .add(ModItems.BONE_MOSSY_UPGRADE)
+                .add(ModItems.BONE_OBSIDIAN_UPGRADE)
                 .add(ModItems.BONE_WITHERED_UPGRADE);
 
         getOrCreateTagBuilder(ItemTags.AXES)

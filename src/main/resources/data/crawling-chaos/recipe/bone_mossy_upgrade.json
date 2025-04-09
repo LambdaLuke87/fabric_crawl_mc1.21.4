@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "skeleton_friend_upgrade",
+  "key": {
+    "B": "minecraft:bone",
+    "M": "minecraft:moss",
+    "#": "crawling-chaos:virus_seeds"
+  },
+  "pattern": [
+    "BMB",
+    "M#M",
+    "BMB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:bone_mossy_upgrade"
+  }
+}

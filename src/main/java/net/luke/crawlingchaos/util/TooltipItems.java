@@ -6,10 +6,31 @@ import net.minecraft.text.Text;
 
 public class TooltipItems {
     public static final int tooltip_effect_color = 0xA8C2A8;
+    public static final int tooltip_lore_color = 0xa8b3c2;
 
     public static void registerTooltipItems() {
         ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
-            if (itemStack.isOf(ModItems.BLIGHT_ROTTEN_FLESH)) {
+            if (itemStack.isOf(ModItems.BONE_FLAME_UPGRADE)) {
+                list.add(Text.translatable("tooltip.crawling-chaos.bone_flame_upgrade")
+                        .styled(style -> style.withColor(tooltip_lore_color)));
+            }
+            else if (itemStack.isOf(ModItems.BONE_FROZEN_UPGRADE)) {
+                list.add(Text.translatable("tooltip.crawling-chaos.bone_frozen_upgrade")
+                        .styled(style -> style.withColor(tooltip_lore_color)));
+            }
+            else if (itemStack.isOf(ModItems.BONE_MOSSY_UPGRADE)) {
+                list.add(Text.translatable("tooltip.crawling-chaos.bone_mossy_upgrade")
+                        .styled(style -> style.withColor(tooltip_lore_color)));
+            }
+            else if (itemStack.isOf(ModItems.BONE_OBSIDIAN_UPGRADE)) {
+                list.add(Text.translatable("tooltip.crawling-chaos.bone_obsidian_upgrade")
+                        .styled(style -> style.withColor(tooltip_lore_color)));
+            }
+            else if (itemStack.isOf(ModItems.BONE_WITHERED_UPGRADE)) {
+                list.add(Text.translatable("tooltip.crawling-chaos.bone_withered_upgrade")
+                        .styled(style -> style.withColor(tooltip_lore_color)));
+            }
+            else if (itemStack.isOf(ModItems.BLIGHT_ROTTEN_FLESH)) {
                 list.add(Text.translatable("effect.minecraft.hunger")
                         .append(Text.literal(" "))
                         .append(Text.translatable("potion.potency.1"))
@@ -18,7 +39,7 @@ public class TooltipItems {
                 list.add(Text.translatable("effect.minecraft.poison")
                         .append(Text.literal(" 00:15"))
                         .append(Text.literal(" "))
-                        .append(Text.literal("in 50%"))
+                        .append(Text.literal("tooltip.crawling-chaos.in_half_percent"))
                         .styled(style -> style.withColor(tooltip_effect_color)));
             }
             else if (itemStack.isOf(ModItems.FORMULA_ABYSSAL_GAZE)) {

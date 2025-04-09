@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "skeleton_friend_upgrade",
+  "key": {
+    "B": "minecraft:bone",
+    "I": "minecraft:blue_ice",
+    "#": "crawling-chaos:virus_seeds"
+  },
+  "pattern": [
+    "BIB",
+    "I#I",
+    "BIB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:bone_frozen_upgrade"
+  }
+}

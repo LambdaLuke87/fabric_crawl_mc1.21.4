@@ -20,6 +20,8 @@ import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -72,10 +74,12 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
     }
 
     public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
         nbt.putFloat("SkellyMode", this.getSFMode());
     }
 
     public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
         this.setSFMode(nbt.getFloat("SkellyMode", this.getSFMode()));
     }
 
@@ -103,6 +107,15 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
     public boolean isMossy() {
         return this.getSFMode() == 3;
     }
+
+    public boolean isObsidian() {
+        return this.getSFMode() == 4;
+    }
+
+    public boolean isFrozen() {
+        return this.getSFMode() == 5;
+    }
+
 
     protected boolean isAffectedByDaylight() {
         return false;
@@ -151,6 +164,10 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
                     this.setSFMode(2);
                 } else if (itemStack.isOf(ModItems.BONE_MOSSY_UPGRADE)) {
                     this.setSFMode(3);
+                } else if (itemStack.isOf(ModItems.BONE_OBSIDIAN_UPGRADE)) {
+                    this.setSFMode(4);
+                } else if (itemStack.isOf(ModItems.BONE_FROZEN_UPGRADE)) {
+                    this.setSFMode(5);
                 }
 
                 itemStack.decrementUnlessCreative(1, player);
@@ -213,17 +230,55 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
         return equipmentSlot;
     }
 
+    public void tick() {
+        if (isBurned()) {
+            this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 200, 0));
+        } else if (isObsidian()) {
+            this.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 1));
+        }
+        super.tick();
+    }
+
     public boolean tryAttack(ServerWorld world, Entity target) {
-        boolean bl = super.tryAttack(world, target);
-        if (bl && this.getMainHandStack().isEmpty() && target instanceof LivingEntity) {
-            float f = this.getWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
-            if (isWithered()) {
-                ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 140 * (int) f), this);
-            } else if (isMossy()) {
-                ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 140 * (int) f), this);
+        if (!super.tryAttack(world, target)) {
+            return false;
+        } else {
+            if (target instanceof LivingEntity) {
+                if (isWithered()) {
+                    ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200), this);
+                } else if (isMossy()) {
+                    ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 200), this);
+                }
+                else if (isFrozen()) {
+                    ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200), this);
+                }
+                else if (isBurned()) {
+                    ((LivingEntity) target).setOnFireFor(200);
+                }
+            }
+
+            return true;
+        }
+    }
+
+    protected PersistentProjectileEntity createArrowProjectile(ItemStack arrow, float damageModifier, @Nullable ItemStack shotFrom) {
+        PersistentProjectileEntity persistentProjectileEntity = super.createArrowProjectile(arrow, damageModifier, shotFrom);
+        if (isBurned()) {
+            persistentProjectileEntity.setOnFireFor(100.0F);
+        } else if (isMossy()) {
+            if (persistentProjectileEntity instanceof ArrowEntity arrowEntity) {
+                arrowEntity.addEffect(new StatusEffectInstance(StatusEffects.POISON, 100));
+            }
+        } else if (isWithered()) {
+            if (persistentProjectileEntity instanceof ArrowEntity arrowEntity) {
+                arrowEntity.addEffect(new StatusEffectInstance(StatusEffects.WITHER, 100));
+            }
+        } else if (isFrozen()) {
+            if (persistentProjectileEntity instanceof ArrowEntity arrowEntity) {
+                arrowEntity.addEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100));
             }
         }
-        return bl;
+        return persistentProjectileEntity;
     }
 
     public boolean canImmediatelyDespawn(double distanceSquared) {

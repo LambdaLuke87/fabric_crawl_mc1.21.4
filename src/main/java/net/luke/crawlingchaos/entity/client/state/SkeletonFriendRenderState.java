@@ -6,6 +6,8 @@ public class SkeletonFriendRenderState extends SkeletonEntityRenderState {
     public boolean withered;
     public boolean burned;
     public boolean mossy;
+    public boolean obsidian;
+    public boolean frozen;
 
     public SkeletonFriendRenderState() {
     }

@@ -57,7 +57,9 @@ public class ModItemsGroups {
 
                         // Smithing Templates and Upgrades Items
                         entries.add(ModItems.BONE_FLAME_UPGRADE);
+                        entries.add(ModItems.BONE_FROZEN_UPGRADE);
                         entries.add(ModItems.BONE_MOSSY_UPGRADE);
+                        entries.add(ModItems.BONE_OBSIDIAN_UPGRADE);
                         entries.add(ModItems.BONE_WITHERED_UPGRADE);
                         entries.add(ModItems.SERUPINEA_UPGRADE_SMITHING_TEMPLATE);
                         entries.add(ModItems.KNIGHT_UPGRADE_SMITHING_TEMPLATE);

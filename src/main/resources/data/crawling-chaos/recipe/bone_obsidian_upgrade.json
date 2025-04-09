@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "skeleton_friend_upgrade",
+  "key": {
+    "B": "minecraft:bone",
+    "O": "minecraft:obsidian",
+    "#": "crawling-chaos:virus_seeds"
+  },
+  "pattern": [
+    "BOB",
+    "O#O",
+    "BOB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:bone_obsidian_upgrade"
+  }
+}
