@@ -13,6 +13,7 @@ import net.minecraft.entity.mob.*;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.SnowGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
@@ -66,6 +67,12 @@ public class KnightBugEntity extends HostileEntity {
 
     public boolean shouldRenderOverlay() {
         return this.getHealth() <= 150.0F;
+    }
+
+    public boolean damage(ServerWorld world, DamageSource source, float amount) {
+        if (source.isIn(DamageTypeTags.IS_EXPLOSION)) {
+            return false;
+        } else return super.damage(world, source, amount) && this.getAttacker() != null;
     }
 
     /* BOSS BAR */

@@ -71,7 +71,7 @@ public class ModEntities {
 
     public static final EntityType<SkeletonFriendEntity> SKELETON_FRIEND =  Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"),
-            EntityType.Builder.create(SkeletonFriendEntity::new, SpawnGroup.MONSTER)
+            EntityType.Builder.create(SkeletonFriendEntity::new, SpawnGroup.MISC)
                     .dimensions(0.6F, 1.95F).eyeHeight(1.74F).vehicleAttachment(-0.7F).maxTrackingRange(8)
                     .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, "skeleton_friend"))));
 

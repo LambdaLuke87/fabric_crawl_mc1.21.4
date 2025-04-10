@@ -296,6 +296,14 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
         return false;
     }
 
+    public boolean canTarget(EntityType<?> type) {
+        if (type == EntityType.PLAYER) {
+            return false;
+        } else {
+            return type != EntityType.CREEPER && super.canTarget(type);
+        }
+    }
+
     @Override
     public int getAngerTime() {
         return 0;
