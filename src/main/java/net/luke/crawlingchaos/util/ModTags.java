@@ -33,6 +33,7 @@ public class ModTags {
     public static class EntityTypeTags {
         public static final TagKey<EntityType<?>> PARASITE_INFECTS = CreateTag("parasite_infects");
         public static final TagKey<EntityType<?>> POISON_VINES_IGNORES = CreateTag("poison_vines_ignores");
+        public static final TagKey<EntityType<?>> SKELETON_FRIEND_MATES = CreateTag("skeleton_friend_mates");
 
         private static TagKey<EntityType<?>> CreateTag(String name) {
             return TagKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(CrawlingChaos.MOD_ID, name));

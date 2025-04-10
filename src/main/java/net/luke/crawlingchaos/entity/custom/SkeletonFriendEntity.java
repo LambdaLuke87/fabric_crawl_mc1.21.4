@@ -10,6 +10,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -26,6 +27,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -231,9 +233,7 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
     }
 
     public void tick() {
-        if (isBurned()) {
-            this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 200, 0));
-        } else if (isObsidian()) {
+        if (isObsidian()) {
             this.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 1));
         }
         super.tick();
@@ -279,6 +279,17 @@ public class SkeletonFriendEntity extends SkeletonEntity implements Angerable {
             }
         }
         return persistentProjectileEntity;
+    }
+
+    public boolean damage(ServerWorld world, DamageSource source, float amount) {
+        Entity entity = source.getAttacker();
+        if (source.isIn(DamageTypeTags.IS_EXPLOSION) && isObsidian()) {
+            return false;
+        } else if (source.isIn(DamageTypeTags.IS_FIRE) && (isBurned() || isObsidian())) {
+            return false;
+        } else if (entity != null && entity.getType().isIn(ModTags.EntityTypeTags.SKELETON_FRIEND_MATES)) {
+            return false;
+        } else return super.damage(world, source, amount) && this.getAttacker() != null;
     }
 
     public boolean canImmediatelyDespawn(double distanceSquared) {

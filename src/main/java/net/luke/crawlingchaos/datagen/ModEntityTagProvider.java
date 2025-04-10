@@ -17,19 +17,22 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(EntityTypeTags.UNDEAD)
-                .add(ModEntities.ERODED_ZOMBIE)
+        getOrCreateTagBuilder(EntityTypeTags.SENSITIVE_TO_SMITE)
                 .add(ModEntities.SKELETON_FRIEND);
 
-        getOrCreateTagBuilder(EntityTypeTags.ZOMBIES)
-                .add(ModEntities.ERODED_ZOMBIE);
+        getOrCreateTagBuilder(EntityTypeTags.CAN_BREATHE_UNDER_WATER)
+                .add(ModEntities.SKELETON_FRIEND);
 
-        getOrCreateTagBuilder(EntityTypeTags.SKELETONS)
+        getOrCreateTagBuilder(EntityTypeTags.INVERTED_HEALING_AND_HARM)
                 .add(ModEntities.SKELETON_FRIEND);
 
         getOrCreateTagBuilder(EntityTypeTags.IGNORES_POISON_AND_REGEN)
                 .add(ModEntities.HELENA)
-                .add(ModEntities.PRISM_FROG);
+                .add(ModEntities.PRISM_FROG)
+                .add(ModEntities.SKELETON_FRIEND);
+
+        getOrCreateTagBuilder(EntityTypeTags.ZOMBIES)
+                .add(ModEntities.ERODED_ZOMBIE);
 
         getOrCreateTagBuilder(ModTags.EntityTypeTags.PARASITE_INFECTS)
                 .add(EntityType.ZOMBIE);
@@ -39,5 +42,10 @@ public class ModEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
                 .add(ModEntities.KNIGHT_BUG)
                 .add(ModEntities.PARASITE_WORM)
                 .add(ModEntities.SERUPINEA);
+
+        getOrCreateTagBuilder(ModTags.EntityTypeTags.SKELETON_FRIEND_MATES)
+                .add(ModEntities.SKELETON_FRIEND)
+                .add(EntityType.IRON_GOLEM)
+                .add(EntityType.SNOW_GOLEM);
     }
 }

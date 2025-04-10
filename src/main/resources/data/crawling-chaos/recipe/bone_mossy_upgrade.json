@@ -4,7 +4,7 @@
   "group": "skeleton_friend_upgrade",
   "key": {
     "B": "minecraft:bone",
-    "M": "minecraft:moss",
+    "M": "minecraft:moss_block",
     "#": "crawling-chaos:virus_seeds"
   },
   "pattern": [
