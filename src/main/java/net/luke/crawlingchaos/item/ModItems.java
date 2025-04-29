@@ -19,6 +19,8 @@ import net.minecraft.util.Rarity;
 public class ModItems {
     public static final Item ACARUS_CHITIN = registerItem("acarus_chitin", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "acarus_chitin")))));
+    public static final Item ANCIENT_EXOSKELETON = registerItem("ancient_exoskeleton", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "ancient_exoskeleton")))));
     public static final Item BUTTERFLY_WINGS = registerItem("butterfly_wings", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "butterfly_wings")))));
     public static final Item CRYSTALS_OF_VIRUS = registerItem("crystals_of_virus", new Item(new Item.Settings()
@@ -113,7 +115,7 @@ public class ModItems {
 
     // Tools Items
     public static final Item SERUPINEA_AXE = registerItem("serupinea_axe",
-            new AxeItem(ModToolMaterials.SERUPINEA, 6.5F, -3.1F, new Item.Settings()
+            new AxeItem(ModToolMaterials.SERUPINEA, 6.0F, -3.1F, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "serupinea_axe")))));
     public static final Item SERUPINEA_HOE = registerItem("serupinea_hoe",
             new HoeItem(ModToolMaterials.SERUPINEA, -2.0F, -1.0F, new Item.Settings()

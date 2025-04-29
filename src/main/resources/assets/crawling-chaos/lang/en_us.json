@@ -15,6 +15,7 @@
   "entity.crawling-chaos.skeleton_friend": "Skeleton Friend",
   "entity.crawling-chaos.wither_skeleton_friend": "Wither Skeleton Friend",
 
+  "block.crawling-chaos.ancient_exoskeleton_stone": "Ancient Exoskeleton Stone",
   "block.crawling-chaos.biollanta": "Biollanta",
   "block.crawling-chaos.bug_oak_sapling": "Bug Oak Sapling",
   "block.crawling-chaos.bug_oak_log": "Bug Oak Log",
@@ -49,6 +50,7 @@
   "block.crawling-chaos.pattern_glass_pane_dark_gothic_shades": "Dark Gothic Shades Pane",
   "block.crawling-chaos.terapia": "Terapia",
 
+  "item.crawling-chaos.ancient_exoskeleton": "Ancient Exoskeleton",
   "item.crawling-chaos.acarus_chitin": "Acarus Chitin",
   "item.crawling-chaos.bone_withered_upgrade": "Bone Withered Upgrade",
   "item.crawling-chaos.bone_flame_upgrade": "Bone Flame Upgrade",

@@ -1,11 +1,9 @@
-package net.luke.crawlingchaos.gen;
-
-import net.luke.crawlingchaos.world.gen.ModGenerateVegetation;
-import net.luke.crawlingchaos.world.gen.ModTreeGeneration;
+package net.luke.crawlingchaos.world.gen;
 
 public class ModWorldGeneration {
     public static void generateModWorldGen() {
         ModTreeGeneration.generateTrees();
+        ModOreGeneration.generateOres();
         ModGenerateVegetation.generateBiollantas();
         ModGenerateVegetation.generateMycenas();
         ModGenerateVegetation.generateTerapias();

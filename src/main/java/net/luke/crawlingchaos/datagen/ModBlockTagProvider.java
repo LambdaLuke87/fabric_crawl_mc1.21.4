@@ -1,10 +1,8 @@
 package net.luke.crawlingchaos.datagen;
 
-import com.jcraft.jorbis.Block;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.luke.crawlingchaos.block.ModBlocks;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -24,6 +22,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_BUG_OAK_LOG)
                 .add(ModBlocks.STRIPPED_BUG_OAK_WOOD);
 
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL).add(ModBlocks.ANCIENT_EXOSKELETON_STONE);
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(ModBlocks.ANCIENT_EXOSKELETON_STONE);
         getOrCreateTagBuilder(BlockTags.CLIMBABLE).add(ModBlocks.POISON_VINE);
         getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.BUG_OAK_PLANKS);
         getOrCreateTagBuilder(BlockTags.LEAVES).add(ModBlocks.BUG_OAK_LEAVES);

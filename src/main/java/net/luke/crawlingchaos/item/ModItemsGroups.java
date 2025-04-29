@@ -20,6 +20,7 @@ public class ModItemsGroups {
 
                         // Normal Items
                         entries.add(ModItems.ACARUS_CHITIN);
+                        entries.add(ModItems.ANCIENT_EXOSKELETON);
                         entries.add(ModItems.BUTTERFLY_WINGS);
                         entries.add(ModItems.CRYSTALS_OF_VIRUS);
                         entries.add(ModItems.CRYSTALS_OF_VIRUS_SHARD);
@@ -95,6 +96,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.SKELETON_FRIEND_SPAWN_EGG);
 
                         // Blocks
+                        entries.add(ModBlocks.ANCIENT_EXOSKELETON_STONE);
                         entries.add(ModBlocks.BUG_OAK_LOG);
                         entries.add(ModBlocks.BUG_OAK_WOOD);
                         entries.add(ModBlocks.STRIPPED_BUG_OAK_LOG);

@@ -8,6 +8,9 @@ import net.minecraft.block.PropaguleBlock;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -23,12 +26,18 @@ import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import java.util.List;
 
 public class ModConfiguredFeatures {
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ANCIENT_EXOSKELETON_STONE_KEY = registerKey("ancient_exoskeleton_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BUG_OAK_KEY = registerKey("bug_oak");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BIOLLANTA_KEY = registerKey("biollanta");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MYCENA_CHLOROPHOS_KEY = registerKey("mycena_chlorophos");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TERAPIA_KEY = registerKey("terapia");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+
+        List<OreFeatureConfig.Target> overworldAncientExoskeletonStone =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.ANCIENT_EXOSKELETON_STONE.getDefaultState()));
+
         register(context, BUG_OAK_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.BUG_OAK_LOG),
                 new LargeOakTrunkPlacer(7, 8, 3),
@@ -41,6 +50,8 @@ public class ModConfiguredFeatures {
                         new AttachedToLeavesTreeDecorator(0.14F, 1, 0,
                                 new RandomizedIntBlockStateProvider(BlockStateProvider.of(Blocks.COBWEB),
                                         PropaguleBlock.AGE, UniformIntProvider.create(0, 4)), 2, List.of(Direction.DOWN)))).build());
+
+        register(context, ANCIENT_EXOSKELETON_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldAncientExoskeletonStone, 12));
 
         register(context, BIOLLANTA_KEY, Feature.FLOWER,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,

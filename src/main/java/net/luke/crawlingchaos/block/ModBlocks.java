@@ -22,6 +22,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
+    public static final Block ANCIENT_EXOSKELETON_STONE = registerBlock("ancient_exoskeleton_stone",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "ancient_exoskeleton_stone")))));
     public static final Block BIOLLANTA = registerBlock("biollanta",
             new FlowerBlock(StatusEffects.REGENERATION, 5.0F,AbstractBlock.Settings.copy(Blocks.POPPY)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(CrawlingChaos.MOD_ID, "biollanta")))));

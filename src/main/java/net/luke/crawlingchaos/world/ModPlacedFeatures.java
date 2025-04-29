@@ -7,15 +7,14 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
-import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
+    public static final RegistryKey<PlacedFeature> ANCIENT_EXOSKELETON_STONE_PLACED_KEY = registerKey("ancient_exoskeleton_stone_placed");
     public static final RegistryKey<PlacedFeature> BUG_OAK_PLACED_KEY = registerKey("bug_oak_placed");
     public static final RegistryKey<PlacedFeature> BIOLLANTA_PLACED_KEY = registerKey("biollanta_placed");
     public static final RegistryKey<PlacedFeature> MYCENA_CHLOROPHOS_PLACED_KEY = registerKey("mycena_chlorophos_placed");
@@ -23,6 +22,10 @@ public class ModPlacedFeatures {
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+        register(context, ANCIENT_EXOSKELETON_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ANCIENT_EXOSKELETON_STONE_KEY),
+                ModOrePlacement.modifiersWithCount(5,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
 
         register(context, BUG_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUG_OAK_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(

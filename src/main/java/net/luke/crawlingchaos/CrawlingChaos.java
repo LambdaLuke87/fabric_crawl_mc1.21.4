@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.luke.crawlingchaos.block.ModBlocks;
 import net.luke.crawlingchaos.entity.ModEntities;
-import net.luke.crawlingchaos.gen.ModWorldGeneration;
+import net.luke.crawlingchaos.world.gen.ModWorldGeneration;
 import net.luke.crawlingchaos.item.ModItems;
 import net.luke.crawlingchaos.item.ModItemsGroups;
 import net.luke.crawlingchaos.particle.ModParticles;
