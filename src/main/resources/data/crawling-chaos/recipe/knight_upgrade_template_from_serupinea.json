@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "crawling-chaos:knight_exoskeleton",
+    "#": "crawling-chaos:serupinea_lining",
     "S": "crawling-chaos:serupinea_upgrade_smithing_template"
   },
   "pattern": [

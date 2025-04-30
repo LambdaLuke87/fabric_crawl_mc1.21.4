@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "crawling-chaos:serupinea_exoskeleton",
+    "A": "crawling-chaos:acarus_chitin",
+    "O": "crawling-chaos:ancient_exoskeleton"
+  },
+  "pattern": [
+    "EEE",
+    "OOO",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:serupinea_lining"
+  }
+}

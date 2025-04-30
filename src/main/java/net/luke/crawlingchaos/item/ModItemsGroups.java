@@ -29,6 +29,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.KNIGHT_EXOSKELETON);
                         entries.add(ModItems.PARASITE_TOOTH);
                         entries.add(ModItems.SERUPINEA_EXOSKELETON);
+                        entries.add(ModItems.SERUPINEA_LINING);
                         entries.add(ModItems.STORAGE_ORGAN);
                         entries.add(ModItems.STORAGE_ORGAN_POISON);
                         entries.add(ModItems.TEST_TUBE);
