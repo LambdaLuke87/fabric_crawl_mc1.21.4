@@ -27,6 +27,7 @@ public class ModItemsGroups {
                         entries.add(ModItems.GROWTH_ORGAN);
                         entries.add(ModItems.INSECT_WINGS);
                         entries.add(ModItems.KNIGHT_EXOSKELETON);
+                        entries.add(ModItems.KNIGHT_LINING);
                         entries.add(ModItems.PARASITE_TOOTH);
                         entries.add(ModItems.SERUPINEA_EXOSKELETON);
                         entries.add(ModItems.SERUPINEA_LINING);

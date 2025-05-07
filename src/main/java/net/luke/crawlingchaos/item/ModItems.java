@@ -33,6 +33,8 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "insect_wings")))));
     public static final Item KNIGHT_EXOSKELETON = registerItem("knight_exoskeleton", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_exoskeleton")))));
+    public static final Item KNIGHT_LINING = registerItem("knight_lining", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "knight_lining")))));
     public static final Item PARASITE_TOOTH = registerItem("parasite_tooth", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(CrawlingChaos.MOD_ID, "parasite_tooth")))));
     public static final Item SERUPINEA_EXOSKELETON = registerItem("serupinea_exoskeleton", new Item(new Item.Settings()

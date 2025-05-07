@@ -80,13 +80,13 @@ public class KnightBugModel extends EntityModel<CommonRenderState> {
         bone6.addChild("legs4_r1", ModelPartBuilder.create().uv(110, 20).cuboid(2.3296F, -45.6242F, -10.5665F, 16.0F, 3.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(-25.1245F, 16.1141F, 26.2536F, 0.49F, 0.1925F, 1.2264F));
         bone6.addChild("legs4_r2", ModelPartBuilder.create().uv(0, 0).cuboid(46.0876F, 0.0F, -10.0665F, 5.0F, 1.0F, 2.0F, new Dilation(0.0F))
                 .uv(70, 21).cuboid(30.0876F, -17.0F, -12.0665F, 13.0F, 5.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(-25.1245F, 16.1141F, 26.2536F, 0.0F, 0.5236F, 0.0F));
-        ModelPartData legs5 = modelPartData.addChild("legs5", ModelPartBuilder.create(), ModelTransform.origin(6.0F, 22.0F, 24.0F));
-        ModelPartData bone3 = legs5.addChild("bone3", ModelPartBuilder.create().uv(190, 46).cuboid(-2.3697F, -5.1375F, -4.8878F, 6.0F, 10.0F, 10.0F, new Dilation(0.0F)), ModelTransform.of(6.2524F, -14.8625F, -36.9949F, 0.0F, 0.3491F, 0.0F));
+        ModelPartData legs5 = modelPartData.addChild("legs5", ModelPartBuilder.create(), ModelTransform.origin(11.0F, 6.0F, -13.0F));
+        ModelPartData bone3 = legs5.addChild("bone3", ModelPartBuilder.create().uv(190, 46).cuboid(-2.3697F, -5.1375F, -4.8878F, 6.0F, 10.0F, 10.0F, new Dilation(0.0F)), ModelTransform.of(1.2524F, 1.1375F, 0.0051F, 0.0F, 0.3491F, 0.0F));
         bone3.addChild("legs5_r1", ModelPartBuilder.create().uv(200, 6).cuboid(0.0F, -2.0F, -3.0968F, 15.0F, 6.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(2.7476F, -0.1375F, -0.0051F, 0.0F, 0.0436F, -0.3491F));
         bone3.addChild("legs5_r2", ModelPartBuilder.create().uv(151, 6).cuboid(-9.9582F, -0.7719F, -1.5889F, 19.0F, 3.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(19.2057F, 8.1344F, -0.4162F, 0.0436F, 0.0F, 1.309F));
         bone3.addChild("legs5_r3", ModelPartBuilder.create().uv(0, 0).cuboid(-2.5F, -0.5F, -1.5F, 5.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(22.7476F, 17.3625F, -0.0051F, 0.0F, 0.0436F, 0.0F));
-        ModelPartData legs4 = modelPartData.addChild("legs4", ModelPartBuilder.create(), ModelTransform.of(20.0F, 22.0F, -31.0F, 3.0771F, 0.828F, 3.094F));
-        ModelPartData bone4 = legs4.addChild("bone4", ModelPartBuilder.create().uv(190, 46).cuboid(-2.3697F, -4.6375F, -4.8878F, 6.0F, 10.0F, 10.0F, new Dilation(0.0F)), ModelTransform.of(6.2524F, -14.8625F, -36.9949F, 0.0F, 0.3491F, 0.0F));
+        ModelPartData legs4 = modelPartData.addChild("legs4", ModelPartBuilder.create(), ModelTransform.of(-11.0F, 22.0F, -13.0F, 3.0771F, 0.828F, 3.094F));
+        ModelPartData bone4 = legs4.addChild("bone4", ModelPartBuilder.create().uv(190, 46).cuboid(-2.3697F, -4.6375F, -4.8878F, 6.0F, 10.0F, 10.0F, new Dilation(0.0F)), ModelTransform.of(-1.4325F, -15.6476F, -1.9902F, 0.0F, 0.3491F, 0.0F));
         bone4.addChild("legs6_r1", ModelPartBuilder.create().uv(200, 6).cuboid(0.0F, -2.0F, -3.0968F, 15.0F, 6.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(2.7476F, -0.1375F, -0.0051F, 0.0F, 0.0436F, -0.3491F));
         bone4.addChild("legs6_r2", ModelPartBuilder.create().uv(151, 6).cuboid(-9.9582F, -0.7719F, -1.5889F, 19.0F, 3.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(19.2057F, 8.1344F, -0.4162F, 0.0436F, 0.0F, 1.309F));
         bone4.addChild("legs6_r3", ModelPartBuilder.create().uv(0, 0).cuboid(-2.5F, -0.5F, -1.5F, 5.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(22.7476F, 17.3625F, -0.0051F, 0.0F, 0.0436F, 0.0F));
@@ -104,11 +104,11 @@ public class KnightBugModel extends EntityModel<CommonRenderState> {
         float f = commonState.limbSwingAnimationProgress * 0.6662F;
         float g = commonState.limbSwingAmplitude;
         float h = -(MathHelper.cos(f * 2.0F + 0.0F) * 0.4F) * g;
-        //float i = -(MathHelper.cos(f * 2.0F + (float)Math.PI) * 0.4F) * g;
+        float i = -(MathHelper.cos(f * 2.0F + (float)Math.PI) * 0.4F) * g;
         //float j = -(MathHelper.cos(f * 2.0F + ((float)Math.PI / 2F)) * 0.4F) * g;
         float k = -(MathHelper.cos(f * 2.0F + ((float)Math.PI * 1.5F)) * 0.4F) * g;
         float l = Math.abs(MathHelper.sin(f + 0.0F) * 0.4F) * g;
-        //float m = Math.abs(MathHelper.sin(f + (float)Math.PI) * 0.4F) * g;
+        float m = Math.abs(MathHelper.sin(f + (float)Math.PI) * 0.4F) * g;
         //float n = Math.abs(MathHelper.sin(f + ((float)Math.PI / 2F)) * 0.4F) * g;
         float o = Math.abs(MathHelper.sin(f + ((float)Math.PI * 1.5F)) * 0.4F) * g;
 
@@ -116,10 +116,10 @@ public class KnightBugModel extends EntityModel<CommonRenderState> {
         var10000.yaw += h;
         var10000 = this.legs6;
         var10000.yaw -= h;
-        //var10000 = this.legs5;
-        //var10000.yaw += i;
-        //var10000 = this.legs4;
-        //var10000.yaw -= i;
+        var10000 = this.legs5;
+        var10000.yaw += i;
+        var10000 = this.legs4;
+        var10000.yaw -= i;
         var10000 = this.legs3;
         var10000.yaw += k;
         var10000 = this.legs2;
@@ -128,10 +128,10 @@ public class KnightBugModel extends EntityModel<CommonRenderState> {
         var10000.roll += l;
         var10000 = this.legs6;
         var10000.roll -= l;
-        //var10000 = this.legs5;
-        //var10000.roll += m;
-        //var10000 = this.legs4;
-        //var10000.roll -= m;
+        var10000 = this.legs5;
+        var10000.roll += m;
+        var10000 = this.legs4;
+        var10000.roll -= m;
         var10000 = this.legs3;
         var10000.roll += o;
         var10000 = this.legs2;

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": "crawling-chaos:knight_exoskeleton",
+    "S": "crawling-chaos:serupinea_lining"
+  },
+  "pattern": [
+    "KKK",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "crawling-chaos:knight_lining"
+  }
+}

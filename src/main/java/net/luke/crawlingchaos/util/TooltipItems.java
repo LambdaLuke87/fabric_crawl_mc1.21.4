@@ -39,7 +39,7 @@ public class TooltipItems {
                 list.add(Text.translatable("effect.minecraft.poison")
                         .append(Text.literal(" 00:15"))
                         .append(Text.literal(" "))
-                        .append(Text.literal("tooltip.crawling-chaos.in_half_percent"))
+                        .append(Text.translatable("tooltip.crawling-chaos.in_half_percent"))
                         .styled(style -> style.withColor(tooltip_effect_color)));
             }
             else if (itemStack.isOf(ModItems.FORMULA_ABYSSAL_GAZE)) {
