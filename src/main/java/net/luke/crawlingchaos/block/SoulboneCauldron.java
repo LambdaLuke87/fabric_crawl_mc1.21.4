@@ -39,8 +39,8 @@ public class SoulboneCauldron extends Block {
         if(entity instanceof ItemEntity itemEntity) {
             if(itemEntity.getStack().getItem() == Items.SKELETON_SKULL) {
                 this.spawnskeletonfriend(world, pos);
+                itemEntity.discard();
             }
-            itemEntity.discard();
         }
 
         super.onSteppedOn(world, pos, state, entity);
